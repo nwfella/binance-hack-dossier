@@ -5,7 +5,9 @@ name: Refresh tracker
 
 on:
   schedule:
-    - cron: "11 * * * *"   # hourly at :11 UTC
+    # GitHub has been delivering this repo's cron at ~6h intervals instead of hourly.
+    # Two slots per hour gives the scheduler a second chance at each boundary.
+    - cron: "11,41 * * * *"
   workflow_dispatch:
   push:
     branches: [main]

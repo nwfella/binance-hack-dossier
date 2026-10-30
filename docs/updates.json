@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion",
+   "link": "https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225",
+   "desc": "Investigators tie the $6B Binance hack to North Korea. Here's how hot-wallet signing infrastructure was compromised and where funds went.",
+   "date": "2026-10-30T21:20:23+00:00",
+   "first_seen": "2026-10-30T21:43:03.078857+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Hack Shows Why Offshore Exchanges Need US Oversight, CFTC Chair Says",
+   "link": "https://decrypt.co/382285/binance-hack-why-offshore-exchanges-need-us-oversight-cftc-chair",
+   "desc": "Michael Selig said the record $6.4 billion theft shows why offshore exchanges should register with the CFTC and adopt U.S.-grade cybersecurity standards.",
+   "date": "2026-10-30T21:16:04+00:00",
+   "first_seen": "2026-10-30T21:43:03.078857+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "President Trump says they\u2019re looking into Binance hack as calls grow for crypto rules",
+   "link": "https://www.theblock.co/news/regulation/2026-10-30-trump-looking-into-binance-hack-calls-grow-for-crypto-rules-432236",
+   "desc": "Following the $6.3 billion hack of the world's largest crypto exchange, Binance, calls are growing for legislation.",
+   "date": "2026-10-30T21:06:03+00:00",
+   "first_seen": "2026-10-30T21:43:03.078857+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "Binance hackers deploy never-seen-before laundering tactics to conceal $6.3 billion theft",
+   "link": "https://cryptoslate.com/binance-hackers-deploy-never-seen-before-laundering-tactics-to-conceal-6-3-billion-theft/",
+   "desc": "Hackers behind Binance's $6.3 billion breach are using previously unseen laundering tactics while rapidly converting stolen assets into other cryptocurrencies. On Oct. 30, blockchain analytics firm Chainalysis said that investigators identified thousands of transactions executed within short periods, suggesting the attackers used automation to obscure the movement of stolen funds. The discovery co",
+   "date": "2026-10-30T20:30:08+00:00",
+   "first_seen": "2026-10-30T21:43:03.078857+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Experts divided over Binance hack asset freezes, warn recovery is another matter",
+   "link": "https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter",
+   "desc": "Tether, Circle and others moved within hours to block billions in stolen crypto, but legal experts question whether smaller victims would get the same protection.",
+   "date": "2026-10-30T19:55:00+00:00",
+   "first_seen": "2026-10-30T21:43:03.078857+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Hack: Why Bitcoin Didn't Crash Like It Did in 2018",
+   "link": "https://decrypt.co/382257/binance-hack-why-bitcoin-didnt-crash",
+   "desc": "Binance lost about $6.4 billion, the largest crypto hack on record, yet Bitcoin fell about 3%, against nearly 11% in 2018 when the exchange was last attacked.",
+   "date": "2026-10-30T18:45:03+00:00",
+   "first_seen": "2026-10-30T21:43:03.078857+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "New Breach Points: Binance CEO Reveals Fresh Findings in $6.3B Hack",
    "link": "https://news.bitcoin.com/security/new-breach-points-binance-ceo-reveals-fresh-findings-6-3b-hack/",
@@ -530,6 +578,6 @@
   }
  ],
  "first_run": null,
- "runs": 11,
- "last_run": "2026-10-30T18:34:06.251120+00:00"
+ "runs": 12,
+ "last_run": "2026-10-30T21:43:03.078857+00:00"
 }
