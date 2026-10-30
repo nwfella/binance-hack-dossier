@@ -6,7 +6,6 @@ name: Refresh tracker
 on:
   schedule:
     - cron: "11 * * * *"   # hourly at :11 UTC
-    - cron: "*/5 * * * *"  # TEMP canary — remove once scheduling is proven
   workflow_dispatch:
   push:
     branches: [main]
