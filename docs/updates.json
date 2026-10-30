@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Cointelegraph",
+   "title": "North Korea\u2019s TraderTraitor linked to $6.3B Binance hack",
+   "link": "https://cointelegraph.com/news/north-korea-linked-to-63b-binance-hack-by-crypto-investigators?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "TRM Labs says it has high confidence in the attribution, while ZachXBT identified stolen funds from the Binance and Bitget hacks converging at the same address.",
+   "date": "2026-10-30T05:51:41+00:00",
+   "first_seen": "2026-10-30T06:36:57.215995+00:00"
+  },
+  {
    "source": "CoinDesk",
    "title": "India's largest exchange curbs crypto futures trading as Binance incident disrupts liquidity",
    "link": "https://www.coindesk.com/markets/2026/10/30/coindcx-halts-new-crypto-futures-bets-as-binance-incident-disrupts-liquidity",
@@ -194,6 +202,6 @@
   }
  ],
  "first_run": null,
- "runs": 8,
- "last_run": "2026-10-30T06:00:35.985255+00:00"
+ "runs": 9,
+ "last_run": "2026-10-30T06:36:57.215995+00:00"
 }
