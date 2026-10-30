@@ -1,6 +1,150 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "New Breach Points: Binance CEO Reveals Fresh Findings in $6.3B Hack",
+   "link": "https://news.bitcoin.com/security/new-breach-points-binance-ceo-reveals-fresh-findings-6-3b-hack/",
+   "desc": "Binance investigators uncovered additional breach points, bypassed approval controls, and evidence-destruction tactics in Thursday\u2019s $6.3 billion hack, co-CEO Richard Teng said. His update outlined a withdrawal-service rebuild, a companywide security review, and targets for restoring transfers and verifying reserves. Investigation Expands Beyond the Laptop Binance found additional breach points be",
+   "date": "2026-10-30T18:05:31+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million",
+   "link": "https://decrypt.co/382268/secret-service-fbi-binance-hack-probe",
+   "desc": "Binance says it has set aside $6.34 billion to cover losses from the breach and the FBI and Secret Service are now working with the exchange as investigators trace the stolen funds.",
+   "date": "2026-10-30T17:50:26+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
+   "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Circle, Strategy and other crypto-linked stocks fell sharply Friday, a day after Binance disclosed a $6.3 billion security breach.",
+   "date": "2026-10-30T17:48:27+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Bitcoin Price Rebounds Above $77K, but Binance Hack Keeps Traders on Edge",
+   "link": "https://news.bitcoin.com/market-updates/bitcoin-rebounds-above-77k-binance-hack-keeps-traders-edge/",
+   "desc": "Bitcoin stabilized above $77,000 after a $6.3 billion Binance hack triggered a marketwide sell-off, pushing the cryptocurrency to a multiweek low of $76,320. Bitcoin Plunges to Multiweek Low Following Binance Hack Bitcoin price stabilized above $77,000 following a marketwide sell-off triggered by Thursday\u2019s $6.3 billion hack of Binance, which briefly dragged the cryptocurrency down toward [\u2026]",
+   "date": "2026-10-30T17:02:31+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Recap: How Binance\u2019s record $6.3B hack unfolded",
+   "link": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "A recap of Cointelegraph\u2019s live coverage of the Binance hack, including early breach reports and the exchange\u2019s full reimbursement pledge.",
+   "date": "2026-10-30T16:53:46+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Gate CEO Calls for Crypto Security Alliance After $6.3B Binance Hack",
+   "link": "https://news.bitcoin.com/security/gate-ceo-calls-crypto-security-alliance-6b-binance-hack/",
+   "desc": "Lin Han, founder and CEO of Gate, has called for the formation of a cryptocurrency security alliance to standardize procedures to prevent and eventually deal with the aftermath of security incidents similar to the $6.3 billion hack that Binance faced on Thursday. Gate CEO Calls for Global Security Alliance to Secure The Crypto Industry Following [\u2026]",
+   "date": "2026-10-30T16:45:57+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Sets Aside $6.34B to Cover Hack Losses, CEO Says 'Your Assets Are Safe'",
+   "link": "https://decrypt.co/382237/binance-sets-aside-6-34b-to-cover-hack-losses-ceo-says-your-assets-are-safe",
+   "desc": "Richard Teng said the attacker used a self-destruct mechanism and an EIP-7702 delegation that bypassed Binance's normal approval controls.",
+   "date": "2026-10-30T16:34:21+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart",
+   "link": "https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart",
+   "desc": "CEO Richard Teng said hackers erased evidence and bypassed security checks. Binance plans to publish its proof of reserves Monday.",
+   "date": "2026-10-30T16:31:17+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack",
+   "link": "https://decrypt.co/382236/elon-musk-cz-trade-blows-spacex-shares-binance-hack",
+   "desc": "After Musk appeared to mock Binance\u2019s $6.3 billion hack, CZ reminded him that the exchange\u2019s $500 million bet on his Twitter takeover is now worth over $1 billion in SpaceX shares.",
+   "date": "2026-10-30T16:25:06+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Coinbase, Bitcoin Giant Strategy Fall as Binance Hack Rocks Crypto Stocks",
+   "link": "https://news.bitcoin.com/market-updates/coinbase-bitcoin-giant-strategy-fall-binance-hack-rocks-crypto-stocks/",
+   "desc": "Crypto-linked stocks plunged Friday as a multibillion-dollar Binance security breach collided with a broader technology selloff driven by concerns over AI spending. Coinbase dropped more than 12% and Strategy fell 6%, even after both companies reported quarterly profits on Thursday night. Binance Hack Adds a Crypto-Specific Shock Crypto stocks are being hit from both sides. [\u2026]",
+   "date": "2026-10-30T15:26:13+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Protos",
+   "title": "How the Binance hack happened on-chain on Ethereum",
+   "link": "https://protos.com/how-the-binance-hack-happened-on-chain-on-ethereum/",
+   "desc": "The hack of Binance's Ethereum on-chain relied on EIP-7702 to target at least one address and regular transfers for other addresses.",
+   "date": "2026-10-30T15:12:36+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "What is EIP-7702? The Ethereum Upgrade Behind the $6.4B Binance Hack",
+   "link": "https://decrypt.co/resources/what-is-eip-7702-the-ethereum-upgrade-behind-the-6-4b-binance-hack",
+   "desc": "EIP-7702 lets ordinary Ethereum wallets run smart contract code, enabling batched and sponsored transactions. Here's how it works.",
+   "date": "2026-10-30T14:17:34+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack",
+   "link": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack",
+   "desc": "Analysts at Cantor Fitzgerald, TD Cowen and Compass Point say the $6.3 billion Binance hack is unlikely to derail the crypto market's recovery.",
+   "date": "2026-10-30T14:13:34+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "Bitcoin fell after the Fed\u2019s pause, but blaming interest rates misses the Binance shock",
+   "link": "https://cryptoslate.com/bitcoin-fell-after-the-feds-pause-but-blaming-interest-rates-misses-the-binance-shock/",
+   "desc": "he Federal Reserve asked for more information before changing interest rates. Eighteen and a half hours later, the economy supplied it: growth was strong, inflation remained elevated, and households were spending more without buying much more. But before investors could settle what that combination meant for Bitcoin, a Binance security breach raised a more immediate\u2026 Read the full story on CryptoS",
+   "date": "2026-10-30T14:00:23+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "CZ Tells Elon Musk to Stop Trolling Over $6.3B Binance Hack, Cites SpaceX Stake",
+   "link": "https://news.bitcoin.com/featured/cz-tells-elon-musk-stop-trolling-6-3b-binance-hack-binance-spacex/",
+   "desc": "Elon Musk poked fun at Binance\u2019s $6.3 billion security crisis, and Changpeng Zhao (CZ) fired back with a billion-dollar reminder: the cryptocurrency exchange owns a valuable stake tied to Musk\u2019s SpaceX empire, an investment Zhao would rather see celebrated than mocked publicly. Musk\u2019s Jokes Draw a Billion-Dollar Response Binance\u2019s reported $6.3 billion security breach on [\u2026]",
+   "date": "2026-10-30T13:44:55+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "Binance says it has $6.34 billion ready to cover hack losses",
+   "link": "https://www.theblock.co/news/ecosystems/2026-10-30-binance-says-it-has-6-34-billion-ready-to-cover-hack-losses-432208",
+   "desc": "Binance has allocated $6.34 billion to cover hack losses, while industry partners have frozen another $3 billion in affected assets.",
+   "date": "2026-10-30T13:14:56+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance working with FBI to recover assets following $6.3B hack",
+   "link": "https://cointelegraph.com/news/binance-fbi-recover-assets-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Binance is working with law enforcement to recover $3 billion that is frozen, after setting aside more than $6.3 billion from the company\u2019s funds to cover the shortfall.",
+   "date": "2026-10-30T13:11:10+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+   "link": "https://cointelegraph.com/news/binance-5-billion-replacement-crypto-in-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "The exchange said it set aside more than $6.34 billion to cover losses and would include the assets in its next proof-of-reserves report.",
+   "date": "2026-10-30T12:41:43+00:00",
+   "first_seen": "2026-10-30T18:34:06.251120+00:00"
+  },
+  {
    "source": "Decrypt",
    "title": "Morning Minute: Binance\u2019s $6.4B Hack Overshadows Hyperliquid\u2019s Biggest Day",
    "link": "https://decrypt.co/382225/morning-minute-binances-6-4b-hack-overshadows-hyperliquids-biggest-day",
@@ -386,6 +530,6 @@
   }
  ],
  "first_run": null,
- "runs": 10,
- "last_run": "2026-10-30T12:44:03.246737+00:00"
+ "runs": 11,
+ "last_run": "2026-10-30T18:34:06.251120+00:00"
 }
