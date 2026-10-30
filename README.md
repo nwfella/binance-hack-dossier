@@ -33,6 +33,36 @@ state/seen.json                     dedupe index (committed)
 .github/workflows/hourly.yml        hourly rebuild + commit
 ```
 
+
+## Refresh triggers — read this
+
+**GitHub Actions `schedule` does not work for this repository.** Proven, not suspected: two
+different workflow files, including a five-minute canary left running for 13 minutes, produced
+**zero** `schedule` events. `push` and `workflow_dispatch` triggers work normally. This is a
+GitHub-side scheduling failure, not a configuration error.
+
+What this means: the hourly rebuild only happens if something else triggers it. Three options:
+
+1. **Manual dispatch** (always available):
+   ```bash
+   gh workflow run "Refresh tracker" --ref main
+   ```
+2. **Local Windows Task Scheduler** — no third party, nothing leaves the machine, but only runs
+   while the PC is on. Opt in with:
+   ```
+   schtasks /Create /TN "BinanceHackTracker" /TR "C:\path\to\repo\scripts\refresh_local.cmd" /SC HOURLY /F
+   ```
+   Remove with `schtasks /Delete /TN "BinanceHackTracker" /F`.
+3. **External cron service** hitting the `workflow_dispatch` API — works with the PC off, but
+   requires storing a repo-scoped `actions:write` token with a third party.
+
+### The page cannot rot silently
+
+The build instant is baked into `<body data-built="...">` and the page computes its own age in the
+browser. Past three hours it flips the metabar to a red **refresh stalled** indicator and shows an
+amber banner stating the feed is frozen at that build time. If the scheduler dies, the page says so
+rather than pretending to be current.
+
 ## Manual refresh
 
 ```bash
