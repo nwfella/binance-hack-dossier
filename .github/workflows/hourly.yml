@@ -1,0 +1,52 @@
+name: Hourly refresh
+
+# Rebuilds the tracker from public RSS feeds once an hour.
+# Zero AI cost: pure HTTP + XML parsing on GitHub's free runner. No API keys, no LLM calls.
+
+on:
+  schedule:
+    - cron: "7 * * * *"      # hourly at :07 UTC (GitHub may delay a few minutes under load)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/hourly.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hourly-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild tracker from feeds
+        run: python scripts/update_feeds.py
+
+      - name: Verify
+        run: node scripts/verify_site.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "dossier-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html docs/updates.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            N=$(python -c "import json;print(len(json.load(open('docs/updates.json'))['items']))")
+            git commit -m "chore: hourly refresh ($N tracked items) [skip ci]"
+            git push
+          fi

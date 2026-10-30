@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inside the Binance Hot-Wallet Breach of October 29, 2026</title>
+<meta name="author" content="nwfella">
+<meta name="description" content="Technical analysis, confirmed-vs-reported ledger, best practices, and monitoring resources for the October 29, 2026 Binance hot wallet compromise.">
+<style>
+  :root{
+    --ink:#12161c; --ink2:#39434f; --muted:#6b7684; --rule:#d8dee6;
+    --accent:#0f4c81; --accent2:#8a1c1c; --wash:#f4f6f9; --wash2:#fbfcfd;
+    --warn:#8a5a00; --warnbg:#fff8e6;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  body{
+    margin:0; color:var(--ink);
+    font:10.5pt/1.55 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:#fff;
+  }
+  @page{ size:A4; margin:16mm 15mm 18mm 15mm; }
+  @page :first{ margin:0; }
+
+  .page{ max-width:180mm; margin:0 auto; }
+  .sheet{ }
+  .nobreak{ page-break-inside:avoid; }
+  h2.sec{ break-after:avoid; page-break-after:avoid; }
+  .box, .kpi, .tl .ev{ break-inside:avoid; page-break-inside:avoid; }
+  .page + .page h2.sec:first-child{ margin-top:0; }
+
+  /* ---------- cover ---------- */
+  .cover{
+    page-break-after:always; position:relative; height:297mm; width:210mm;
+    background:#0c1118; color:#eef3f8; padding:26mm 20mm 20mm; overflow:hidden;
+  }
+  .cover::after{
+    content:""; position:absolute; right:-40mm; bottom:-50mm; width:150mm; height:150mm;
+    border-radius:50%; border:1.5mm solid rgba(200,60,60,.28);
+  }
+  .cover .kicker{
+    font:700 8.5pt/1.4 "Segoe UI",Arial,sans-serif; letter-spacing:.22em; text-transform:uppercase;
+    color:#e07070; margin-bottom:10mm;
+  }
+  .cover h1{
+    font:700 30pt/1.14 "Segoe UI",Arial,sans-serif; margin:0 0 6mm; letter-spacing:-.015em; max-width:150mm;
+  }
+  .cover h2{
+    font:400 12.5pt/1.5 "Segoe UI",Arial,sans-serif; color:#a8b6c6; margin:0 0 14mm; max-width:135mm;
+  }
+  .cover .statrow{ display:flex; gap:6mm; margin:0 0 12mm; }
+  .cover .stat{
+    flex:1; border-top:2px solid #c33; padding-top:3mm;
+  }
+  .cover .stat .n{ font:700 17pt/1.1 "Segoe UI",Arial,sans-serif; color:#fff; display:block; }
+  .cover .stat .l{ font:400 7.5pt/1.35 "Segoe UI",Arial,sans-serif; color:#93a3b5; text-transform:uppercase; letter-spacing:.1em; }
+  .cover .glance{ max-width:150mm; border-top:1px solid rgba(255,255,255,.14); }
+  .cover .gl{ display:flex; gap:5mm; padding:3mm 0; border-bottom:1px solid rgba(255,255,255,.1); }
+  .cover .gk{
+    flex:0 0 32mm; font:700 7pt/1.5 "Segoe UI",Arial,sans-serif; text-transform:uppercase;
+    letter-spacing:.14em; color:#8fa2b6; padding-top:.4mm;
+  }
+  .cover .gv{ flex:1; font:400 9.2pt/1.5 "Segoe UI",Arial,sans-serif; color:#dbe4ee; }
+  .cover .meta{
+    position:absolute; left:20mm; right:20mm; bottom:20mm; border-top:1px solid rgba(255,255,255,.18);
+    padding-top:5mm; font-size:8.5pt; color:#93a3b5; display:flex; justify-content:space-between;
+  }
+  .cover .meta b{ color:#e6edf5; font-weight:600; display:block; font-size:9.5pt; }
+
+  /* ---------- headings ---------- */
+  h2.sec{
+    font:700 15pt/1.25 "Segoe UI",Arial,sans-serif; margin:9mm 0 4mm; padding-bottom:2.5mm;
+    border-bottom:2px solid var(--ink); letter-spacing:-.01em;
+  }
+  h2.sec .num{ color:var(--accent2); font-weight:700; margin-right:2.5mm; }
+  h3.sub{
+    font:700 11pt/1.35 "Segoe UI",Arial,sans-serif; margin:6mm 0 2mm; color:var(--accent);
+  }
+  h4.mini{
+    font:700 9.5pt/1.35 "Segoe UI",Arial,sans-serif; margin:4.5mm 0 1.5mm;
+    text-transform:uppercase; letter-spacing:.08em; color:var(--ink2);
+  }
+  p{ margin:0 0 2.8mm; text-align:justify; hyphens:auto; }
+  p.lead{ font-size:11pt; color:var(--ink2); }
+  a{ color:var(--accent); text-decoration:none; }
+  code, .mono{
+    font-family:"Cascadia Mono",Consolas,"Courier New",monospace; font-size:8.2pt;
+    background:var(--wash); padding:.4mm 1mm; border-radius:1mm; word-break:break-all;
+  }
+  .addr{ font-family:"Cascadia Mono",Consolas,monospace; font-size:7.4pt; word-break:break-all; }
+
+  /* ---------- tables ---------- */
+  table{ width:100%; border-collapse:collapse; margin:3mm 0 4mm; font-size:8.6pt; }
+  caption{ caption-side:top; text-align:left; font-size:7.6pt; color:var(--muted);
+           text-transform:uppercase; letter-spacing:.09em; padding-bottom:1.5mm; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:1.8mm 2.2mm; font-weight:600; font-size:8pt;
+      letter-spacing:.02em; }
+  td{ padding:1.6mm 2.2mm; border-bottom:.3mm solid var(--rule); vertical-align:top; }
+  tr:nth-child(even) td{ background:var(--wash2); }
+  td.num, th.num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .src{ color:var(--muted); font-size:7.6pt; }
+
+  /* ---------- callouts ---------- */
+  .box{ border-left:2.5mm solid var(--accent); background:var(--wash); padding:3.5mm 4mm; margin:4mm 0; }
+  .box h4{ margin:0 0 1.5mm; font:700 9pt/1.3 "Segoe UI",Arial,sans-serif; text-transform:uppercase;
+           letter-spacing:.08em; color:var(--accent); }
+  .box p:last-child{ margin-bottom:0; }
+  .box.warn{ border-left-color:var(--warn); background:var(--warnbg); }
+  .box.warn h4{ color:var(--warn); }
+  .box.crit{ border-left-color:var(--accent2); background:#fdf4f4; }
+  .box.crit h4{ color:var(--accent2); }
+
+  /* ---------- timeline ---------- */
+  .tl{ margin:3mm 0 4mm; border-left:.6mm solid var(--rule); padding-left:0; }
+  .tl .ev{ position:relative; padding:0 0 3.2mm 6mm; page-break-inside:avoid; }
+  .tl .ev::before{
+    content:""; position:absolute; left:-1.55mm; top:2.2mm; width:2.6mm; height:2.6mm;
+    border-radius:50%; background:#fff; border:.6mm solid var(--accent);
+  }
+  .tl .ev.key::before{ background:var(--accent2); border-color:var(--accent2); }
+  .tl .t{ font:700 8.4pt/1.3 "Cascadia Mono",Consolas,monospace; color:var(--accent2); }
+  .tl .t .et{ color:var(--muted); font-weight:400; }
+  .tl .d{ font-size:9.2pt; color:var(--ink); }
+
+  ul, ol{ margin:1mm 0 3mm; padding-left:5mm; }
+  li{ margin-bottom:1.4mm; text-align:justify; }
+  ul.tight li, ol.tight li{ margin-bottom:.8mm; }
+  ul.clean{ list-style:none; padding-left:0; }
+  ul.clean li{ padding-left:5.5mm; position:relative; }
+  ul.clean li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-size:8pt; }
+
+  .cols2{ column-count:2; column-gap:7mm; }
+  .cols2 > *{ break-inside:avoid; }
+
+  .footnote{ font-size:7.6pt; color:var(--muted); border-top:.3mm solid var(--rule); padding-top:2mm; margin-top:5mm; }
+
+  .kpi{ display:flex; gap:3mm; margin:3mm 0 4mm; }
+  .kpi > div{ flex:1; border:.3mm solid var(--rule); border-top:1.4mm solid var(--accent); padding:2.5mm 3mm; }
+  .kpi .n{ font:700 13pt/1.15 "Segoe UI",Arial,sans-serif; display:block; letter-spacing:-.01em; }
+  .kpi .l{ font-size:7.2pt; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; }
+
+  .toc{ font-size:9.6pt; }
+  .toc div{ display:flex; justify-content:space-between; padding:1.5mm 0; border-bottom:.2mm dotted var(--rule); }
+  .toc .n{ color:var(--accent2); font-weight:700; }
+</style>
+</head>
+<body>
+
+<!-- ============================ COVER ============================ -->
+<section class="cover">
+  <div class="kicker">Incident Report &middot; Provisional Findings</div>
+  <h1>Inside the Binance Hot-Wallet Breach</h1>
+  <h2>How a single leaked signature turned Binance's largest payment wallet into an attacker-controlled sweeper — and drained the wallets Binance publishes as proof that customer deposits are fully backed.</h2>
+
+  <div class="statrow">
+    <div class="stat"><span class="n">$5.5–5.9B</span><span class="l">Estimated outflow<br>(third-party tallies)</span></div>
+    <div class="stat"><span class="n">$2.54B</span><span class="l">Verified frozen<br>(Binance, self-reported)</span></div>
+    <div class="stat"><span class="n">11</span><span class="l">Wallets drained<br>across 4+ chains</span></div>
+  </div>
+
+  <div class="glance">
+    <div class="gl">
+      <span class="gk">Mechanism</span>
+      <span class="gv">Compromised private key to Binance&nbsp;14 &rarr; EIP-7702 delegation to an attacker-deployed sweeper contract</span>
+    </div>
+    <div class="gl">
+      <span class="gk">Chains touched</span>
+      <span class="gv">Ethereum, Arbitrum, Optimism, Avalanche, Bitcoin, Tron</span>
+    </div>
+    <div class="gl">
+      <span class="gk">Still unfrozen</span>
+      <span class="gv">~$2.9B equivalent &mdash; all native ETH/AVAX/OP/ARB and the 17,270&nbsp;BTC block</span>
+    </div>
+    <div class="gl">
+      <span class="gk">Customer impact</span>
+      <span class="gv">All deposits and withdrawals halted; Binance pledges to cover all losses; no post-mortem published</span>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><b>Incident window</b>29 Oct 2026, 20:20 UTC onward</div>
+    <div><b>Report compiled</b>29 Oct 2026, 18:45 PDT</div>
+    <div><b>Status</b>Ongoing — no post-mortem</div>
+  </div>
+</section>
+
+<!-- ============================ TOC + EXEC ============================ -->
+<div class="page">
+
+<h2 class="sec">Contents</h2>
+<div class="toc">
+  <div><span><span class="n">1</span> &nbsp;Executive summary</span><span></span></div>
+  <div><span><span class="n">2</span> &nbsp;What is confirmed, and what is only reported</span><span></span></div>
+  <div><span><span class="n">3</span> &nbsp;Timeline of the incident</span><span></span></div>
+  <div><span><span class="n">4</span> &nbsp;How the attack worked: EIP-7702 delegation</span><span></span></div>
+  <div><span><span class="n">5</span> &nbsp;The money: estimates, freezes, and what is still loose</span><span></span></div>
+  <div><span><span class="n">6</span> &nbsp;The reserve-backing problem</span><span></span></div>
+  <div><span><span class="n">7</span> &nbsp;Response: Binance, issuers, DeFi, law enforcement</span><span></span></div>
+  <div><span><span class="n">8</span> &nbsp;Market impact</span><span></span></div>
+  <div><span><span class="n">9</span> &nbsp;Best practices</span><span></span></div>
+  <div><span><span class="n">10</span> &nbsp;Resources to monitor</span><span></span></div>
+  <div><span><span class="n">11</span> &nbsp;What to watch next</span><span></span></div>
+  <div><span><span class="n">12</span> &nbsp;Methodology, sources, disclaimer</span><span></span></div>
+</div>
+
+<h2 class="sec" style="margin-top:10mm"><span class="num">1</span>Executive summary</h2>
+
+<p class="lead">On the afternoon of Thursday, 29 October 2026, cryptocurrency began leaving hot wallets
+controlled by Binance, the world's largest exchange by volume. Within roughly twelve minutes the
+attacker had swept eleven wallets across Ethereum, Optimism, Arbitrum, Avalanche, Bitcoin and
+Tron. By late evening, third-party analysts tracking the flows put the total at between
+<strong>$5.3 billion and $5.9 billion</strong> — which, if it holds, makes this the largest
+cryptocurrency theft ever recorded, at roughly four times the February 2025 Bybit hack
+(~$1.5 billion, attributed to North Korea's Lazarus group).</p>
+
+<p>Binance's public position moved in three stages over the course of the evening: first that it was
+"aware of reports of a potential security issue and actively investigating" with no confirmed
+impact to user funds; then, hours later, suspending <em>all</em> deposits and withdrawals while
+security checks ran; and finally, in a statement posted just after midnight UTC on 30 October,
+co-founder Yi He confirming that "user funds are safe", that <strong>Binance will cover all
+hacking losses</strong>, and that a full post-mortem would follow the investigation. Former CEO
+Changpeng Zhao, who remains a majority shareholder, was blunter: "It does look like a hack on
+Binance."</p>
+
+<div class="box crit">
+  <h4>The single most important technical finding</h4>
+  <p>The attacker did not exploit a bug in Ethereum, in a smart contract, or in Binance's code.
+  They obtained <strong>Binance 14's private key</strong> — the key to one of the exchange's largest
+  and busiest payment wallets — and used it to sign an ordinary-looking
+  <strong>EIP-7702 delegation</strong> that permanently re-pointed the wallet at attacker-deployed
+  bytecode. From that moment the wallet itself was the weapon: every subsequent deposit into it was
+  forwarded out automatically, and Binance's own routine signing activity kept flowing from the same
+  address while it did. One leaked signature, persistent code-level control.</p>
+</div>
+
+<p>Two things distinguish this from a normal exchange breach and make it worth studying closely.
+First, the <strong>drained wallets are the same wallets Binance publishes in its monthly proof-of-reserves
+disclosure</strong> as backing customer assets — CoinDesk's review of Binance's own reserve data
+placed the exchange's ether backing about 6% short until the stolen assets are replaced. Second,
+the attack pattern is <strong>generic</strong>: any EVM address whose key has ever leaked is now a
+candidate, EIP-7702 has been live only since the May 2025 Pectra upgrade, and the "nonce spray"
+technique used here defeats the usual defence of not knowing a victim's current transaction counter.</p>
+
+<div class="box warn">
+  <h4>Read this report with the caveat it deserves</h4>
+  <p>This is a first-24-hours document. Binance has not published a post-mortem, has not confirmed a
+  final loss figure, has not attributed the attack, and has not said when withdrawals resume. Every
+  number below is tagged with who produced it. Where sources disagree, the disagreement is shown
+  rather than averaged away.</p>
+</div>
+
+</div>
+
+<!-- ============================ 2 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">2</span>What is confirmed, and what is only reported</h2>
+
+<p>The information environment around this incident degraded quickly — it always does. Three
+distinct classes of claim are circulating and they should not be mixed.</p>
+
+<table class="nobreak">
+  <caption>Table 1 — Epistemic status of the major claims</caption>
+  <thead><tr><th style="width:23%">Claim</th><th style="width:47%">Detail</th><th style="width:30%">Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Funds left Binance-controlled wallets</td>
+      <td>On-chain transfers from addresses Binance publishes and labels (Binance 14, 16, 55, and others), corroborated by Etherscan, Arbiscan, Snowscan, Optimistic Etherscan and multiple independent analytics firms.</td>
+      <td><strong>Confirmed.</strong> On-chain, not disputable.</td>
+    </tr>
+    <tr>
+      <td>It was a hack, not a routine rebalancing</td>
+      <td>Binance co-founder Yi He: "User funds are safe. Binance will cover all hacking losses." CZ: "It does look like a hack on Binance."</td>
+      <td><strong>Confirmed by Binance officers</strong> after ~4 hours of "potential security issue" language.</td>
+    </tr>
+    <tr>
+      <td>Loss size</td>
+      <td>Binance has never stated a loss figure. Third parties range $5.3B–$5.9B. Binance separately reported <em>frozen</em> assets of $2.54B — a different number that is routinely confused with the loss.</td>
+      <td><strong>Unconfirmed.</strong> Range only. Treat any single figure as an estimate.</td>
+    </tr>
+    <tr>
+      <td>Root cause is a compromised Binance 14 key + EIP-7702 delegation</td>
+      <td>Blockaid's incident report traces the delegation transaction, the sweeper contract, the torch-funded operator address and the sweep itself. Consistent with CoinDesk and Decrypt descriptions.</td>
+      <td><strong>Strongly corroborated</strong> by multiple firms; Binance has not published its own analysis.</td>
+    </tr>
+    <tr>
+      <td>How the key was obtained</td>
+      <td>Candidates: direct private-key theft, social engineering of a signer, or compromise elsewhere in the signing infrastructure. None established.</td>
+      <td><strong>Unknown.</strong> Do not repeat any single theory as fact.</td>
+    </tr>
+    <tr>
+      <td>Attribution</td>
+      <td>No government or firm has attributed the attack as of compilation. The Bybit precedent (Lazarus) makes DPRK the default speculation on social media.</td>
+      <td><strong>Unattributed.</strong> Speculation only; treat as noise.</td>
+    </tr>
+    <tr>
+      <td>Customer funds are safe / will be covered</td>
+      <td>Binance and Yi He state losses will be covered in full. CZ (as shareholder) says he expects full coverage.</td>
+      <td><strong>Company commitment</strong>, not an audited fact. Coverage depends on balance sheet, which is not public.</td>
+    </tr>
+    <tr>
+      <td>Binance.US affected</td>
+      <td>Binance.US: "We are a separate, independent platform, and customer funds and services are secure and operating normally."</td>
+      <td><strong>Company statement.</strong> Separate corporate entity and separate custody.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="sub">Why the "number" keeps changing</h3>
+<p>Three different quantities are being reported under the same word, <em>lost</em>:</p>
+<ul class="tight">
+  <li><strong>Gross outflow</strong> — everything that moved from compromised wallets. The largest figures (~$5.8B, Arkham; $5.9B, Chainalysis) are gross, and may include transfers that were not attacker-initiated.</li>
+  <li><strong>Attacker-controlled net</strong> — gross minus what issuers froze. Roughly $2.8B+ frozen against ~$5.7B gross implies ~$2.9B still moving, an inference no one has confirmed independently.</li>
+  <li><strong>Binance's actual loss</strong> — what the exchange must replace from its own balance sheet. This is the number that matters for solvency and it is the one Binance has not given.</li>
+</ul>
+<p>Reporting that treats these as interchangeable — "Binance lost $5.7B" next to "Binance froze $2.54B" as if the second offset the first — is wrong. The freeze reduces attacker proceeds; it does not reduce what left Binance's custody.</p>
+
+</div>
+
+<!-- ============================ 3 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">3</span>Timeline of the incident</h2>
+
+<p>All times UTC on 29 October 2026 unless marked. ET = UTC−4. Transaction and address hashes are
+taken from Blockaid's incident report and Etherscan and are reproduced so they can be independently
+checked.</p>
+
+<div class="tl">
+
+  <div class="ev">
+    <div class="t">28 Oct — T−1 day</div>
+    <div class="d">Operator address <code class="addr">0x7C8601d4645b93cea45F71e118A729332e6B5CA0</code> is funded through three Tornado Cash withdrawals. The operation is financed, not improvised.</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">29 Oct, 15:59</div>
+    <div class="d">The attacker deploys the sweeper contract <code class="addr">0x63e842B054Bd624a465454D533C33F573e9c6fAe</code> — unverified source, names the operator as its only authorised caller, with a function that moves every listed token plus the account's ETH to a recipient.</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">during the day — rehearsal</div>
+    <div class="d">The full delegate-and-sweep sequence is rehearsed on three attacker-controlled test wallets, moving $2–$6 each time. All of it is visible on-chain in advance.</div>
+  </div>
+
+  <div class="ev key">
+    <div class="t">20:20:59 <span class="et">(16:20 ET)</span></div>
+    <div class="d"><strong>The nonce spray.</strong> A type-4 transaction is sent to Binance 14 (<code class="addr">0x28C6c06298d514Db089934071355E5743bf21d60</code>) carrying <strong>50 EIP-7702 authorisations signed with Binance 14's key</strong>, one for each nonce from 18,914,775 to 18,914,824. Because Binance 14 is actively paying out withdrawals, the attacker cannot know which nonce is current — so he signs a window. Forty-nine are invalid. One matches. The wallet is now delegated to the sweeper.</div>
+  </div>
+
+  <div class="ev key">
+    <div class="t">20:24:23 <span class="et">(16:24 ET)</span></div>
+    <div class="d"><strong>The sweep.</strong> Three minutes and twenty-four seconds later, the operator calls <code>sweep</code> on Binance 14: <strong>167,464 ETH</strong>, <strong>1.615 billion USDT</strong> and about 60 other tokens move to collection address <code class="addr">0x5227f603C1eE34CE3C06eFe6477003BDfCCB2f8c</code>, an address with no prior history. Binance 14 is left holding <strong>1 ETH</strong>. Basket value ≈ $2.5B.<br><span class="src">tx 0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3</span></div>
+  </div>
+
+  <div class="ev">
+    <div class="t">20:24:47 <span class="et">(+24 seconds)</span></div>
+    <div class="d">Binance 16 (<code class="addr">0xDFd5293D8e347dFe59E90eFd55b2956a1343963d</code>) sends <strong>28,005.6 ETH</strong>, 55.7M USDT, 25.9M RLUSD and 84.5 WBTC plus five other tokens to the same collection address. <em>This wallet carried no code</em> — it was an ordinary transfer signed by the wallet's own key.</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">by 20:36 <span class="et">(+12 minutes)</span></div>
+    <div class="d">Ten further hot wallets on four chains send to the same address: Binance 55 on Optimism (44.2M OP); four Arbitrum wallets (74.6M ARB and 8,426 ETH); four Avalanche wallets (1.81M AVAX and 8.41M USDT). Separately, <strong>18,270 BTC</strong> and roughly $630M on Tron move to new addresses.</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">~20:30 onward</div>
+    <div class="d">Blockchain researcher Spreek raises the alarm publicly. Blockaid's detection fires <strong>under two minutes after the sweep</strong> and before any public report; automated analysis identifies the key compromise and delegation mechanism within eleven minutes.</div>
+  </div>
+
+  <div class="ev key">
+    <div class="t">~21:04 <span class="et">(17:04 ET)</span></div>
+    <div class="d"><strong>The freezes begin.</strong> Tether freezes 975.1M USDT in the main receiving address; Circle freezes 823M USDC — about $1.8B in total at that point. Both issuers can blacklist at the contract level; neither can claw back ETH, BTC or AVAX.</div>
+  </div>
+
+  <div class="ev key">
+    <div class="t">22:22 <span class="et">(18:22 ET)</span></div>
+    <div class="d"><strong>Binance officially pauses withdrawals</strong> — then extends the pause to <em>all</em> deposits and withdrawals. Separately, Solana, XRP, and USDT/USDC on Solana, Optimism, Avalanche, NEAR and Polygon had already been marked paused for "wallet maintenance"; USDT on Polygon was marked "hot wallet being refilled". Bitcoin, Ether and USDT/USDC on Ethereum, Tron, BSC, Arbitrum and Base initially stayed open.</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">23:06 <span class="et">(19:06 ET)</span></div>
+    <div class="d">Binance suspends Binance Alpha trading.</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">23:22 <span class="et">(19:22 ET)</span></div>
+    <div class="d"><strong>Binance disputes the public arithmetic.</strong> "We are aware of differing figures circulating publicly regarding the amount frozen, including references to $1.8 billion. For clarity, the current verified total frozen is <strong>$2.54 billion</strong>" — of which more than $2.37 billion from Tether alone, with the remainder from Circle, Ripple (~$200M) and World Liberty Financial ($27M in USD1). Paxos separately froze 1,906.67 PAXG (&gt;$8M).</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">~00:04, 30 Oct <span class="et">(20:04 ET)</span></div>
+    <div class="d"><strong>Yi He confirms the hack.</strong> "User funds are safe. Binance will cover all hacking losses. Deposits and withdrawals are temporarily suspended while our team conducts security checks, freezes funds, and works with law enforcement. We will share a full post-mortem once the investigation is complete."</div>
+  </div>
+
+  <div class="ev">
+    <div class="t">post-freeze — still ongoing</div>
+    <div class="d">Roughly <strong>$850M in ETH</strong> is observed moving between freshly created wallets; 17,270 BTC reported untouched at that point. ZachXBT puts total frozen at <strong>&gt;$2.83 billion</strong>. The attacker had, before the freezes, deposited $60M USDT into Aave and borrowed ~19,762–19,800 ETH (≈$45M) against it; Aave subsequently froze all DAO-operated V3 and V4 markets as a precaution. The Arbitrum Security Council executed an on-chain transaction to freeze ~$30.5M.</div>
+  </div>
+
+</div>
+
+</div>
+
+<!-- ============================ 4 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">4</span>How the attack worked: EIP-7702 delegation</h2>
+
+<p>This is the part worth understanding properly, because it is the part that will be copied.</p>
+
+<h3 class="sub">4.1 The primitive</h3>
+<p>An exchange hot wallet on an EVM chain has historically been an <strong>externally owned account</strong>
+(EOA): a plain address with no code. The only thing that can move funds out of it is a valid
+signature from its private key. Everything else — policy engines, withdrawal limits, velocity
+checks — lives in the exchange's own software, off-chain, in front of the signing operation.</p>
+
+<p><strong>EIP-7702</strong> (shipped with Ethereum's Pectra upgrade in May 2025) removes that
+simplicity. It lets an EOA sign an <em>authorisation</em> naming a contract; once a type-4
+transaction carrying that authorisation lands in a block, <strong>any</strong> call to the account
+executes that contract's logic with full access to the account's balances. The delegation is bound
+to the account's nonce and <strong>persists</strong> until the account signs another authorisation
+that replaces or clears it.</p>
+
+<p>For a retail wallet this is genuinely useful: batching, gas sponsorship, session keys, social
+recovery. For a hot wallet holding billions, it means <strong>one leaked signature over the right
+nonce hands an attacker persistent, code-level control — including every deposit that arrives
+afterwards.</strong> Before this incident, the four known EIP-7702 abuses in H1 2026 totalled
+roughly $1.08M. Blockaid's own H1 report forecast that the first seven-figure case would arrive
+before year end. It arrived three orders of magnitude above forecast.</p>
+
+<h3 class="sub">4.2 The nonce-spray trick</h3>
+<p>The cleverness is in defeating the standard assumption that an attacker can't guess what a busy
+wallet will be doing. Binance 14 was processing withdrawals continuously, so its account nonce was
+advancing block by block. The attacker could not know the current value. So he did not guess — he
+signed <strong>fifty authorisations covering a contiguous nonce window</strong> and put all fifty in
+one type-4 transaction. Forty-nine failed. The one that matched made the delegation live, at a
+moment when Binance's own routine transactions were still flowing from the same address — which is
+exactly what made the subsequent drain look, to a casual monitor, like normal exchange activity.</p>
+
+<div class="box">
+  <h4>Why this matters beyond Binance</h4>
+  <p>Nonce unpredictability is not a security control. If an attacker holds the key, a nonce window
+  is cheap to cover. The only controls that hold are <strong>policy enforcement before a signature is
+  produced</strong> and <strong>continuous monitoring of the address for code changes</strong>.</p>
+</div>
+
+<h3 class="sub">4.3 Forced lateral movement</h3>
+<p>Once the delegation was live, the collection address became the obvious thing to watch — so the
+attacker did not need it. Within twelve minutes ten more wallets on four chains sent funds to the
+same address, each as an <strong>ordinary transfer signed by the wallet's own key</strong>, placed
+between routine withdrawals. Two readings fit the evidence: the same operator held those keys too, or
+Binance's own systems (or staff) were induced to move funds to an address the attacker controlled.
+Binance has not said which. Notably, the Ethereum delegation mechanism <em>cannot</em> explain the
+Bitcoin and Tron movements — those chains have no EIP-7702 equivalent — which is why investigators
+describe this as a broader signing-key problem rather than a single smart-contract exploit.</p>
+
+<h3 class="sub">4.4 Laundering path</h3>
+<p>On-chain, the proceeds were split, swapped through decentralised venues, and borrowed against:
+$60M USDT was supplied to Aave and roughly 19,762–19,800 ETH borrowed against it, converting
+freezable stablecoins into unfreezable ETH. Aave froze DAO-operated markets to stop further
+borrowing, and stressed that its contracts were unaffected and positions remained overcollateralised.
+The economic reality: <strong>stablecoin issuers can freeze their own tokens, and nothing else.</strong>
+ETH, BTC, AVAX, OP and ARB sit with the attacker and can only be recovered by the attacker choosing
+to move them somewhere identifiable, or by law enforcement identifying a person.</p>
+
+<h3 class="sub">4.5 Detection performance</h3>
+<p>Blockaid flagged the drain under two minutes after the sweep — before any public report — and
+confirmed the key-compromise and delegation mechanism within eleven minutes, then pushed the
+attacker's addresses to its customer network as malicious. That is roughly as good as this class of
+detection gets. It still arrived after 167,464 ETH had left. Detection is not prevention; the value
+of two minutes of warning is that downstream venues and issuers can start freezing before the
+laundering spread widens.</p>
+
+</div>
+
+<!-- ============================ 5 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">5</span>The money: estimates, freezes, and what is still loose</h2>
+
+<table class="nobreak">
+  <caption>Table 2 — Competing loss estimates (as published, 29–30 Oct 2026)</caption>
+  <thead><tr><th style="width:19%">Source</th><th class="num" style="width:13%">Figure</th><th style="width:68%">Basis</th></tr></thead>
+  <tbody>
+    <tr><td>Blockaid</td><td class="num">$5.5B</td><td>"At least" — Ethereum, Arbitrum, Avalanche, Optimism, Bitcoin and Tron; described the exploit as still ongoing at publication.</td></tr>
+    <tr><td>Kairos Research</td><td class="num">$5.7B</td><td>Hot-wallet accumulations, including 18,270 BTC and 613M USDT on Tron.</td></tr>
+    <tr><td>Decrypt on-chain tally</td><td class="num">$5.57B</td><td>Broken down as $3.51B Ethereum + $1.44B (18,270 BTC) + $630M Tron.</td></tr>
+    <tr><td>Arkham Intelligence</td><td class="num">$5.8B</td><td>Entity-level explorer tracking of Binance-linked illegitimate withdrawals by 20:00 UTC.</td></tr>
+    <tr><td>Chainalysis</td><td class="num">$5.9B</td><td>Largest published estimate; gross outflow basis.</td></tr>
+    <tr><td>Glassnode</td><td class="num">~$5.3B</td><td>Most conservative third-party figure.</td></tr>
+    <tr><td>Conor Grogan (Coinbase)</td><td class="num">up to $5.8B</td><td>Early independent read; cited widely.</td></tr>
+    <tr><td><strong>Binance (frozen figure)</strong></td><td class="num"><strong>$2.54B</strong></td><td><strong>Not a loss estimate.</strong> "Current verified total frozen", of which &gt;$2.37B from Tether; said to "continue to increase".</td></tr>
+    <tr><td>ZachXBT</td><td class="num">&gt;$2.83B</td><td>Frozen total, post-freeze, across issuers and chains.</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub">5.1 Frozen, by issuer</h3>
+<table class="nobreak">
+  <thead><tr><th style="width:30%">Issuer</th><th class="num" style="width:20%">Frozen</th><th style="width:50%">Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>Tether (USDT)</td><td class="num">&gt;$1.567B</td><td>Contract-level blacklist of the receiving addresses. Confirmed by CEO Paolo Ardoino.</td></tr>
+    <tr><td>Circle (USDC)</td><td class="num">&gt;$823M</td><td>Contract-level blacklist, "in coordination with law enforcement". CEO Jeremy Allaire.</td></tr>
+    <tr><td>Ripple (RLUSD)</td><td class="num">~$200M</td><td>Credited by Binance co-CEO Yi He.</td></tr>
+    <tr><td>World Liberty Financial (USD1)</td><td class="num">~$27M</td><td>Reported by co-founder Zach Witkoff.</td></tr>
+    <tr><td>Paxos (PAXG)</td><td class="num">&gt;$8M</td><td>1,906.67 PAXG disclosed by Paxos.</td></tr>
+    <tr><td>Arbitrum Security Council</td><td class="num">~$30.5M</td><td>On-chain governance-level freeze transaction.</td></tr>
+  </tbody>
+</table>
+
+<div class="box warn">
+  <h4>Frozen is not recovered</h4>
+  <p>A freeze blocks movement from an address. It does not return tokens to Binance. Recovery requires
+  either a court order compelling the issuer to burn and reissue to Binance (the established Tether
+  precedent after prior incidents) or a negotiated/legal resolution. Until that happens the assets are
+  in limbo — and Binance must still fund the shortfall from its own balance sheet in the meantime.</p>
+</div>
+
+<h3 class="sub">5.2 What remains loose</h3>
+<ul class="tight">
+  <li><strong>~$850M in ETH</strong> observed moving between newly created wallets after the freezes.</li>
+  <li><strong>17,270 BTC</strong> reported untouched at the time of the freeze tally — the single largest unfreezable block, and the one most likely to be bridged or swapped.</li>
+  <li><strong>All AVAX, OP and ARB</strong> taken: no issuer freeze mechanism exists for them.</li>
+  <li>Native ETH beyond the delegation's reach: once swept, unfreezable by anyone.</li>
+</ul>
+
+<h3 class="sub">5.3 Historical scale</h3>
+<table class="nobreak">
+  <thead><tr><th style="width:30%">Incident</th><th class="num" style="width:14%">Loss</th><th style="width:56%">Note</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Binance, 29 Oct 2026</strong></td><td class="num">$5.5–5.9B</td><td>Hot wallets, multiple chains, EIP-7702 delegation. Largest on record if confirmed.</td></tr>
+    <tr><td>Bybit, Feb 2025</td><td class="num">~$1.5B</td><td>Cold-wallet signing UI compromise; attributed to Lazarus Group (DPRK).</td></tr>
+    <tr><td>Coincheck, 2018</td><td class="num">~$534M</td><td>NEM from hot wallets.</td></tr>
+    <tr><td>Mt. Gox, 2014</td><td class="num">~850k BTC</td><td>Custody failure and insolvency, not a single-event hack.</td></tr>
+    <tr><td>Binance, 2019</td><td class="num">~$40M</td><td>7,000 BTC. The point of comparison Binance would prefer.</td></tr>
+  </tbody>
+</table>
+
+</div>
+
+<!-- ============================ 6 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">6</span>The reserve-backing problem</h2>
+
+<p>The most consequential disclosure of the evening was not the loss figure — it was which wallets
+were drained.</p>
+
+<p>Binance publishes a monthly list of wallets it controls and what they hold, and compares those
+totals against customer liabilities. CoinDesk's review of that data found that <strong>the addresses
+emptied on 29 October are the same addresses Binance lists as backing customer assets</strong>. On
+1 October, Binance's disclosed ether reserve ratio was exactly 100%, with USDC at 108.26%. The
+approximately <strong>204,500 ETH</strong> taken therefore leaves disclosed ETH backing roughly
+<strong>6% short</strong> until the exchange replaces what was stolen — a position that is only
+cured by Binance spending its own money in the market.</p>
+
+<div class="box crit">
+  <h4>Two implications that matter more than the headline number</h4>
+  <p><strong>1. Separation failed.</strong> Proof-of-reserves wallets are supposed to be the least
+  reachable assets on the exchange. Here they were the payment float. An exchange that uses
+  reserve-attested addresses as hot wallets is publishing a solvency claim about accounts it is
+  simultaneously spending from.</p>
+  <p><strong>2. The shortfall is a market event, not just an accounting one.</strong> If Binance must
+  buy ~204,500 ETH to restore its disclosed ratio, that is real spot demand against a market already
+  falling on the news. How and when it does so is a genuine open question — and a reason to watch
+  Binance's on-chain refill behavior rather than its statements.</p>
+</div>
+
+<p>This is also why "user funds are safe" and "Binance will cover all losses" deserve to be read
+precisely. Both statements can be true while the exchange's disclosed reserves are temporarily
+underwater. What makes customers whole is not the promise; it is Binance's ability to fund the
+replacement, which depends on balance-sheet capacity that is not publicly audited in real time. The
+honest posture for a depositor is to treat the pledge as credible-but-unverified and to plan around
+the withdrawal queue rather than the press release.</p>
+
+<h3 class="sub">6.1 The reflexivity problem with BNB</h3>
+<p>BNB is both a tradable asset and a claim on the exchange whose solvency is in question. BNB fell
+roughly 6–9% on the day — worse than BTC or ETH — which is the market pricing exactly that
+double exposure. Comparisons to FTX's FTT are intellectually sloppy (BNB is not a pure internal IOU,
+Binance is a profitable going concern, and there is no evidence of misappropriated customer funds)
+but the direction of the reflexivity is real and it is why BNB underperformed.</p>
+
+</div>
+
+<!-- ============================ 7 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">7</span>Response: Binance, issuers, DeFi, law enforcement</h2>
+
+<h3 class="sub">7.1 Binance — sequence and significance</h3>
+<p>The messaging arc is itself informative. From ~20:30 to ~23:00 UTC Binance maintained a narrow
+statement about "reports of a potential security issue" with no confirmed impact to user funds, even
+as CZ was publicly saying it looked like a hack. Only after the last hot wallet drained did the
+exchange suspend all deposits and withdrawals. Note that the full halt came <em>after</em> the funds
+were already gone: withdrawal pauses protect a remaining balance, they do not recover a swept one,
+and in this case the sweeper was configured to forward inbound transfers — so leaving deposits open
+was actively harmful while the delegation stood.</p>
+<ul class="tight">
+  <li><strong>23:22 UTC</strong> — disputed the $1.8B figure publicly, asserting $2.54B frozen. Unusual and, in this narrow sense, helpful: it put a falsifiable number on the record.</li>
+  <li><strong>00:04 UTC</strong> — Yi He: funds safe, all losses covered, full post-mortem to follow, "rely only on official Binance channels".</li>
+  <li><strong>Anti-phishing warning</strong> issued in the first statement — appropriate, and the single most useful thing Binance said all evening for ordinary users.</li>
+  <li><strong>Not yet said:</strong> the loss figure, the root cause, the key-generation and custody architecture involved, whether reserve wallets and hot wallets are still shared, and when withdrawals resume per network.</li>
+</ul>
+
+<h3 class="sub">7.2 Stablecoin issuers</h3>
+<p>Tether, Circle, Ripple, World Liberty Financial and Paxos all froze within hours, collectively
+&gt;$2.6B by some tallies and $2.54B by Binance's own count. This is the most effective cross-industry
+response in the history of exchange breaches — and it is also an uncomfortable demonstration of
+centralised power: five private companies decided, in a few hours and at scale, that specific
+addresses could no longer transact. Whatever one thinks of that power, the practical lesson is that
+<strong>stablecoin holdings are freezeable by design and native assets are not</strong>. An attacker
+who understands this converts to ETH immediately; the operator here was doing exactly that when Aave
+markets were frozen.</p>
+
+<h3 class="sub">7.3 DeFi</h3>
+<ul class="tight">
+  <li><strong>Aave</strong> froze all DAO-operated V3 and V4 markets as a precaution. Contracts unaffected, positions overcollateralised, withdrawals and repayments still permitted. This stopped the attacker from borrowing further against laundered collateral.</li>
+  <li><strong>Arbitrum Security Council</strong> executed an on-chain freeze of ~$30.5M — a governance body using emergency powers against an address, which will be cited in future debates about L2 admin keys.</li>
+  <li>DEX venues processed the attacker's swaps. There is no general mechanism to reverse a completed DEX trade.</li>
+</ul>
+
+<h3 class="sub">7.4 Law enforcement</h3>
+<p>Circle explicitly cited coordination with law enforcement; Binance cited working with law enforcement
+and freezes. No agency has issued a public statement, named a suspect, or attributed the attack. Expect
+FBI/DOJ engagement given the size and US nexus (USDT/USDC freezes), and expect OFAC sanctions on
+addresses only if attribution firms converge — historically a multi-week process, not a multi-hour one.</p>
+
+<h3 class="sub">7.5 Context: a bad day for exchange security</h3>
+<p>Polymarket suspended trading the same day after a third-party vendor breach led to user losses.
+Two unrelated incidents on one day is not proof of a coordinated campaign, but it is a reminder that
+the <em>supply chain</em> around exchanges — vendors, signing infrastructure, oracles, bridges — is
+where the leverage is. Neither incident involved breaking cryptography.</p>
+
+</div>
+
+<!-- ============================ 8 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">8</span>Market impact</h2>
+
+<p>The market reaction was severe but orderly — a de-risking move, not a liquidation cascade of the
+kind that followed FTX. Prices below are snapshots from 29–30 October 2026 and moved throughout
+the evening; they are illustrative of direction and magnitude, not closing marks.</p>
+
+<table class="nobreak">
+  <caption>Table 3 — Price reaction (approximate, intraday 29 Oct 2026)</caption>
+  <thead><tr><th style="width:26%">Asset</th><th class="num" style="width:18%">Level</th><th class="num" style="width:16%">Change</th><th style="width:40%">Read</th></tr></thead>
+  <tbody>
+    <tr><td>Bitcoin (BTC)</td><td class="num">~$77,000–79,000</td><td class="num">−2.7% to −3.6%</td><td>Broke below $79,000; the headline risk gauge.</td></tr>
+    <tr><td>Ether (ETH)</td><td class="num">~$2,206–2,268</td><td class="num">−3.6% to −6.2%</td><td>Directly implicated chain; largest stolen notional.</td></tr>
+    <tr><td>BNB</td><td class="num">~$690–708</td><td class="num">−6% to −9%</td><td>Worst large-cap. Exchange-equity reflexivity.</td></tr>
+    <tr><td>Solana (SOL)</td><td class="num">~$94</td><td class="num">−5.7% to −8%</td><td>Fell through $100; withdrawal pause amplified.</td></tr>
+    <tr><td>XRP</td><td class="num">~$1.21</td><td class="num">−5.8% to −8.1%</td><td>XRP Ledger withdrawals were paused.</td></tr>
+    <tr><td>Tron (TRX)</td><td class="num">~$0.35</td><td class="num">+7.3% to +8.7%</td><td>Odd strength; Tron was a laundering route, not a victim chain for freezes.</td></tr>
+    <tr><td>Monero (XMR)</td><td class="num">~$616–637</td><td class="num">+3% to +6%</td><td>Privacy-coin bid — the market's read on laundering demand. Echoes the +51% move after a 2025 theft.</td></tr>
+    <tr><td>Hyperliquid (HYPE)</td><td class="num">~$90</td><td class="num">+12% to +14%</td><td>Rotation into a venue perceived as uncorrelated with the compromised one.</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub">8.1 What the price action is telling you</h3>
+<ul class="tight">
+  <li><strong>This was priced as a counterparty event, not a technology event.</strong> BTC and ETH fell a few percent; BNB, SOL and XRP — the assets whose <em>off-ramps</em> were disrupted — fell twice as much. Markets repriced access, not blockchains.</li>
+  <li><strong>Privacy coins catching a bid is a laundering-demand indicator.</strong> It is not a signal about XMR's fundamentals.</li>
+  <li><strong>Venue rotation toward HYPE and TRX is a measure of distrust in Binance custody specifically</strong>, not in crypto generally.</li>
+  <li><strong>No systemic contagion yet.</strong> Stablecoin pegs held (USDT ~$0.9985). No major lender reported impairment. Aave froze instead of absorbing. That is the difference between this and 2022.</li>
+</ul>
+
+<div class="box">
+  <h4>The trading structure worth watching</h4>
+  <p>When withdrawals are halted at a major venue, that venue's prices decouple from the rest of the
+  market — crypto stuck inside trades at a discount (or premium) to crypto you can actually move. Watch
+  the <strong>Binance-vs-elsewhere basis on BTC and ETH</strong>: it is the market's live estimate of the
+  probability and duration of the withdrawal freeze. A widening discount says traders expect the freeze to
+  last; convergence says they expect resumption. It is a cleaner sentiment gauge than the spot price.</p>
+</div>
+
+</div>
+
+<!-- ============================ 9 BEST PRACTICES ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">9</span>Best practices</h2>
+
+<p class="lead">Ordered by how soon they matter. Section 9.1 is for anyone with a Binance account right
+now; the rest is durable practice.</p>
+
+<h3 class="sub">9.1 Immediately, if you have funds on Binance</h3>
+<ol class="tight">
+  <li><strong>Do not rush a withdrawal to an unverified destination.</strong> The most common way people
+  lose money during an exchange incident is a panicked transfer to a wrong network or a mistyped
+  address. Stuck-in-queue is recoverable; sent-to-the-wrong-chain usually is not.</li>
+  <li><strong>Confirm network support before you send.</strong> Binance's own status page was showing
+  Bitcoin and Ether withdrawal routes open while the exchange's broader statement said all deposits and
+  withdrawals were suspended. The statement is authoritative; per-network indicators lag. If a route is
+  marked "wallet maintenance" or "hot wallet being refilled", treat it as closed.</li>
+  <li><strong>Send a test amount first.</strong> One extra fee buys protection against a typo, a wrong
+  chain, or a destination that doesn't support the asset. This is not the moment to optimise fees.</li>
+  <li><strong>Assume you are now a phishing target — because you are.</strong> Breach events produce a
+  reliable wave of fake "Binance recovery", "security verification", "unlock your withdrawal" emails,
+  SMS, DMs and paid-ad search results. Binance will not DM you first, will not ask for your password,
+  2FA code or seed phrase, and will not ask you to "verify" to release funds. Navigate by typing the
+  domain or using the app — never through a link in a message.</li>
+  <li><strong>Beware fake support on social media.</strong> Replies offering to "escalate your case" from
+  accounts with Binance logos and slightly wrong handles are the highest-yield scam of the next 72 hours.</li>
+  <li><strong>Don't publish screenshots</strong> of balances, transaction IDs, or account pages. They
+  carry account identifiers and make you a better-targeted phishing mark.</li>
+  <li><strong>Check where your assets actually sit.</strong> Spot balance, Earn/staking, futures margin,
+  Binance Alpha and Simple Earn are different claims with different unwind mechanics under stress. Know
+  which you're in before you need to move.</li>
+  <li><strong>If withdrawals are closed, do not chase it with leverage.</strong> Opening a hedge you
+  can't close on the same venue deepens exposure to the thing you're worried about.</li>
+</ol>
+
+<h3 class="sub">9.2 Durable counterparty hygiene</h3>
+<ul class="tight">
+  <li><strong>Size your exchange balance to your trading need, not your net worth.</strong> An exchange
+  balance is an unsecured claim on a private company. Keep the working float there; keep savings in
+  self-custody.</li>
+  <li><strong>Diversify venues.</strong> Not because other exchanges are safer in the abstract, but because
+  a halt at one venue should not stop you from trading or exiting.</li>
+  <li><strong>Read proof-of-reserves disclosures for the right thing.</strong> After this incident, the
+  question is no longer "what is the ratio" but <strong>"are the attested addresses also the operating hot
+  wallets?"</strong> A 100% ratio is worthless if the reserve addresses sign daily payments.</li>
+  <li><strong>Treat stablecoins as freezeable.</strong> USDT and USDC can be blacklisted at the contract
+  level by their issuers. That protects you in a theft; it is also a reminder that they are permissioned
+  instruments, not bearer assets.</li>
+  <li><strong>Pre-stage your exit.</strong> Know, in advance, which network you'd withdraw on, to which
+  address, and have that address already whitelisted and tested. Deciding this during a halt is how
+  mistakes happen.</li>
+</ul>
+
+<h3 class="sub">9.3 Self-custody and DeFi users — the EIP-7702 checklist</h3>
+<p>EIP-7702 changed what an EOA <em>is</em>. A wallet you control can now be running someone else's code
+without your knowledge if you ever signed a malicious delegation, or if a dApp you interacted with
+tricked you into one. Practical hygiene:</p>
+<ul class="tight">
+  <li><strong>Check your addresses for delegation.</strong> Etherscan surfaces delegated accounts, and
+  revocation tools (Revoke.cash and equivalents) now include 7702 delegations alongside token approvals.
+  Any delegation you did not deliberately create is an emergency.</li>
+  <li><strong>Clear unknown delegations before anything else.</strong> Clear the delegation first, then
+  rotate keys, then move funds. Moving funds out of a still-delegated wallet can be intercepted by the
+  delegated code.</li>
+  <li><strong>Never sign an authorisation you can't read.</strong> A 7702 authorisation is a durable grant
+  of code execution over your account. It is categorically more dangerous than a token approval.</li>
+  <li><strong>Separate keys by purpose.</strong> A hot trading key, a DeFi key, and a savings key should be
+  different keys in different wallets. One compromise should cost you one bucket.</li>
+  <li><strong>Revoke approvals on a schedule.</strong> Quarterly, and immediately after any protocol you've
+  used is exploited.</li>
+  <li><strong>Use hardware signing for anything above your pain threshold</strong>, and verify the
+  destination address on the device screen, not on the computer's display.</li>
+</ul>
+
+<h3 class="sub">9.4 If you operate wallets that hold other people's money</h3>
+<p>This is the section that would have prevented the incident.</p>
+<ul class="tight">
+  <li><strong>Treat EIP-7702 authorisations as privileged operations</strong> — the same approval tier as a
+  cold-wallet transfer, not as a user convenience. Route them through policy review.</li>
+  <li><strong>Enforce policy <em>before</em> the signature exists.</strong> Pre-sign simulation of the
+  resulting state change, destination allowlists, and amount anomaly detection against a rolling 30-day
+  baseline. Post-hoc monitoring is an incident-response tool, not a control.</li>
+  <li><strong>Monitor every hot-wallet address for code changes</strong>, and keep a signed revocation
+  transaction prepared in advance so clearing a delegation is one broadcast away.</li>
+  <li><strong>Hold no inventory in an address whose delegation status is unknown.</strong></li>
+  <li><strong>Do not co-locate reserve or proof-of-reserves inventory with payment float.</strong> Use
+  separate addresses, separate keys, separate signing infrastructure. This single change would have capped
+  the loss at the working balance of one wallet.</li>
+  <li><strong>Cap the blast radius of any single key.</strong> If one key can move $2.5B, that key is the
+  control. Withdrawal hot wallets should hold hours of float, not months.</li>
+  <li><strong>Assume key compromise, not key secrecy.</strong> Design so a leaked key costs you a bounded
+  amount, detected in minutes, rather than an unbounded amount detected after the fact.</li>
+  <li><strong>Nonce windows defeat nonce unpredictability.</strong> Don't rely on an attacker being unable
+  to guess your transaction counter.</li>
+  <li><strong>Have a freeze playbook with issuers.</strong> The difference between a $5.7B theft and a
+  $2.9B theft tonight was phone numbers that existed before the incident. Pre-negotiate escalation paths
+  with Tether, Circle and the other issuers of every stablecoin you hold.</li>
+  <li><strong>Publish the post-mortem.</strong> The industry learns from these only if the details are
+  public; silence converts one incident into many.</li>
+</ul>
+
+</div>
+
+<!-- ============================ 10 RESOURCES ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">10</span>Resources to monitor</h2>
+
+<p class="lead">Ordered by signal quality for this specific incident. Primary sources first — social
+posts from named researchers and issuer CEOs moved faster and were more accurate than most news
+coverage in the first six hours.</p>
+
+<h3 class="sub">10.1 Official Binance channels (the only authoritative word on withdrawals)</h3>
+<ul class="clean tight">
+  <li><strong>Binance announcements</strong> — binance.com/en/support/announcement. The per-network deposit/withdrawal status list lives here; it is the thing to check before attempting a transfer.</li>
+  <li><strong>@binance</strong> on X — the verified account. Statement cadence has been roughly hourly during the incident.</li>
+  <li><strong>@heyibinance</strong> (Yi He, co-founder &amp; co-CEO) — posted the "cover all losses" commitment and is the source for the post-mortem promise.</li>
+  <li><strong>@cz_binance</strong> (Changpeng Zhao) — no longer management, but majority shareholder; his language has been ahead of the company's.</li>
+  <li><strong>Binance status / support pages</strong> — for network-level "wallet maintenance" notices.</li>
+  <li><strong>@BinanceUS</strong> — separate entity; relevant if you hold there.</li>
+</ul>
+
+<h3 class="sub">10.2 On-chain: verify, don't trust</h3>
+<table class="nobreak">
+  <caption>Table 4 — Addresses central to the incident</caption>
+  <thead><tr><th style="width:22%">Role</th><th style="width:78%">Address</th></tr></thead>
+  <tbody>
+    <tr><td>Binance 14 (delegated hot wallet)</td><td class="addr">0x28C6c06298d514Db089934071355E5743bf21d60</td></tr>
+    <tr><td>Binance 16 (second drained)</td><td class="addr">0xDFd5293D8e347dFe59E90eFd55b2956a1343963d</td></tr>
+    <tr><td>Collection address</td><td class="addr">0x5227f603C1eE34CE3C06eFe6477003BDfCCB2f8c</td></tr>
+    <tr><td>Attacker sweeper contract</td><td class="addr">0x63e842B054Bd624a465454D533C33F573e9c6fAe</td></tr>
+    <tr><td>Operator (Tornado-funded)</td><td class="addr">0x7C8601d4645b93cea45F71e118A729332e6B5CA0</td></tr>
+  </tbody>
+</table>
+<ul class="clean tight">
+  <li><strong>Etherscan</strong> — watch Binance 14 for a delegation-clearing transaction (a type-4 auth replacing the sweeper) and for refill activity. Both are leading indicators of recovery posture.</li>
+  <li><strong>Arkham Intelligence</strong> — entity-level explorer; it was the first to put a dollar figure on illegitimate withdrawals, and its Binance entity page aggregates all labelled wallets.</li>
+  <li><strong>ZachXBT</strong> (@zachxbt) — the most reliable independent freeze tally.</li>
+  <li><strong>Spreek</strong> (@spreekaway) — flagged the drain first.</li>
+  <li><strong>Conor Grogan</strong> (@jconorgrogan, Coinbase) — early independent sizing; consistently careful about gross vs net.</li>
+  <li><strong>Blockaid</strong> (blockaid.io/blog) — published the detailed technical incident report including the nonce-spray mechanics. Best single technical document available.</li>
+  <li><strong>Chainalysis, TRM Labs, Elliptic</strong> — attribution and sanctions exposure when it comes; their blogs are where attribution will actually appear.</li>
+</ul>
+
+<h3 class="sub">10.3 Issuer freeze trackers</h3>
+<ul class="clean tight">
+  <li><strong>@paoloardoino</strong> (Tether CEO) and <strong>@jerallaire</strong> (Circle CEO) — freeze confirmations come from these accounts first, before any press coverage.</li>
+  <li><strong>Tether transparency / frozen-address disclosures</strong> — for the cumulative USDT freeze total.</li>
+  <li><strong>@Paxos</strong>, <strong>@Ripple</strong> — smaller freezes but part of the running total.</li>
+</ul>
+
+<h3 class="sub">10.4 Newsrooms worth reading (and their RSS feeds)</h3>
+<table class="nobreak">
+  <thead><tr><th style="width:26%">Outlet</th><th style="width:44%">Why</th><th style="width:30%">Feed</th></tr></thead>
+  <tbody>
+    <tr><td>Protos</td><td>Ran a live blog from the first hour; timestamped, skeptical, no hype.</td><td class="addr">protos.com/feed/</td></tr>
+    <tr><td>The Block</td><td>Fastest to precise on-chain numbers with attribution.</td><td class="addr">theblock.co/rss.xml</td></tr>
+    <tr><td>CoinDesk</td><td>Broke the reserve-wallet analysis — the most consequential story of the night.</td><td class="addr">coindesk.com/arc/outboundfeeds/rss/</td></tr>
+    <tr><td>Cointelegraph</td><td>Live-updates page is updated continuously.</td><td class="addr">cointelegraph.com/rss</td></tr>
+    <tr><td>Decrypt</td><td>Clean on-chain tallies with per-chain breakdowns.</td><td class="addr">decrypt.co/feed</td></tr>
+    <tr><td>BleepingComputer</td><td>Security-reporting rigor; good on the mechanics.</td><td class="addr">bleepingcomputer.com/feed/</td></tr>
+    <tr><td>CryptoSlate</td><td>Aggregates issuer statements quickly.</td><td class="addr">cryptoslate.com/feed/</td></tr>
+    <tr><td>BBC / AP / Reuters / Guardian</td><td>Non-crypto-native verification; useful for what a mainstream reader will believe.</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub">10.5 Free monitoring tools</h3>
+<ul class="clean tight">
+  <li><strong>RSS reader</strong> (Feedly, Inoreader, NetNewsWire) — subscribe to the six feeds above; that is the cheapest complete coverage available.</li>
+  <li><strong>Google Alerts</strong> — set for "Binance hack", "Binance post-mortem", "Binance withdrawals resume". Free, email-based, no account risk.</li>
+  <li><strong>Etherscan address watch</strong> — email/Twitter alerts on any movement from the five addresses in Table 4.</li>
+  <li><strong>DeFiLlama hacks dashboard</strong> and <strong>rekt.news leaderboard</strong> — running totals that get corrected as figures settle; better than any single news article a week from now.</li>
+  <li><strong>Revoke.cash</strong> — check and clear token approvals and 7702 delegations on your own addresses.</li>
+  <li><strong>Chainabuse</strong> — community reporting of scam addresses; useful for screening "recovery service" offers.</li>
+  <li><strong>This project's tracker</strong> — nwfella.github.io/binance-hack-dossier — rebuilds hourly from the feeds above, free, no account.</li>
+</ul>
+
+<div class="box">
+  <h4>A note on "recovery services"</h4>
+  <p>After every large theft, a market appears for people who claim they can recover stolen funds for a
+  fee. For an individual user, there is nothing to recover from this incident unless Binance fails to
+  honour its coverage pledge — in which case the route is Binance support, then a regulator or court,
+  not a paid stranger on Telegram. Legitimate forensic firms (Chainalysis, TRM, Elliptic) work for
+  exchanges, issuers and law enforcement, not for retail claimants.</p>
+</div>
+
+</div>
+
+<!-- ============================ 11 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">11</span>What to watch next</h2>
+
+<p>A short list of observable events that would change the assessment, in rough order of expected
+arrival. Each is checkable rather than rhetorical.</p>
+
+<table>
+  <caption>Table 5 — Leading indicators and what each would tell you</caption>
+  <thead><tr><th style="width:30%">Event to watch</th><th style="width:34%">Where</th><th style="width:36%">What it would mean</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Withdrawals resume, per network</td>
+      <td>Binance announcements + status page</td>
+      <td>The most direct solvency signal available to a retail user. Staged resumption (small coins first) suggests liquidity strain; full resumption suggests ample reserves.</td>
+    </tr>
+    <tr>
+      <td>Binance's post-mortem</td>
+      <td>Binance blog / @binance</td>
+      <td>Will or won't disclose: root cause, key custody architecture, loss figure, whether reserve and hot wallets remain shared. Silence here is itself information.</td>
+    </tr>
+    <tr>
+      <td>Delegation cleared on Binance 14</td>
+      <td>Etherscan, address in Table 4</td>
+      <td>The wallet is still delegated until Binance signs a replacing authorisation. Until it does, refilling that address would be donating to the attacker.</td>
+    </tr>
+    <tr>
+      <td>On-chain ETH refill of reserve addresses</td>
+      <td>Arkham / Etherscan</td>
+      <td>Showing the ~204,500 ETH shortfall being cured. Size and venue of the purchases are a real spot-market factor.</td>
+    </tr>
+    <tr>
+      <td>BTC movement from the 17,270 BTC block</td>
+      <td>Bitcoin explorers, Chainalysis/TRM</td>
+      <td>Largest unfreezable holding. Movement implies intent to bridge, swap, or mix — and gives investigators their best trail.</td>
+    </tr>
+    <tr>
+      <td>Tether/Circle burn-and-reissue to Binance</td>
+      <td>Issuer disclosures, on-chain</td>
+      <td>Converts "frozen" into "recovered". The precedent exists; it usually requires legal process and takes weeks.</td>
+    </tr>
+    <tr>
+      <td>Attribution statement (FBI/DOJ/Treasury)</td>
+      <td>Agency press releases, OFAC SDN list</td>
+      <td>Would convert speculation into a named actor and bring sanctions on addresses. Until then, DPRK claims are inference from the Bybit precedent, nothing more.</td>
+    </tr>
+    <tr>
+      <td>Customer class actions / regulator action</td>
+      <td>Court filings, SEC/CFTC/FCA</td>
+      <td>Whether the "cover all losses" pledge is treated as a binding commitment and whether reserve-wallet practice draws enforcement.</td>
+    </tr>
+    <tr>
+      <td>Follow-on EIP-7702 abuses</td>
+      <td>Blockaid, BlockSec, Phylax, rekt.news</td>
+      <td>The technique is now public and proven at scale. Expect copycats against smaller venues with weaker pre-sign policy.</td>
+    </tr>
+    <tr>
+      <td>Other exchanges' hot-wallet hygiene changes</td>
+      <td>Exchange engineering blogs</td>
+      <td>Whether the industry actually learns: delegation monitoring, reserve/float separation, revocation readiness.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box crit">
+  <h4>The question that will decide this incident's real severity</h4>
+  <p>Not "how much was stolen" — that number is already known within a few percent. It is
+  <strong>"can Binance fund the replacement without impairing customer withdrawals, and does it resume
+  them fully and on a disclosed timetable?"</strong> A full, prompt, staged resumption makes this an
+  expensive but survivable security failure. A prolonged or partial one makes it a solvency event, and
+  everything else in this report becomes secondary.</p>
+</div>
+
+<h3 class="sub">11.1 Provisional assessment</h3>
+<p>On the evidence available: the technical story is clear and unusually well documented on-chain; the
+financial story is not yet clear; attribution is absent; and the industry response — issuer freezes,
+Aave markets frozen, Arbitrum council action, detection in under two minutes — was materially better
+than in any prior comparable incident. The failure was not detection or response. It was
+<strong>architecture</strong>: one key, in one hot wallet, that also happened to be attested reserve
+inventory, with no pre-signature policy standing between it and $2.5 billion.</p>
+
+</div>
+
+<!-- ============================ 12 ============================ -->
+<div class="page sheet">
+
+<h2 class="sec"><span class="num">12</span>Methodology, sources, disclaimer</h2>
+
+<h3 class="sub">12.1 Method</h3>
+<p>This report was compiled from primary reporting and on-chain analysis published between
+29 October 2026, 20:00 UTC and 30 October 2026, 01:45 UTC, cross-checked across outlets. Where
+independent parties published conflicting figures, both are shown with attribution rather than
+reconciled into a single number (Table 2). Claims sourced only to social media are labelled as such.
+Transaction hashes and addresses were taken from Blockaid's incident report and cross-referenced
+against Etherscan where possible; they are reproduced so a reader can verify rather than trust.</p>
+
+<p>Two structural biases are worth stating. First, <strong>early figures skew high</strong>: gross outflow
+tallies from on-chain analytics firms capture everything that moved, including transfers later found
+not to be attacker-initiated, and they are revised down. Second, <strong>company statements skew
+reassuring</strong>: "no confirmed impact to user funds" was Binance's position for hours while funds
+were demonstrably leaving its wallets. Neither bias is unique to this incident; both are visible in
+every comparable one.</p>
+
+<h3 class="sub">12.2 Primary sources</h3>
+<ul class="tight">
+  <li><strong>Blockaid</strong> — "Binance $5.5B Hack" incident report (blockaid.io/blog). The most detailed technical account: operator funding, sweeper contract, 50-authorisation nonce spray, per-chain movements.</li>
+  <li><strong>CoinDesk</strong> — "Binance hack drained wallets backing customer assets, reserve data shows" (O. Knight, 29 Oct, 20:17 ET) and "Binance loses $5.7 billion in largest crypto hack to date" (29 Oct). The reserve analysis is the report's most significant disclosure.</li>
+  <li><strong>Decrypt</strong> — "Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion" (29 Oct); per-chain tally and first-transaction detail.</li>
+  <li><strong>Protos</strong> — live blog, "Binance suspends withdrawals amid massive crypto hack" (29 Oct); announcement timestamps and Binance's own $2.54B figure.</li>
+  <li><strong>The Block</strong> — "Binance investigating hack as suspicious outflows reach up to $5.8 billion" (29 Oct); Aave and Binance.US statements.</li>
+  <li><strong>Bitcoin.com News</strong> — "Inside the $5.8B Binance Hack: What's Confirmed and What Isn't"; structured confirmed/unconfirmed separation and Blockaid CEO comment.</li>
+  <li><strong>CryptoSlate</strong> — "Trump's crypto firm joins Tether, Circle, and Ripple in $2.6 billion stablecoin freeze"; per-issuer freeze detail, Aave market freeze.</li>
+  <li><strong>TechCrunch</strong> (Z. Whittaker), <strong>AP</strong> (K. Huamani), <strong>BBC</strong>, <strong>Guardian</strong>, <strong>Axios</strong>, <strong>Al Jazeera</strong>, <strong>BleepingComputer</strong> (L. Abrams) — mainstream confirmation of the core facts and the frozen-assets figures.</li>
+  <li><strong>Cointelegraph</strong> — live updates page; Chainalysis $5.9B estimate.</li>
+  <li><strong>Crypto Ticker</strong> — network-by-network withdrawal status table captured 22:32 UTC.</li>
+  <li><strong>On-chain</strong> — Etherscan, Arbiscan, Snowscan, Optimistic Etherscan, Arkham Intelligence.</li>
+  <li><strong>Social / named researchers</strong> — Spreek (@spreekaway, first public flag), ZachXBT (@zachxbt, freeze tally &gt;$2.83B), Conor Grogan (@jconorgrogan), Wazz (@WazzCrypto), Yi He (@heyibinance), CZ (@cz_binance), Paolo Ardoino (@paoloardoino), Jeremy Allaire (@jerallaire), Aave (@aave), Binance (@binance), Binance.US (@BinanceUS).</li>
+</ul>
+
+<h3 class="sub">12.3 Disclaimer</h3>
+<p>This document is a research summary compiled from public sources within hours of the events
+described. It is <strong>not</strong> financial, legal or investment advice, and it is not an
+independent forensic audit. Figures are provisional and will be revised — likely downward for gross
+outflow and upward for frozen/recovered totals. Binance has not published a post-mortem; nothing here
+should be read as a finding of fact about Binance's solvency, its internal controls, or the identity of
+the attacker. Addresses and transaction hashes are reproduced for verification and carry no
+endorsement. Verify anything you intend to act on against a primary source listed in section 12.2.</p>
+
+<div class="footnote">
+  <strong>Companion resource.</strong> A live tracker at
+  <strong>nwfella.github.io/binance-hack-dossier</strong> rebuilds hourly from public RSS feeds and
+  on-chain references listed in section 10. It makes no AI/LLM calls and requires no account; the
+  published page is a static build regenerated on a schedule, so it is free to operate and view.
+  <br><br>
+  Compiled 29 October 2026, 18:45 PDT (30 October 2026, 01:45 UTC). Revision 1.0.
+</div>
+
+</div>
+
+</body>
+</html>

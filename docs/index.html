@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binance Hack Tracker — Live Updates, Best Practices, Resources</title>
+<meta name="description" content="Hourly-updated tracker for the 29 October 2026 Binance hot-wallet breach: confirmed figures, on-chain addresses, best practices and monitoring resources.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Binance Hot-Wallet Breach — Live Tracker">
+<meta property="og:description" content="Rebuilt hourly from public feeds. Confirmed vs reported figures, on-chain addresses, best practices and resources.">
+<style>
+  :root{
+    --bg:#0b0e13; --panel:#12171f; --panel2:#171e28; --line:#232c39;
+    --ink:#e8eef6; --ink2:#a9b6c6; --muted:#71808f;
+    --red:#e2564f; --red-bg:rgba(226,86,79,.10);
+    --amber:#d99b3a; --amber-bg:rgba(217,155,58,.10);
+    --green:#4fbf8b; --blue:#5a9fd4;
+    --mono:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+
+  /* ---------- header ---------- */
+  header{border-bottom:1px solid var(--line); background:linear-gradient(180deg,#10151d,#0b0e13);}
+  .flag{display:flex; align-items:center; gap:10px; padding:14px 0 0; font:600 11px/1 var(--mono);
+        letter-spacing:.18em; text-transform:uppercase; color:var(--red)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(226,86,79,.6);
+       animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(226,86,79,.55)}70%{box-shadow:0 0 0 9px rgba(226,86,79,0)}100%{box-shadow:0 0 0 0 rgba(226,86,79,0)}}
+  h1{margin:10px 0 6px; font-size:clamp(26px,4.6vw,40px); line-height:1.12; letter-spacing:-.02em; font-weight:750}
+  h1 span{color:var(--muted); font-weight:400}
+  .sub{color:var(--ink2); max-width:74ch; margin:0 0 16px; font-size:15px}
+  .metabar{display:flex; flex-wrap:wrap; gap:8px 18px; padding:12px 0 16px; border-top:1px solid var(--line);
+           margin-top:6px; font:12px/1.5 var(--mono); color:var(--muted)}
+  .metabar b{color:var(--ink2); font-weight:600}
+  .metabar .ok{color:var(--green)}
+
+  .banner{background:var(--amber-bg); border:1px solid rgba(217,155,58,.35); color:#f0cf95;
+          padding:10px 14px; border-radius:8px; margin:14px 0 0; font-size:13.5px}
+
+  /* ---------- alert ---------- */
+  .alert{background:var(--red-bg); border:1px solid rgba(226,86,79,.32); border-left:3px solid var(--red);
+         border-radius:8px; padding:16px 18px; margin:22px 0 0}
+  .alert h2{margin:0 0 6px; font-size:15px; letter-spacing:.01em; color:#ffb3ad}
+  .alert p{margin:0; color:var(--ink2); font-size:14px}
+
+  /* ---------- stats ---------- */
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:22px 0 0}
+  .stat{background:var(--panel); border:1px solid var(--line); border-top:2px solid var(--red);
+        border-radius:8px; padding:13px 15px}
+  .stat .n{font:700 23px/1.15 -apple-system,"Segoe UI",sans-serif; letter-spacing:-.02em; display:block}
+  .stat .l{font:11px/1.4 var(--mono); text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-top:4px; display:block}
+  .stat .q{font-size:11.5px; color:var(--muted); margin-top:6px}
+  .stat.amber{border-top-color:var(--amber)} .stat.amber .n{color:#f0c37a}
+  .stat.blue{border-top-color:var(--blue)} .stat.blue .n{color:#9cc7e6}
+
+  /* ---------- sections ---------- */
+  section{margin:42px 0 0}
+  h2.sec{font-size:19px; letter-spacing:-.01em; margin:0 0 4px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+  h2.sec .k{font:600 11px/1 var(--mono); color:var(--red); letter-spacing:.14em; text-transform:uppercase}
+  .lede{color:var(--ink2); font-size:14px; margin:0 0 16px; max-width:80ch}
+
+  /* ---------- feed ---------- */
+  .feedbar{display:flex; flex-wrap:wrap; gap:7px; margin:0 0 14px; align-items:center}
+  .fbtn{font:12px/1 var(--mono); background:var(--panel2); color:var(--ink2); border:1px solid var(--line);
+        padding:7px 11px; border-radius:99px; cursor:pointer; transition:.12s}
+  .fbtn:hover{border-color:#3a4657; color:var(--ink)}
+  .fbtn.on{background:var(--red); border-color:var(--red); color:#fff}
+  .chip{font:11px/1 var(--mono); color:var(--muted); background:var(--panel2); border:1px solid var(--line);
+        padding:5px 9px; border-radius:5px; display:inline-block; margin:0 4px 4px 0}
+  .chip b{color:var(--ink2)}
+
+  .upd{background:var(--panel); border:1px solid var(--line); border-left:2px solid #2c3949;
+       border-radius:7px; padding:12px 15px; margin:0 0 9px; transition:.12s}
+  .upd:hover{border-left-color:var(--red); background:var(--panel2)}
+  .uh{display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:5px}
+  .uh .src{font:600 10px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--bg);
+           background:var(--muted); padding:4px 7px; border-radius:4px}
+  .uh .src.s-protos{background:#c9803a} .uh .src.s-coindesk{background:#4a8fc7}
+  .uh .src.s-theblock{background:#8f7ad0} .uh .src.s-cointelegraph{background:#c7a94a}
+  .uh .src.s-decrypt{background:#4fb391} .uh .src.s-cryptoslate{background:#c76a8f}
+  .uh .src.s-bleepingcomputer{background:#9aa5b1} .uh .src.s-bitcoincom{background:#d08a4a}
+  .uh .src.s-rekt{background:#c75a5a} .uh .src.s-blockhead{background:#6a9ac7}
+  .uh time{font:12px/1 var(--mono); color:var(--muted)}
+  .uh .rel{font:11px/1 var(--mono); color:#4d5a68; margin-left:auto}
+  .ut{display:block; font-weight:620; font-size:15px; line-height:1.4; color:var(--ink); margin-bottom:3px}
+  .ut:hover{color:#fff; text-decoration:none}
+  .ud{margin:0; color:var(--ink2); font-size:13px; line-height:1.55}
+  .empty{color:var(--muted); font-size:14px; font-style:italic}
+  .more{margin:14px 0 0; font:12px/1 var(--mono); color:var(--muted)}
+
+  /* ---------- timeline ---------- */
+  .tl{border-left:1px solid var(--line); margin:0; padding:0}
+  .ev{position:relative; padding:0 0 16px 22px}
+  .ev::before{content:""; position:absolute; left:-4.5px; top:6px; width:8px; height:8px; border-radius:50%;
+              background:var(--bg); border:2px solid var(--blue)}
+  .ev.key::before{background:var(--red); border-color:var(--red)}
+  .ev .t{font:600 12px/1.3 var(--mono); color:var(--red); letter-spacing:.02em}
+  .ev .t em{color:var(--muted); font-style:normal; font-weight:400}
+  .ev p{margin:3px 0 0; font-size:14px; color:var(--ink2)}
+  .ev p b{color:var(--ink)}
+
+  /* ---------- tables ---------- */
+  table{width:100%; border-collapse:collapse; font-size:13.5px; margin:0 0 6px}
+  th{text-align:left; font:600 11px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase;
+     color:var(--muted); border-bottom:1px solid var(--line); padding:9px 10px}
+  td{padding:9px 10px; border-bottom:1px solid #1b232e; color:var(--ink2); vertical-align:top}
+  td.num{text-align:right; font-family:var(--mono); color:var(--ink); white-space:nowrap}
+  td b{color:var(--ink)}
+  .addr{font-family:var(--mono); font-size:11.5px; color:#9cc7e6; word-break:break-all}
+
+  /* ---------- cards ---------- */
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(268px,1fr)); gap:12px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:15px 17px}
+  .card h3{margin:0 0 8px; font-size:14px; letter-spacing:.01em; color:var(--ink)}
+  .card h3 .tag{font:600 10px/1 var(--mono); color:var(--red); letter-spacing:.1em; text-transform:uppercase;
+                display:block; margin-bottom:6px}
+  .card ul{margin:0; padding-left:17px; color:var(--ink2); font-size:13.5px}
+  .card li{margin-bottom:6px}
+  .card a{color:var(--blue)}
+  .card p{margin:0 0 8px; color:var(--ink2); font-size:13.5px}
+
+  /* ---------- resources ---------- */
+  .res{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px}
+  .res h3{font:600 12px/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--red);
+          margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--line)}
+  .res ul{list-style:none; margin:0; padding:0; font-size:13.5px}
+  .res li{padding:7px 0; border-bottom:1px solid #171f29; color:var(--ink2)}
+  .res li:last-child{border-bottom:0}
+  .res li b{color:var(--ink); font-weight:600; display:block; font-size:13.5px}
+  .res li span{color:var(--muted); font-size:12.5px}
+
+  /* ---------- footer ---------- */
+  footer{margin:52px 0 0; border-top:1px solid var(--line); padding:24px 0 46px; color:var(--muted); font-size:12.5px}
+  footer p{margin:0 0 9px; max-width:88ch}
+  footer b{color:var(--ink2)}
+  .cta{display:inline-block; background:var(--red); color:#fff; font-weight:650; font-size:13.5px;
+       padding:11px 17px; border-radius:7px; margin:4px 0 18px}
+  .cta:hover{text-decoration:none; background:#ef6159}
+  .cta.ghost{background:transparent; border:1px solid var(--line); color:var(--ink2); margin-left:8px}
+  @media (max-width:640px){
+    .uh .rel{margin-left:0}
+    section{margin-top:34px}
+    .metabar{font-size:11.5px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="flag"><span class="dot"></span> Live monitor · ongoing incident</div>
+    <h1>The Binance Hot-Wallet Breach <span>/ 29 Oct 2026</span></h1>
+    <p class="sub">An independent, hourly-updated record of the largest cryptocurrency theft on record —
+      what is confirmed, what is only reported, which addresses matter, and how to protect yourself.</p>
+    <div class="metabar">
+      <span><b>Rebuilt</b> 30 Oct 2026, 01:54 UTC</span>
+      <span class="ok">● auto-refreshed hourly</span>
+      <span><b>15</b> tracked items</span>
+      <span><b>Refresh #1</b></span>
+      <span><b>Newest headline</b> 61 min ago</span>
+    </div>
+    
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="alert">
+    <h2>All Binance deposits and withdrawals are suspended</h2>
+    <p>Binance co-founder Yi He: “User funds are safe. Binance will cover all hacking losses.” A full
+    post-mortem is promised. Binance has <strong>not</strong> published a loss figure, an attribution, or
+    a timetable for resuming withdrawals. Check Binance's own announcements before attempting any transfer.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="n">$5.5–5.9B</span><span class="l">Est. outflow</span>
+      <span class="q">Third-party tallies. Not Binance's figure.</span></div>
+    <div class="stat blue"><span class="n">$2.54B</span><span class="l">Verified frozen</span>
+      <span class="q">Binance, self-reported. Not a loss figure.</span></div>
+    <div class="stat amber"><span class="n">~$2.9B</span><span class="l">Likely still loose</span>
+      <span class="q">Inferred: outflow minus freezes.</span></div>
+    <div class="stat"><span class="n">11</span><span class="l">Wallets drained</span>
+      <span class="q">Across 4+ chains in ~12 minutes.</span></div>
+    <div class="stat"><span class="n">6</span><span class="l">Chains touched</span>
+      <span class="q">ETH, Arbitrum, Optimism, Avalanche, BTC, Tron.</span></div>
+    <div class="stat amber"><span class="n">None</span><span class="l">Attribution</span>
+      <span class="q">No agency or firm has named an actor.</span></div>
+  </div>
+
+  <section>
+    <h2 class="sec"><span class="k">01</span> What to do right now</h2>
+    <p class="lede">Five things, in order of urgency. The full analysis and the technical forensics are in the PDF.</p>
+    <a class="cta" href="Binance-Hack-Report-2026-10-29.pdf">Read the full report (PDF)</a>
+    <a class="cta ghost" href="report.html">HTML version</a>
+
+    <div class="grid" style="margin-top:20px">
+      <div class="card">
+        <h3><span class="tag">Do not</span>Panic-withdraw to an unverified destination</h3>
+        <ul>
+          <li>Stuck in a queue is recoverable. Sent to the wrong chain usually is not.</li>
+          <li>Send a small test amount first — one extra fee for real protection.</li>
+          <li>Confirm the specific <em>network</em> is open on Binance's status page; the headline statement is authoritative, per-network indicators lag.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span class="tag">Assume</span>You are now a phishing target</h3>
+        <ul>
+          <li>Expect fake “Binance recovery”, “verify to unlock withdrawal” emails, SMS, DMs and paid search ads.</li>
+          <li>Binance will never DM first or ask for a password, 2FA code or seed phrase.</li>
+          <li>Navigate by typing the domain or using the app. Never via a link in a message.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span class="tag">Check</span>Where your assets actually sit</h3>
+        <ul>
+          <li>Spot, Earn/staking, futures margin and Binance Alpha are different claims with different unwind mechanics.</li>
+          <li>Know which bucket you're in <em>before</em> you need to move.</li>
+          <li>Don't add leverage on the venue you're worried about.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span class="tag">Audit</span>EIP-7702 delegations on your own wallets</h3>
+        <ul>
+          <li>An EOA can now be running someone else's code. Check every address you control for unexpected delegations.</li>
+          <li>Clear the delegation <em>first</em>, then rotate keys, then move funds.</li>
+          <li>Tools: Etherscan “delegated” indicators, Revoke.cash.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">02</span> Incident brief</h2>
+    <p class="lede">The short version. Section 6 has the forensics.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>One leaked key, one persistent delegation</h3>
+        <p>The attacker obtained the private key to <strong>Binance 14</strong>, one of the exchange's busiest
+        payment wallets, and signed an <strong>EIP-7702 authorisation</strong> pointing it at attacker-deployed
+        bytecode. The delegation persists until the wallet signs a replacement — so the wallet became a sweeper
+        that forwarded every inbound deposit to the attacker, while Binance's own withdrawals kept flowing from it.</p>
+      </div>
+      <div class="card">
+        <h3>A 50-authorisation nonce spray</h3>
+        <p>Because Binance 14's nonce was advancing with daily payouts, the attacker could not guess it — so he
+        signed <strong>50 authorisations across a contiguous nonce window</strong> in one type-4 transaction.
+        Forty-nine failed. One matched. Nonce unpredictability is not a security control.</p>
+      </div>
+      <div class="card">
+        <h3>Then ten more wallets in twelve minutes</h3>
+        <p>Within 12 minutes, ten more hot wallets on four chains sent to the same collection address — each as an
+        <strong>ordinary transfer signed by the wallet's own key</strong>. The Ethereum delegation cannot explain
+        the Bitcoin or Tron movements, which is why investigators describe a broader signing-key problem.</p>
+      </div>
+      <div class="card">
+        <h3>The wallets were the proof-of-reserves wallets</h3>
+        <p>CoinDesk found the drained addresses are the same ones Binance publishes as backing customer assets.
+        Its disclosed ether backing is an estimated <strong>6% short</strong> until the stolen ETH is replaced —
+        roughly 204,500 ETH that has to be bought back into the reserve.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">03</span> Live updates <span style="font:400 12px var(--mono); color:var(--muted)">— rebuilt hourly from 15 tracked items</span></h2>
+    <p class="lede">Public RSS feeds from crypto newsrooms, filtered for this incident and deduplicated.
+      Newest first. No AI summarisation and no editorialising — headline, source, timestamp, link.</p>
+    <div class="feedbar" id="filters">
+      <button class="fbtn on" data-src="all">All</button>
+    </div>
+    <div id="feed">
+<article class="upd"><div class="uh"><span class="src s-protos">Protos</span><time datetime="2026-10-30T00:52:31+00:00">30 Oct 00:52 UTC</time><span class="rel">61 min ago</span></div><a class="ut" href="https://protos.com/live-binance-suspends-withdrawals-amid-massive-crypto-hack/" target="_blank" rel="noopener">LIVE: Binance suspends withdrawals amid massive crypto hack</a><p class="ud">Billions of dollars vanished from Binance crypto wallets on Thursday in one of the largest exchange hacks in world history.</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T00:41:03+00:00">30 Oct 00:41 UTC</time><span class="rel">73 min ago</span></div><a class="ut" href="https://news.bitcoin.com/security/inside-the-5-8b-binance-hack-whats-confirmed-and-what-isnt/" target="_blank" rel="noopener">Inside the $5.8B Binance Hack: What’s Confirmed and What Isn’t</a><p class="ud">A suspected security breach at Binance has grown into a multibillion-dollar cryptocurrency emergency, with analysts tracking as much as $5.8 billion in potentially compromised assets across several blockchains. The exchange has su…</p></article>
+<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-30T00:17:10+00:00">30 Oct 00:17 UTC</time><span class="rel">1 h ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/30/binance-hack-drained-wallets-backing-customer-assets-reserve-data-shows" target="_blank" rel="noopener">Binance hack drained wallets backing customer assets, reserve data shows</a><p class="ud">Binance’s own reserve data lists the drained wallets as backing customer balances, leaving its ether backing an estimated 6% short until the exchange replaces what was stolen.</p></article>
+<article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-30T00:11:26+00:00">30 Oct 00:11 UTC</time><span class="rel">1 h ago</span></div><a class="ut" href="https://cointelegraph.com/news/binance-hack-may-involve-private-key-misuse-not-theft-blockaid-ceo?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Binance hack may involve private key ‘misuse,’ not theft: Blockaid CEO</a><p class="ud">Blockaid’s Ido Ben-Natan suspects attackers manipulated Binance’s transaction-signing infrastructure, drawing parallels with the Bybit hack.</p></article>
+<article class="upd"><div class="uh"><span class="src s-cryptoslate">CryptoSlate</span><time datetime="2026-10-29T23:50:05+00:00">29 Oct 23:50 UTC</time><span class="rel">2 h ago</span></div><a class="ut" href="https://cryptoslate.com/trumps-crypto-firm-joins-tether-circle-and-ripple-in-2-6-billion-stablecoin-freeze-as-binance-hack-outflows-near-6-billion/" target="_blank" rel="noopener">Trump’s crypto firm joins Tether, Circle, and Ripple in $2.6 billion stablecoin freeze as Binance hack outflows near $6 billion</a><p class="ud">Stablecoin issuers, including Tether, Circle, Ripple, and World Liberty Financial, have frozen more than $2.6 billion in digital assets linked to a suspected Binance security breach involving nearly $6 billion. On Oct. 29, Tether …</p></article>
+<article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-29T23:24:21+00:00">29 Oct 23:24 UTC</time><span class="rel">2 h ago</span></div><a class="ut" href="https://cointelegraph.com/markets/binance-hack-rattles-crypto-markets-bnb-bitcoin-slide?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Binance hack rattles markets as BNB falls 8%, Bitcoin nears $77K</a><p class="ud">Bitcoin, Ether and the broader crypto market took a dive as Binance suffered a multibillion-dollar hack.</p></article>
+<article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-29T22:57:48+00:00">29 Oct 22:57 UTC</time><span class="rel">2 h ago</span></div><a class="ut" href="https://decrypt.co/382194/binance-hack-exit-ramps-defi-exchange-ethereum" target="_blank" rel="noopener">Binance Hacker Hunts for Exit Ramps as DeFi Exchanges Pause Markets</a><p class="ud">Etherscan records show wallets tied to the suspected Binance hack swapping freezable stablecoins for Ethereum on decentralized exchanges.</p></article>
+<article class="upd"><div class="uh"><span class="src s-cryptoslate">CryptoSlate</span><time datetime="2026-10-29T22:45:24+00:00">29 Oct 22:45 UTC</time><span class="rel">3 h ago</span></div><a class="ut" href="https://cryptoslate.com/bitcoin-whipsaws-below-79000-as-binance-hot-wallet-reportedly-drained-by-tornado-cash-linked-wallet/" target="_blank" rel="noopener">Bitcoin whipsaws below $79,000 as Binance hot wallet reportedly drained by Tornado Cash-linked wallet</a><p class="ud">Bitcoin hit an intraday low of $78,297 on Binance spot on Oct. 29 and sat near $79,126 at press time, as large transfers left Binance-labeled wallets. Binance shared on X that the exchange is “aware of reports of a potential secur…</p></article>
+<article class="upd"><div class="uh"><span class="src s-bleepingcomputer">BleepingComputer</span><time datetime="2026-10-29T22:45:23+00:00">29 Oct 22:45 UTC</time><span class="rel">3 h ago</span></div><a class="ut" href="https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/" target="_blank" rel="noopener">Binance probes potential $5.8 billion crypto-theft hack</a><p class="ud">Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]</p></article>
+<article class="upd"><div class="uh"><span class="src s-theblock">The Block</span><time datetime="2026-10-29T21:49:16+00:00">29 Oct 21:49 UTC</time><span class="rel">4 h ago</span></div><a class="ut" href="https://www.theblock.co/news/markets/2026-10-29-binance-investigating-hack-suspicious-outflows-5-billion-432171" target="_blank" rel="noopener">Binance investigating hack as suspicious outflows reach up to $5.8 billion</a><p class="ud">Tether and Circle froze $1.79 billion in USDT and USDC after billions moved out of Binance hot wallets. Binance says it is investigating.</p></article>
+<article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-29T21:36:24+00:00">29 Oct 21:36 UTC</time><span class="rel">4 h ago</span></div><a class="ut" href="https://decrypt.co/382191/binance-suspected-hack-5-billion-tether-circle-freeze-crypto" target="_blank" rel="noopener">Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion</a><p class="ud">An on-chain tally puts the suspected Binance drain at $5.57 billion across three blockchains, as Tether and Circle froze $1.8 billion.</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-29T21:33:23+00:00">29 Oct 21:33 UTC</time><span class="rel">4 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-founder-likely-hack-billions-crypto-leaves-exchange-wallets/" target="_blank" rel="noopener">Binance Founder Suggests Likely Hack as Billions in Crypto Leaves Exchange Wallets</a><p class="ud">Billions of dollars’ worth of cryptocurrency was pulled from the wallets of leading exchange Binance on Thursday, according to onchain data and industry analysts, fueling speculation that it may have been the target of a massive h…</p></article>
+<article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-29T21:24:36+00:00">29 Oct 21:24 UTC</time><span class="rel">4 h ago</span></div><a class="ut" href="https://cointelegraph.com/news/binance-linked-wallet-faces-possible-exploit-blockchain-researcher-warns?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Live updates: Binance says $3B in crypto frozen in connection to hack</a><p class="ud">Follow live updates as Binance says $3 billion in assets has been frozen after a multibillion-dollar hack, with further freezes possible as investigators trace funds.</p></article>
+<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-29T21:12:45+00:00">29 Oct 21:12 UTC</time><span class="rel">4 h ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/29/potential-multi-billion-binance-hack-hitting-crypto-markets" target="_blank" rel="noopener">Binance loses $5.7 billion in &#x27;biggest crypto hack in history&#x27;</a><p class="ud">Crypto prices are sliding on the news, with bitcoin falling back to $77,000, though Binance&#x27;s co-CEO said it would cover all losses.</p></article>
+<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-29T10:41:39+00:00">29 Oct 10:41 UTC</time><span class="rel">15 h ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/29/live-updates-bitcoin-clings-to-usd80-000-as-strategy-s-cushion-thins-before-earnings" target="_blank" rel="noopener">Live updates: Binance confirms security breach, says &#x27;will cover all hacking losses&#x27;</a><p class="ud">North of $5 billion appears to have been stolen from the world&#x27;s biggest crypto exchange, Binance, of which some $2.5 billion has been frozen.</p></article>
+    </div>
+    <p class="more"><span class="chip">CoinDesk <b>3</b></span> <span class="chip">Cointelegraph <b>3</b></span> <span class="chip">Bitcoin.com <b>2</b></span> <span class="chip">CryptoSlate <b>2</b></span> <span class="chip">Decrypt <b>2</b></span> <span class="chip">Protos <b>1</b></span> <span class="chip">BleepingComputer <b>1</b></span> <span class="chip">The Block <b>1</b></span></p>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">04</span> On-chain watch list</h2>
+    <p class="lede">These are the addresses that matter. Everything in this incident is verifiable — you do not
+      need to trust any article, including this one.</p>
+    <table>
+      <thead><tr><th>Role</th><th>Address</th></tr></thead>
+      <tbody>
+        <tr><td><b>Binance 14</b><br><span style="font-size:12px;color:var(--muted)">Delegated hot wallet, drained to 1 ETH</span></td>
+            <td><a class="addr" href="https://etherscan.io/address/0x28C6c06298d514Db089934071355E5743bf21d60" target="_blank" rel="noopener">0x28C6c06298d514Db089934071355E5743bf21d60</a></td></tr>
+        <tr><td><b>Binance 16</b><br><span style="font-size:12px;color:var(--muted)">Second wallet, 24s later, no code</span></td>
+            <td><a class="addr" href="https://etherscan.io/address/0xDFd5293D8e347dFe59E90eFd55b2956a1343963d" target="_blank" rel="noopener">0xDFd5293D8e347dFe59E90eFd55b2956a1343963d</a></td></tr>
+        <tr><td><b>Collection address</b><br><span style="font-size:12px;color:var(--muted)">No prior history; main freeze target</span></td>
+            <td><a class="addr" href="https://etherscan.io/address/0x5227f603C1eE34CE3C06eFe6477003BDfCCB2f8c" target="_blank" rel="noopener">0x5227f603C1eE34CE3C06eFe6477003BDfCCB2f8c</a></td></tr>
+        <tr><td><b>Attacker sweeper contract</b><br><span style="font-size:12px;color:var(--muted)">Unverified; single authorised caller</span></td>
+            <td><a class="addr" href="https://etherscan.io/address/0x63e842B054Bd624a465454D533C33F573e9c6fAe" target="_blank" rel="noopener">0x63e842B054Bd624a465454D533C33F573e9c6fAe</a></td></tr>
+        <tr><td><b>Operator</b><br><span style="font-size:12px;color:var(--muted)">Funded via 3 Tornado Cash withdrawals</span></td>
+            <td><a class="addr" href="https://etherscan.io/address/0x7C8601d4645b93cea45F71e118A729332e6B5CA0" target="_blank" rel="noopener">0x7C8601d4645b93cea45F71e118A729332e6B5CA0</a></td></tr>
+      </tbody>
+    </table>
+    <p class="lede" style="margin-top:12px"><b>What to watch on-chain:</b> a type-4 transaction clearing the
+      delegation on Binance 14 (until that happens, refilling the wallet would be donating to the attacker); ETH
+      refills into Binance's disclosed reserve addresses (the ~204,500 ETH shortfall being cured); and movement
+      from the 17,270 BTC block, the largest unfreezable holding.</p>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">05</span> Competing loss figures</h2>
+    <p class="lede">Three different quantities circulate under the word “lost”. They are not interchangeable.</p>
+    <table>
+      <thead><tr><th>Source</th><th style="text-align:right">Figure</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td>Blockaid</td><td class="num">≥$5.5B</td><td>Across ETH, Arbitrum, Avalanche, Optimism, BTC, Tron; still ongoing at publication.</td></tr>
+        <tr><td>Kairos Research</td><td class="num">$5.7B</td><td>Hot-wallet accumulations incl. 18,270 BTC and 613M USDT on Tron.</td></tr>
+        <tr><td>Decrypt tally</td><td class="num">$5.57B</td><td>$3.51B ETH + $1.44B (18,270 BTC) + $630M Tron.</td></tr>
+        <tr><td>Arkham Intelligence</td><td class="num">$5.8B</td><td>Entity explorer, illegitimate withdrawals by 20:00 UTC.</td></tr>
+        <tr><td>Chainalysis</td><td class="num">$5.9B</td><td>Largest published estimate; gross outflow.</td></tr>
+        <tr><td>Glassnode</td><td class="num">~$5.3B</td><td>Most conservative third-party figure.</td></tr>
+        <tr><td><b>Binance (frozen)</b></td><td class="num"><b>$2.54B</b></td><td><b>Not a loss estimate.</b> &gt;$2.37B of it from Tether alone.</td></tr>
+        <tr><td>ZachXBT (frozen)</td><td class="num">&gt;$2.83B</td><td>Post-freeze total across issuers and chains.</td></tr>
+      </tbody>
+    </table>
+    <div class="grid" style="margin-top:14px">
+      <div class="card"><h3>Gross outflow</h3><p>Everything that moved from compromised wallets. The biggest
+        numbers ($5.8–5.9B) are this, and may include transfers that were not attacker-initiated.</p></div>
+      <div class="card"><h3>Attacker-controlled net</h3><p>Gross minus freezes. ~$2.9B is the inference; nobody
+        has confirmed it independently.</p></div>
+      <div class="card"><h3>Binance's actual loss</h3><p>What the exchange must replace from its own balance
+        sheet. The number that matters for solvency. Not published.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">06</span> Timeline</h2>
+    <p class="lede">All times UTC, 29 October 2026 (ET = UTC−4). Times before midnight are 29 Oct.</p>
+    <div class="tl">
+      <div class="ev"><div class="t">20:20:59 <em>(16:20 ET)</em></div>
+        <p><b>The nonce spray.</b> Type-4 transaction to Binance 14 carrying 50 EIP-7702 authorisations signed with
+        its key, one per nonce from 18,914,775 to 18,914,824. 49 invalid, <b>1 matched</b> — the wallet is now delegated.</p></div>
+      <div class="ev key"><div class="t">20:24:23 <em>(16:24 ET)</em></div>
+        <p><b>The sweep.</b> 167,464 ETH + 1.615B USDT + ~60 other tokens to a fresh address. Binance 14 left with
+        <b>1 ETH</b>. Basket ≈ $2.5B.</p></div>
+      <div class="ev"><div class="t">20:24:47</div>
+        <p>Binance 16 sends 28,005.6 ETH, 55.7M USDT, 25.9M RLUSD and 84.5 WBTC. No code involved — an ordinary
+        transfer signed with the wallet's own key.</p></div>
+      <div class="ev"><div class="t">by 20:36</div>
+        <p>Ten more hot wallets on four chains send to the same address: 44.2M OP, 74.6M ARB, 8,426 ETH, 1.81M AVAX.
+        Separately <b>18,270 BTC</b> and ~$630M on Tron move.</p></div>
+      <div class="ev key"><div class="t">~21:04 <em>(17:04 ET)</em></div>
+        <p><b>Freezes begin.</b> Tether freezes 975.1M USDT, Circle 823M USDC — ~$1.8B at that point.</p></div>
+      <div class="ev key"><div class="t">22:22 <em>(18:22 ET)</em></div>
+        <p><b>Binance officially pauses withdrawals</b>, then extends to all deposits and withdrawals.</p></div>
+      <div class="ev"><div class="t">23:06</div><p>Binance Alpha trading suspended.</p></div>
+      <div class="ev"><div class="t">23:22</div>
+        <p>Binance disputes the $1.8B figure: <b>“verified total frozen is $2.54 billion”</b>.</p></div>
+      <div class="ev key"><div class="t">00:04 <em>(30 Oct, 20:04 ET)</em></div>
+        <p><b>Yi He confirms the hack.</b> Funds safe, all losses covered, post-mortem to follow.</p></div>
+      <div class="ev"><div class="t">post-freeze</div>
+        <p>~$850M in ETH still moving between fresh wallets; 17,270 BTC untouched. Aave froze DAO-operated V3/V4
+        markets; the Arbitrum Security Council froze ~$30.5M.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">07</span> Resources to monitor</h2>
+    <p class="lede">Primary sources first. In the first six hours, named researchers and issuer CEOs were faster
+      and more accurate than most news coverage.</p>
+    <div class="res">
+      <div>
+        <h3>Official — the only authoritative word</h3>
+        <ul>
+          <li><b><a href="https://www.binance.com/en/support/announcement" target="_blank" rel="noopener">Binance announcements</a></b><span>Per-network deposit/withdrawal status</span></li>
+          <li><b><a href="https://x.com/binance" target="_blank" rel="noopener">@binance</a></b><span>Official statements, ~hourly during the incident</span></li>
+          <li><b><a href="https://x.com/heyibinance" target="_blank" rel="noopener">@heyibinance</a></b><span>Yi He — source of the loss-coverage pledge</span></li>
+          <li><b><a href="https://x.com/cz_binance" target="_blank" rel="noopener">@cz_binance</a></b><span>Ahead of the company's own language</span></li>
+          <li><b><a href="https://x.com/BinanceUS" target="_blank" rel="noopener">@BinanceUS</a></b><span>Separate entity, unaffected</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>On-chain &amp; forensics</h3>
+        <ul>
+          <li><b><a href="https://blockaid.io/blog" target="_blank" rel="noopener">Blockaid incident report</a></b><span>Best technical document available — nonce spray, sweeper, per-chain flows</span></li>
+          <li><b><a href="https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8" target="_blank" rel="noopener">Arkham — Binance entity</a></b><span>First to size illegitimate withdrawals</span></li>
+          <li><b><a href="https://x.com/zachxbt" target="_blank" rel="noopener">@zachxbt</a></b><span>Most reliable independent freeze tally</span></li>
+          <li><b><a href="https://x.com/spreekaway" target="_blank" rel="noopener">@spreekaway</a></b><span>Flagged the drain first</span></li>
+          <li><b><a href="https://x.com/jconorgrogan" target="_blank" rel="noopener">@jconorgrogan</a></b><span>Careful about gross vs net</span></li>
+          <li><b><a href="https://rekt.news/leaderboard/" target="_blank" rel="noopener">rekt.news leaderboard</a></b><span>Running totals, revised as figures settle</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Issuer freezes</h3>
+        <ul>
+          <li><b><a href="https://x.com/paoloardoino" target="_blank" rel="noopener">@paoloardoino</a></b><span>Tether CEO — confirms USDT freezes first</span></li>
+          <li><b><a href="https://x.com/jerallaire" target="_blank" rel="noopener">@jerallaire</a></b><span>Circle CEO — USDC freezes, law-enforcement coordination</span></li>
+          <li><b><a href="https://x.com/Paxos" target="_blank" rel="noopener">@Paxos</a></b><span>PAXG freeze disclosure</span></li>
+          <li><b><a href="https://x.com/Ripple" target="_blank" rel="noopener">@Ripple</a></b><span>~$200M RLUSD</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Newsrooms &amp; feeds</h3>
+        <ul>
+          <li><b><a href="https://protos.com/feed/" target="_blank" rel="noopener">Protos</a></b><span>Live blog from hour one · protos.com/feed/</span></li>
+          <li><b><a href="https://www.theblock.co/rss.xml" target="_blank" rel="noopener">The Block</a></b><span>Fastest to precise on-chain numbers</span></li>
+          <li><b><a href="https://www.coindesk.com/arc/outboundfeeds/rss/" target="_blank" rel="noopener">CoinDesk</a></b><span>Broke the reserve-wallet analysis</span></li>
+          <li><b><a href="https://cointelegraph.com/rss" target="_blank" rel="noopener">Cointelegraph</a></b><span>Continuous live-updates page</span></li>
+          <li><b><a href="https://decrypt.co/feed" target="_blank" rel="noopener">Decrypt</a></b><span>Clean per-chain tallies</span></li>
+          <li><b><a href="https://www.bleepingcomputer.com/feed/" target="_blank" rel="noopener">BleepingComputer</a></b><span>Security-reporting rigour</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Your own safety</h3>
+        <ul>
+          <li><b><a href="https://revoke.cash/" target="_blank" rel="noopener">Revoke.cash</a></b><span>Check token approvals and 7702 delegations</span></li>
+          <li><b><a href="https://etherscan.io/" target="_blank" rel="noopener">Etherscan address watch</a></b><span>Alert on any movement from the addresses above</span></li>
+          <li><b><a href="https://www.chainabuse.com/" target="_blank" rel="noopener">Chainabuse</a></b><span>Screen “recovery service” offers and scam addresses</span></li>
+          <li><b><a href="https://www.google.com/alerts" target="_blank" rel="noopener">Google Alerts</a></b><span>“Binance post-mortem”, “Binance withdrawals resume”</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Regulatory &amp; legal</h3>
+        <ul>
+          <li><b><a href="https://www.ic3.gov/" target="_blank" rel="noopener">FBI IC3</a></b><span>Where US-based losses get reported</span></li>
+          <li><b><a href="https://sanctionssearch.ofac.treas.gov/" target="_blank" rel="noopener">OFAC sanctions search</a></b><span>Where attribution would surface as sanctions</span></li>
+          <li><b><a href="https://www.sec.gov/litigation/litreleases" target="_blank" rel="noopener">SEC litigation releases</a></b><span>Enforcement, if reserve practice draws it</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec"><span class="k">08</span> How this page works</h2>
+    <div class="grid">
+      <div class="card"><h3>Zero AI cost</h3><p>No LLM calls, no API keys, no metered inference. A plain Python
+        script polls the public RSS feeds above, filters for this incident, deduplicates, and rebuilds this page.
+        It runs on a free GitHub Actions schedule.</p></div>
+      <div class="card"><h3>No runtime fetch</h3><p>The data is baked into the HTML at build time, so the page
+        renders fully even where XHR/fetch to github.io is blocked by a corporate proxy. Nothing loads from a third
+        party when you open it.</p></div>
+      <div class="card"><h3>Read the caveats</h3><p>Headlines are reproduced as-is, not summarised — including
+        ones that report unverified numbers. The PDF is where claims are weighed and attributed.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>Method.</b> Compiled from primary reporting and on-chain analysis published 29–30 October 2026.
+      Where independent parties disagree, both figures are shown with attribution rather than averaged.
+      Claims sourced only to social media are labelled as such. Transaction hashes and addresses are
+      reproduced so you can verify rather than trust.</p>
+    <p><b>Bias notice.</b> Early outflow figures skew high (gross tallies include transfers later found not to
+      be attacker-initiated, and get revised down); company statements skew reassuring (“no confirmed impact to
+      user funds” was Binance's line for hours while funds were demonstrably leaving its wallets).</p>
+    <p><b>Not advice.</b> This is a research summary, not a forensic audit or financial, legal or investment
+      advice. Binance has not published a post-mortem; nothing here is a finding of fact about its solvency,
+      its controls, or the attacker's identity.</p>
+    <p style="margin-top:14px">Compiled by <b>nwfella</b> · revision 1.0 · generated 2026-10-30T01:54:26.870904+00:00 ·
+      <a href="Binance-Hack-Report-2026-10-29.pdf">full PDF report</a> ·
+      <a href="https://github.com/nwfella/binance-hack-dossier">source</a></p>
+  </footer>
+</div>
+
+<script>
+/* client-side source filtering over already-baked DOM — no network */
+(function(){
+  var feed = document.getElementById('feed');
+  var bar  = document.getElementById('filters');
+  if(!feed || !bar) return;
+  var items = Array.prototype.slice.call(feed.querySelectorAll('.upd'));
+  var seen = {};
+  items.forEach(function(el){
+    var s = el.querySelector('.src');
+    if(!s) return;
+    var name = s.textContent.trim();
+    if(!seen[name]){
+      seen[name] = 0;
+      var b = document.createElement('button');
+      b.className = 'fbtn';
+      b.setAttribute('data-src', name);
+      b.textContent = name;
+      bar.appendChild(b);
+    }
+    seen[name]++;
+  });
+  bar.addEventListener('click', function(e){
+    var b = e.target.closest('.fbtn');
+    if(!b) return;
+    var want = b.getAttribute('data-src');
+    bar.querySelectorAll('.fbtn').forEach(function(x){ x.classList.toggle('on', x === b); });
+    items.forEach(function(el){
+      var s = el.querySelector('.src');
+      var name = s ? s.textContent.trim() : '';
+      el.style.display = (want === 'all' || name === want) ? '' : 'none';
+    });
+  });
+})();
+</script>
+</body>
+</html>

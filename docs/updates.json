@@ -1,0 +1,127 @@
+{
+ "items": [
+  {
+   "source": "Protos",
+   "title": "LIVE: Binance suspends withdrawals amid massive crypto hack",
+   "link": "https://protos.com/live-binance-suspends-withdrawals-amid-massive-crypto-hack/",
+   "desc": "Billions of dollars vanished from Binance crypto wallets on Thursday in one of the largest exchange hacks in world history.",
+   "date": "2026-10-30T00:52:31+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Inside the $5.8B Binance Hack: What\u2019s Confirmed and What Isn\u2019t",
+   "link": "https://news.bitcoin.com/security/inside-the-5-8b-binance-hack-whats-confirmed-and-what-isnt/",
+   "desc": "A suspected security breach at Binance has grown into a multibillion-dollar cryptocurrency emergency, with analysts tracking as much as $5.8 billion in potentially compromised assets across several blockchains. The exchange has suspended withdrawals while Tether, Circle, and other issuers have reportedly frozen more than $2 billion in tokens. Binance insists customer funds are safe, but [\u2026]",
+   "date": "2026-10-30T00:41:03+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance hack drained wallets backing customer assets, reserve data shows",
+   "link": "https://www.coindesk.com/business/2026/10/30/binance-hack-drained-wallets-backing-customer-assets-reserve-data-shows",
+   "desc": "Binance\u2019s own reserve data lists the drained wallets as backing customer balances, leaving its ether backing an estimated 6% short until the exchange replaces what was stolen.",
+   "date": "2026-10-30T00:17:10+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance hack may involve private key \u2018misuse,\u2019 not theft: Blockaid CEO",
+   "link": "https://cointelegraph.com/news/binance-hack-may-involve-private-key-misuse-not-theft-blockaid-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Blockaid\u2019s Ido Ben-Natan suspects attackers manipulated Binance\u2019s transaction-signing infrastructure, drawing parallels with the Bybit hack.",
+   "date": "2026-10-30T00:11:26+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "Trump\u2019s crypto firm joins Tether, Circle, and Ripple in $2.6 billion stablecoin freeze as Binance hack outflows near $6 billion",
+   "link": "https://cryptoslate.com/trumps-crypto-firm-joins-tether-circle-and-ripple-in-2-6-billion-stablecoin-freeze-as-binance-hack-outflows-near-6-billion/",
+   "desc": "Stablecoin issuers, including Tether, Circle, Ripple, and World Liberty Financial, have frozen more than $2.6 billion in digital assets linked to a suspected Binance security breach involving nearly $6 billion. On Oct. 29, Tether CEO Paolo Ardoino said the company had frozen more than $ 1.567 billion in USDT linked to the suspected incident. He\u2026 Read the full story on CryptoSlate Understand the cr",
+   "date": "2026-10-29T23:50:05+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance hack rattles markets as BNB falls 8%, Bitcoin nears $77K",
+   "link": "https://cointelegraph.com/markets/binance-hack-rattles-crypto-markets-bnb-bitcoin-slide?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Bitcoin, Ether and the broader crypto market took a dive as Binance suffered a multibillion-dollar hack.",
+   "date": "2026-10-29T23:24:21+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Hacker Hunts for Exit Ramps as DeFi Exchanges Pause Markets",
+   "link": "https://decrypt.co/382194/binance-hack-exit-ramps-defi-exchange-ethereum",
+   "desc": "Etherscan records show wallets tied to the suspected Binance hack swapping freezable stablecoins for Ethereum on decentralized exchanges.",
+   "date": "2026-10-29T22:57:48+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "Bitcoin whipsaws below $79,000 as Binance hot wallet reportedly drained by Tornado Cash-linked wallet",
+   "link": "https://cryptoslate.com/bitcoin-whipsaws-below-79000-as-binance-hot-wallet-reportedly-drained-by-tornado-cash-linked-wallet/",
+   "desc": "Bitcoin hit an intraday low of $78,297 on Binance spot on Oct. 29 and sat near $79,126 at press time, as large transfers left Binance-labeled wallets. Binance shared on X that the exchange is \u201caware of reports of a potential security issue and are actively investigating.\u201d It added: \u201cOur security teams are reviewing all relevant\u2026 Read the full story on CryptoSlate Understand the crypto stories that",
+   "date": "2026-10-29T22:45:24+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "BleepingComputer",
+   "title": "Binance probes potential $5.8 billion crypto-theft hack",
+   "link": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
+   "desc": "Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]",
+   "date": "2026-10-29T22:45:23+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "Binance investigating hack as suspicious outflows reach up to $5.8 billion",
+   "link": "https://www.theblock.co/news/markets/2026-10-29-binance-investigating-hack-suspicious-outflows-5-billion-432171",
+   "desc": "Tether and Circle froze $1.79 billion in USDT and USDC after billions moved out of Binance hot wallets. Binance says it is investigating.",
+   "date": "2026-10-29T21:49:16+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion",
+   "link": "https://decrypt.co/382191/binance-suspected-hack-5-billion-tether-circle-freeze-crypto",
+   "desc": "An on-chain tally puts the suspected Binance drain at $5.57 billion across three blockchains, as Tether and Circle froze $1.8 billion.",
+   "date": "2026-10-29T21:36:24+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Founder Suggests Likely Hack as Billions in Crypto Leaves Exchange Wallets",
+   "link": "https://news.bitcoin.com/security/binance-founder-likely-hack-billions-crypto-leaves-exchange-wallets/",
+   "desc": "Billions of dollars\u2019 worth of cryptocurrency was pulled from the wallets of leading exchange Binance on Thursday, according to onchain data and industry analysts, fueling speculation that it may have been the target of a massive hack. Binance acknowledged a \u201cpotential security issue\u201d soon thereafter. Billions Leave Binance in Apparent Hack Binance founder and former [\u2026]",
+   "date": "2026-10-29T21:33:23+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Live updates: Binance says $3B in crypto frozen in connection to hack",
+   "link": "https://cointelegraph.com/news/binance-linked-wallet-faces-possible-exploit-blockchain-researcher-warns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Follow live updates as Binance says $3 billion in assets has been frozen after a multibillion-dollar hack, with further freezes possible as investigators trace funds.",
+   "date": "2026-10-29T21:24:36+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance loses $5.7 billion in 'biggest crypto hack in history'",
+   "link": "https://www.coindesk.com/business/2026/10/29/potential-multi-billion-binance-hack-hitting-crypto-markets",
+   "desc": "Crypto prices are sliding on the news, with bitcoin falling back to $77,000, though Binance's co-CEO said it would cover all losses.",
+   "date": "2026-10-29T21:12:45+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Live updates: Binance confirms security breach, says 'will cover all hacking losses'",
+   "link": "https://www.coindesk.com/business/2026/10/29/live-updates-bitcoin-clings-to-usd80-000-as-strategy-s-cushion-thins-before-earnings",
+   "desc": "North of $5 billion appears to have been stolen from the world's biggest crypto exchange, Binance, of which some $2.5 billion has been frozen.",
+   "date": "2026-10-29T10:41:39+00:00",
+   "first_seen": "2026-10-30T01:54:17.659670+00:00"
+  }
+ ],
+ "first_run": null,
+ "runs": 1,
+ "last_run": "2026-10-30T01:54:17.659670+00:00"
+}
