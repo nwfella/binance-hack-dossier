@@ -1,6 +1,190 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "Morning Minute: Binance\u2019s $6.4B Hack Overshadows Hyperliquid\u2019s Biggest Day",
+   "link": "https://decrypt.co/382225/morning-minute-binances-6-4b-hack-overshadows-hyperliquids-biggest-day",
+   "desc": "Just as Hyperliquid opened the door to a fully regulated perps offering inside the U.S., Binance suffered the biggest hack in crypto history.",
+   "date": "2026-10-30T12:31:30+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Secures $6.34B to Cover Losses From Historic Crypto Hack",
+   "link": "https://news.bitcoin.com/exchanges/binance-secures-6-34b-to-cover-losses-from-historic-crypto-hack/",
+   "desc": "Through its social media channels, Binance announced it had already reserved over $6.34 billion in company funds to cover losses from the hack suffered on Thursday, with $5 billion held in the tokens impacted, while other purchases are being completed. Binance Prepares to Restart Normal Operations Binance, the largest cryptocurrency exchange, is preparing to resume [\u2026]",
+   "date": "2026-10-30T12:30:47+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "link": "https://decrypt.co/382224/trm-and-chainalysis-tie-6-4b-binance-hack-to-north-koreas-tradertraitor",
+   "desc": "Both firms blame the group behind the Bybit hack, as Binance says it has set aside $6.34 billion of its own funds to cover user losses.",
+   "date": "2026-10-30T12:22:04+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance arranges $6.34 billion to cover losses from record crypto hack",
+   "link": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
+   "desc": "Binance said it reserved its own funds to cover the $6.3 billion hack, including freezes of roughly $3 billion in stolen assets.",
+   "date": "2026-10-30T12:13:02+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Here's how big bitcoin traders responded after the Binance hack hit",
+   "link": "https://www.coindesk.com/daybook-us/2026/10/30/here-s-how-big-bitcoin-traders-responded-after-the-binance-hack-hit",
+   "desc": "Your day-ahead look for Oct. 30, 2026",
+   "date": "2026-10-30T11:51:26+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+   "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Follow live updates as Binance says $6.3 billion in assets have been stolen in a major hack. Around $3 billion in stolen funds have been frozen.",
+   "date": "2026-10-30T11:44:20+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Here\u2019s how an Ethereum upgrade helped drain part of Binance\u2019s $6 billion loss",
+   "link": "https://www.coindesk.com/tech/2026/10/30/here-s-how-one-ethereum-permission-let-an-attacker-drain-usd2-5-billion-from-binance",
+   "desc": "On Ethereum, the attacker used a 2025 upgrade built to make ordinary wallets smarter, armed with 50 signatures from Binance's own wallet.",
+   "date": "2026-10-30T11:35:16+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Hack Fallout: Aave Freezes Lending Across 16 Networks",
+   "link": "https://news.bitcoin.com/defi/binance-hack-fallout-aave-freezes-lending-across-16-networks/",
+   "desc": "Aave froze 292 reserves across its V3 and V4 markets following a major Binance security breach that saw attackers steal more than 195,000 ETH and millions of dollars in altcoins. Binance Exploit Drains 195,000 ETH Across Multiple Blockchains Decentralized finance (DeFi) lending protocol Aave froze lending markets across 16 blockchain networks Thursday following a major [\u2026]",
+   "date": "2026-10-30T11:30:41+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
+   "link": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Bitcoin held above $76,000 after a $6.3 billion Binance hack and a tech-stock sell-off, as momentum indicators pointed to a possible rebound.",
+   "date": "2026-10-30T11:29:23+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "Binance uncovers more breach points in $6 billion hack",
+   "link": "https://cryptoslate.com/binance-breach-points-6-billion-hack/",
+   "desc": "Binance said investigators uncovered additional breach points in the approximately $6 billion hack after initially suspecting a compromised employee laptop. The exchange has not disclosed what those additional breach points were. In an earlier Oct. 30 security update, the exchange said its preliminary investigation identified a potentially compromised DevOps engineer's laptop that may have allowed",
+   "date": "2026-10-30T11:13:40+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
+   "link": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
+   "desc": "Bitcoin traded near $77,350 after $6.3 billion Binance hack, with crypto futures liquidations jumping to $1.57 billion.",
+   "date": "2026-10-30T11:09:24+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "EIP-7702 didn\u2019t cause Binance hack, but may have amplified losses",
+   "link": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Security experts say attackers could have drained Binance\u2019s wallets without EIP-7702, but the Ethereum upgrade may have helped bypass withdrawal safeguards.",
+   "date": "2026-10-30T11:00:10+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance hacker\u2019s Bitcoin haul tops Coinbase\u2019s corporate treasury",
+   "link": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "The attackers held 18,270 BTC early Friday, topping Coinbase\u2019s reported corporate holdings, and an Ether stash exceeding 500,000 ETH.",
+   "date": "2026-10-30T10:54:30+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Hacker Dumps $158M in Alts as Sleuths Question Exchange\u2019s Key Story",
+   "link": "https://news.bitcoin.com/security/binance-hacker-dumps-158m-altcoins-key-leak-doubts/",
+   "desc": "The Binance hacker sold about $158 million in altcoins for 70,480 ETH, while analysts challenged the exchange\u2019s claim that no private keys were leaked. Seven Tokens Gone in Hours The thief behind the Binance breach wasted little time turning stolen altcoins into ether. Onchain trackers reported the attacker finished dumping a host of alts including [\u2026]",
+   "date": "2026-10-30T10:30:20+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "THORChain\u2019s RUNE jumps 13% after Binance\u2019s record $6.3B hack",
+   "link": "https://cointelegraph.com/markets/rune-token-surges-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "North Korean hackers previously used THORChain to move funds stolen from Bybit and Bitget, prompting calls for the protocol to intervene.",
+   "date": "2026-10-30T09:52:29+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Finds 'Additional Points of Breach' in $6.3B Hack",
+   "link": "https://decrypt.co/382203/binance-finds-additional-points-of-breach-in-6-3b-hack",
+   "desc": "CEO Richard Teng said the attack was \"not a single 'one-click' action,\" as Binance confirmed about $3 billion has been frozen.",
+   "date": "2026-10-30T09:31:59+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Hack Has Logan Paul Calling Crypto \u2018a Scam\u2019 Despite Cryptozoo Past",
+   "link": "https://news.bitcoin.com/featured/logan-paul-calls-crypto-scam-binance-hack-cryptozoo/",
+   "desc": "Logan Paul called crypto \u201ca scam\u201d following the $6.3 billion Binance hack, and critics were quick to point to his own Cryptozoo project. \u201cI Don\u2019t Trust Crypto\u201d Youtuber and boxer Logan Paul has a new take on digital assets because, in a recent podcast appearance, when his longtime collaborator Mike Majlak told him, \u201cBinance got [\u2026]",
+   "date": "2026-10-30T09:30:52+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "BleepingComputer",
+   "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
+   "link": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+   "desc": "Binance, the world's largest crypto exchange, has linked the theft of about $6.3 billion in cryptocurrency to a DevOps engineer's compromised laptop. [...]",
+   "date": "2026-10-30T09:18:13+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Live updates: Binance finds more breaches in $6.3 billion hack; AI spending fears hit tech",
+   "link": "https://www.coindesk.com/markets/2026/10/30/live-news-binance-hack-rattles-crypto-as-intel-plunges-and-ai-spending-fears-hit-tech",
+   "desc": "A $6.3 billion Binance hack adds to crypto jitters, while weak earnings outlooks and mounting concerns over AI spending push QQQ down more than 2%.",
+   "date": "2026-10-30T08:36:52+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Ripple and Trump\u2019s World Liberty Help Freeze Binance Hacker\u2019s Loot",
+   "link": "https://news.bitcoin.com/security/ripple-world-liberty-freeze-binance-hacker-funds/",
+   "desc": "Ripple froze about $200 million and World Liberty Financial froze $27 million in USD1 tied to the Binance hack, joining Tether, Circle and Coinbase in a rare industry-wide lockdown. Ripple Steps in Binance\u2019s ongoing crisis has turned into an unusual show of cooperation amongst some of the biggest names in crypto. Most recently, Binance co-CEO [\u2026]",
+   "date": "2026-10-30T08:30:30+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance hacker dumps a little-known 2017 token and it crashes 90%",
+   "link": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-dumps-a-little-known-2017-token-and-it-crashes-90",
+   "desc": "The hacker dumped FUN and other smaller tokens into markets too small to absorb large selling, leading to price crashes.",
+   "date": "2026-10-30T07:54:07+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Hack Sparks $1.5B Liquidation Bloodbath Across Crypto",
+   "link": "https://news.bitcoin.com/market-updates/binance-hack-sparks-1-5b-liquidation-bloodbath-across-crypto/",
+   "desc": "Cryptocurrency liquidations exceeded $1.54 billion following a Binance hack-related marketwide sell-off that disproportionately affected leveraged long positions. Market Crash Triggers $1.5B in Liquidations Cryptocurrency market liquidations surpassed $1.54 billion Friday morning after Binance confirmed hackers stole $6.3 billion in what is shaping up to be the industry\u2019s largest breach on record.",
+   "date": "2026-10-30T07:45:01+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Hack Pinned on North Korea\u2019s Lazarus Group by TRM Labs and ZachXBT",
+   "link": "https://news.bitcoin.com/security/binance-hack-north-korea-lazarus-tradertraitor/",
+   "desc": "Several blockchain investigators say North Korea\u2019s Tradertraitor (a sub-unit of the larger Lazarus/DPRK ecosystem) likely carried out the roughly $6.3 billion Binance hack, the largest crypto theft on record to date. Investigators Point to Pyongyang The hunt for the Binance attacker has a prime suspect now, with blockchain analytics firm TRM Labs attributing the attack [\u2026]",
+   "date": "2026-10-30T07:01:57+00:00",
+   "first_seen": "2026-10-30T12:44:03.246737+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "North Korea\u2019s TraderTraitor linked to $6.3B Binance hack",
    "link": "https://cointelegraph.com/news/north-korea-linked-to-63b-binance-hack-by-crypto-investigators?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -202,6 +386,6 @@
   }
  ],
  "first_run": null,
- "runs": 9,
- "last_run": "2026-10-30T06:36:57.215995+00:00"
+ "runs": 10,
+ "last_run": "2026-10-30T12:44:03.246737+00:00"
 }
