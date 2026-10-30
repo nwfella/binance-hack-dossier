@@ -1,6 +1,70 @@
 {
  "items": [
   {
+   "source": "CryptoSlate",
+   "title": "Binance hack began with a $296 million XRP drain after 36-hour preparation",
+   "link": "https://cryptoslate.com/binance-hack-began-with-a-296-million-xrp-drain-after-36-hour-preparation/",
+   "desc": "The Binance attacker spent at least 36 hours preparing for the $6.36 billion crypto exchange hack that began with $296 million in XRP. According to an Oct. 29 investigation by TRM Labs, the attacker began preparing the operation on Oct. 28 before executing coordinated transfers across 10 blockchains the following evening. The blockchain intelligence firm\u2026 Read the full story on CryptoSlate Underst",
+   "date": "2026-10-30T05:40:52+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance hacker splits $1.4 billion of bitcoin into 19 wallets that no one can freeze",
+   "link": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-splits-usd1-4-billion-of-bitcoin-into-19-wallets-that-no-one-can-freeze",
+   "desc": "All 18,270 coins sit in 19 wallets, 17 of them holding exactly 1,000 BTC each, and none has moved since Thursday night, a CoinDesk trace of the blockchain shows.",
+   "date": "2026-10-30T04:50:42+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "$6 billion Binance hack sends bitcoin, ether tumbling; Standard Chartered expects more pain",
+   "link": "https://www.coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead",
+   "desc": "Bitcoin and ether slid after a suspected $6.3 billion Binance security breach and a Polymarket exploit. Standard Chartered says crypto prices may remain under pressure before finding a base.",
+   "date": "2026-10-30T04:00:43+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Institutional crypto investors rush to pull funds from exchanges after Binance hack",
+   "link": "https://www.coindesk.com/markets/2026/10/30/institutional-crypto-investors-rush-to-pull-funds-from-exchanges-after-binance-hack",
+   "desc": "The withdrawals suggest the fallout from the multibillion-dollar breach is spreading beyond Binance.",
+   "date": "2026-10-30T03:56:40+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance hack could accelerate shift to DEXs: Standard Chartered",
+   "link": "https://cointelegraph.com/news/binance-hack-could-accelerate-shift-to-dexs-standard-chartered?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Standard Chartered\u2019s Geoffrey Kendrick says the breach could accelerate a shift toward decentralized trading and strengthen his case for Uniswap\u2019s UNI token reaching $100 by 2030.",
+   "date": "2026-10-30T03:47:01+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Crypto's longtime foe, North Korea's Lazarus Group, likely behind Binance hack: blockchain sleuths",
+   "link": "https://www.coindesk.com/policy/2026/10/29/crypto-s-longtime-foe-north-korea-s-lazarus-group-likely-behind-binance-hack-blockchain-sleuths",
+   "desc": "Security researchers suggested that the hermit kingdom's Lazarus Group was behind Thursday's nearly $6 billion hack of the world's largest crypto exchange.",
+   "date": "2026-10-30T03:36:11+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Releases First $6.3B Hack Findings, Reports No Key Leak Evidence",
+   "link": "https://news.bitcoin.com/security/binance-releases-first-6-3b-hack-findings-reports-no-key-leak-evidence/",
+   "desc": "Binance\u2019s initial investigation points to a possible employee laptop compromise behind a security incident with an estimated $6.3 billion impact. The crypto exchange reported no evidence of a wallet private key leak and pledged to cover all losses. Initial Findings Point to Possible Laptop Compromise Binance released its first detailed findings on the estimated $6.3 [\u2026]",
+   "date": "2026-10-30T03:08:24+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "Bitcoin slides below $77,000, BNB drops amid Binance hack",
+   "link": "https://www.theblock.co/news/markets/2026-10-29-bitcoin-slides-below-77000-binance-hack-432183",
+   "desc": "BNB lost 7.1%, while Binance Co-CEO Yi He pledged that the exchange will cover all user losses resulting from the hack.",
+   "date": "2026-10-30T02:22:31+00:00",
+   "first_seen": "2026-10-30T05:41:44.315615+00:00"
+  },
+  {
    "source": "Protos",
    "title": "LIVE: Binance suspends withdrawals amid massive crypto hack",
    "link": "https://protos.com/live-binance-suspends-withdrawals-amid-massive-crypto-hack/",
@@ -122,6 +186,6 @@
   }
  ],
  "first_run": null,
- "runs": 3,
- "last_run": "2026-10-30T01:59:06.899971+00:00"
+ "runs": 4,
+ "last_run": "2026-10-30T05:41:44.315615+00:00"
 }

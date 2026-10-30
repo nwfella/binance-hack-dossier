@@ -47,8 +47,9 @@ ok("no unresolved template tokens", tokens.length === 0, tokens.slice(0, 5).join
 });
 ok("header flag / live indicator", html.includes('class="flag"'));
 ok("withdrawal-suspension alert", /All Binance deposits and withdrawals are suspended/.test(html));
-ok("rebuild timestamp injected", /<b>Rebuilt<\/b>\s*\d{2} \w{3} \d{4}/.test(html));
-ok("no stale banner (fresh build)", !html.includes("hourly job may be stalled"));
+ok("rebuild timestamp injected", /<b>Rebuilt<\/b>\s*<span id="builtAbs">\d{2} \w{3} \d{4}/.test(html));
+ok("build instant baked for client-side age check", /<body data-built="\d{4}-\d{2}-\d{2}T/.test(html));
+ok("client-side staleness logic present", html.includes("staleBanner") && html.includes("refresh stalled"));
 ok("PDF link present", html.includes("Binance-Hack-Report-2026-10-29.pdf"));
 
 // ---------- feed ----------

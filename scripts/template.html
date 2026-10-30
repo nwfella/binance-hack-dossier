@@ -153,7 +153,7 @@
   }
 </style>
 </head>
-<body>
+<body data-built="{{GEN_ISO}}">
 
 <header>
   <div class="wrap">
@@ -162,13 +162,13 @@
     <p class="sub">An independent, hourly-updated record of the largest cryptocurrency theft on record —
       what is confirmed, what is only reported, which addresses matter, and how to protect yourself.</p>
     <div class="metabar">
-      <span><b>Rebuilt</b> {{BUILT}}</span>
-      <span class="ok">● auto-refreshed hourly</span>
+      <span><b>Rebuilt</b> <span id="builtAbs">{{BUILT}}</span><span id="builtRel"></span></span>
+      <span class="ok" id="autoClaim">● auto-refreshed hourly</span>
       <span><b>{{COUNT}}</b> tracked items</span>
       <span><b>Refresh #{{RUNS}}</b></span>
       <span><b>Newest headline</b> {{NEWEST}}</span>
     </div>
-    {{STALE_NOTE}}
+    <div id="staleBanner" class="banner" hidden></div>
   </div>
 </header>
 
@@ -463,6 +463,34 @@
 </div>
 
 <script>
+/* freshness: the build timestamp is baked in, so the page can always state its own age
+   truthfully — a stalled scheduler can never make it silently rot. no network needed. */
+(function(){
+  var el = document.getElementById('builtRel');
+  var raw = document.body.getAttribute('data-built');
+  if(!el || !raw) return;
+  var built = new Date(raw);
+  if(isNaN(built)) return;
+  var age = (Date.now() - built.getTime())/1000;
+  var rel = age < 90 ? 'just now'
+          : age < 5400 ? Math.round(age/60) + ' min ago'
+          : age < 172800 ? Math.round(age/3600) + ' h ago'
+          : Math.round(age/86400) + ' d ago';
+  el.textContent = ' · ' + rel;
+  el.style.color = age > 10800 ? '#e2564f' : '#4fbf8b';
+  if(age > 10800){
+    var b = document.getElementById('staleBanner');
+    if(b){
+      b.hidden = false;
+      b.innerHTML = '<b>This tracker is ' + rel.replace(' ago','') + ' stale.</b> The scheduled hourly rebuild is '
+        + 'not running, so the feed below is frozen at the build time above. The incident summary, on-chain '
+        + 'addresses and best-practice guidance remain accurate; only the news feed is out of date.';
+    }
+    var a = document.getElementById('autoClaim');
+    if(a){ a.textContent = '\u25cf refresh stalled'; a.style.color = '#e2564f'; }
+  }
+})();
+
 /* client-side source filtering over already-baked DOM — no network */
 (function(){
   var feed = document.getElementById('feed');
