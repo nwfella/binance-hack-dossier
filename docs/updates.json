@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "India's largest exchange curbs crypto futures trading as Binance incident disrupts liquidity",
+   "link": "https://www.coindesk.com/markets/2026/10/30/coindcx-halts-new-crypto-futures-bets-as-binance-incident-disrupts-liquidity",
+   "desc": "CoinDCX has restricted new futures positions after Binance\u2019s security incident disrupted a key liquidity provider. Deposits, withdrawals and customer funds remain unaffected, the exchange said.",
+   "date": "2026-10-30T05:43:07+00:00",
+   "first_seen": "2026-10-30T05:44:42.828203+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance hack began with a $296 million XRP drain after 36-hour preparation",
    "link": "https://cryptoslate.com/binance-hack-began-with-a-296-million-xrp-drain-after-36-hour-preparation/",
@@ -186,6 +194,6 @@
   }
  ],
  "first_run": null,
- "runs": 4,
- "last_run": "2026-10-30T05:41:44.315615+00:00"
+ "runs": 5,
+ "last_run": "2026-10-30T05:44:42.828203+00:00"
 }
