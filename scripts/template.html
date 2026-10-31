@@ -163,7 +163,7 @@
       what is confirmed, what is only reported, which addresses matter, and how to protect yourself.</p>
     <div class="metabar">
       <span><b>Rebuilt</b> <span id="builtAbs">{{BUILT}}</span><span id="builtRel"></span></span>
-      <span class="ok" id="autoClaim">● auto-refreshed hourly</span>
+      <span class="ok" id="autoClaim">● auto-refreshed (GitHub delivers ~every 6h)</span>
       <span><b>{{COUNT}}</b> tracked items</span>
       <span><b>Refresh #{{RUNS}}</b></span>
       <span><b>Newest headline</b> {{NEWEST}}</span>
@@ -477,14 +477,16 @@
           : age < 172800 ? Math.round(age/3600) + ' h ago'
           : Math.round(age/86400) + ' d ago';
   el.textContent = ' · ' + rel;
-  el.style.color = age > 10800 ? '#e2564f' : '#4fbf8b';
-  if(age > 10800){
+  var LATE = 28800;               /* 8h — beyond the 7.0h worst gap measured across 7 scheduled runs */
+  el.style.color = age > LATE ? '#e2564f' : '#4fbf8b';
+  if(age > LATE){
     var b = document.getElementById('staleBanner');
     if(b){
       b.hidden = false;
-      b.innerHTML = '<b>This tracker is ' + rel.replace(' ago','') + ' stale.</b> The scheduled hourly rebuild is '
-        + 'not running, so the feed below is frozen at the build time above. The incident summary, on-chain '
-        + 'addresses and best-practice guidance remain accurate; only the news feed is out of date.';
+      b.innerHTML = '<b>No update in ' + rel.replace(' ago','') + '.</b> GitHub\u2019s scheduler normally delivers this '
+        + 'workflow every 3\u20137 hours; this gap is longer than any observed, so the rebuild may genuinely be stalled. '
+        + 'The feed is frozen at the build time above. The incident summary, on-chain addresses and best-practice '
+        + 'guidance remain accurate \u2014 only the news feed is behind.';
     }
     var a = document.getElementById('autoClaim');
     if(a){ a.textContent = '\u25cf refresh stalled'; a.style.color = '#e2564f'; }
