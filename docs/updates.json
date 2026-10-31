@@ -2,6 +2,54 @@
  "items": [
   {
    "source": "CoinDesk",
+   "title": "A Nasdaq-listed company may sell $450 million bitcoin, citing Binance hack and quantum fears",
+   "link": "https://www.coindesk.com/markets/2026/10/31/a-nasdaq-listed-company-may-sell-usd450-million-bitcoin-citing-binance-hack-and-quantum-fears",
+   "desc": "Next Technology Holding cited exchange security and quantum computing risks in authorizing sales or loans against its 5,833 BTC. It says none of the coins are held at Binance.",
+   "date": "2026-10-31T12:49:47+00:00",
+   "first_seen": "2026-10-31T13:51:41.134649+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "The $6.3 billion Binance hack paradox: Centralization made the hack possible, but also saved $3 billion",
+   "link": "https://www.coindesk.com/business/2026/10/31/the-usd6-3-billion-binance-hack-paradox-centralization-made-the-hack-possible-but-also-saved-usd3-billion",
+   "desc": "The Binance hack has revived debates about whether decentralization is the digital asset industry\u2019s greatest security advantage or its biggest point of weakness.",
+   "date": "2026-10-31T12:00:00+00:00",
+   "first_seen": "2026-10-31T13:51:41.134649+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Wall Street Downplays Binance Hack as Bitwise Sees \u2018Recovery In a Week\u2019",
+   "link": "https://news.bitcoin.com/featured/wall-street-binance-hack-buy-dip-bitwise-hougan/",
+   "desc": "Wall Street analysts are telling clients to buy the dip after the $6.3 billion Binance hack, and Bitwise CIO Matt Hougan expects bitcoin\u2019s price to recover fairly soon. Hougan Calls the Hack a Mere \u2018Blip\u2019 Hougan, chief investment officer at crypto asset manager Bitwise, played down the damage, stating: This hack has not changed anything [\u2026]",
+   "date": "2026-10-31T10:30:32+00:00",
+   "first_seen": "2026-10-31T13:51:41.134649+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance $6.3B record hack sparks pre-election political clashes",
+   "link": "https://cointelegraph.com/news/binance-63b-record-hack-sparks-pre-election-political-chatter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Some political and administration figures tried to make hay of the biggest-ever crypto heist.",
+   "date": "2026-10-31T09:58:50+00:00",
+   "first_seen": "2026-10-31T13:51:41.134649+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Starts Shopping for Stolen Coins as Ethena Ships $24M in ENA",
+   "link": "https://news.bitcoin.com/market-updates/binance-buys-back-stolen-tokens-ethena-ena/",
+   "desc": "Binance has started buying back the tokens lost in its $6.3 billion hack, and onchain data shows wallets associated with Ethena sent 128.63 million ENA worth about $24 million to the exchange. Ethena Tokens Flow Into Binance Blockchain trackers flagged the transfers early on Oct. 31, writing: Binance is buying back the stolen assets through [\u2026]",
+   "date": "2026-10-31T09:30:33+00:00",
+   "first_seen": "2026-10-31T13:51:41.134649+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Inside Job Theories Explode Ahead of Monday\u2019s Reserve Reports",
+   "link": "https://news.bitcoin.com/security/binance-hack-inside-job-theories-proof-of-reserves/",
+   "desc": "Claims that the $6.3 billion Binance hack was an inside job are spreading across X as the exchange holds back its proof-of-reserves results until Monday, Nov. 2. Skeptics Question the Timing of Monday\u2019s Audit The doubts center on the order of events, as in its Oct. 30 update, Binance said it had covered about 80% [\u2026]",
+   "date": "2026-10-31T08:30:36+00:00",
+   "first_seen": "2026-10-31T13:51:41.134649+00:00"
+  },
+  {
+   "source": "CoinDesk",
    "title": "Bitcoin stolen from Binance tops Tesla\u2019s holdings and is over twice El Salvador\u2019s reserve",
    "link": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
    "desc": "The 18,270 BTC haul is worth about $1.4 billion and comes within 442 coins of SpaceX\u2019s disclosed holdings. Blockchain investigators link the attack to North Korea.",
@@ -610,6 +658,6 @@
   }
  ],
  "first_run": null,
- "runs": 15,
- "last_run": "2026-10-31T07:28:47.070761+00:00"
+ "runs": 16,
+ "last_run": "2026-10-31T13:51:41.134649+00:00"
 }
