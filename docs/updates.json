@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "Bitcoin stolen from Binance tops Tesla\u2019s holdings and is over twice El Salvador\u2019s reserve",
+   "link": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
+   "desc": "The 18,270 BTC haul is worth about $1.4 billion and comes within 442 coins of SpaceX\u2019s disclosed holdings. Blockchain investigators link the attack to North Korea.",
+   "date": "2026-10-31T05:01:32+00:00",
+   "first_seen": "2026-10-31T07:28:47.070761+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Hackers Deploy \u2018Never-Seen-Before\u2019 Crypto Laundering Tactics",
    "link": "https://news.bitcoin.com/security/binance-hackers-deploy-never-seen-before-crypto-laundering-tactics/",
@@ -602,6 +610,6 @@
   }
  ],
  "first_run": null,
- "runs": 14,
- "last_run": "2026-10-31T01:33:51.649490+00:00"
+ "runs": 15,
+ "last_run": "2026-10-31T07:28:47.070761+00:00"
 }
