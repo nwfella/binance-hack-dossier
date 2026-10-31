@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Binance Hack Jolts Bitcoin Treasury Firm Into Weighing BTC Sales",
+   "link": "https://news.bitcoin.com/crypto-news/binance-hack-jolts-bitcoin-treasury-firm-into-weighing-btc-sales/",
+   "desc": "Next Technology Holding, the 18th-largest publicly traded corporate bitcoin holder at press time, has authorized the sale or pledging of its approximately 5,833 BTC following Binance\u2019s major security incident. The company\u2019s decision reflects mounting concerns about exchange vulnerabilities, international cyberattacks, and quantum computing. Although none of its bitcoin is held at Binance, the comp",
+   "date": "2026-10-31T22:20:30+00:00",
+   "first_seen": "2026-10-31T23:19:52.911420+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Kim Jong Un and North Korea Memes Flood X After Binance\u2019s $6.3B Hack",
    "link": "https://news.bitcoin.com/featured/kim-jong-un-and-north-korea-memes-flood-x-after-binances-6-3b-hack/",
    "desc": "Crypto Twitter on the social media platform now called X has found its latest villain-turned-comedian in Kim Jong Un. Following the colossal Binance breach, images of the North Korean dictator celebrating an imaginary payday have spread across nearly everyone\u2019s timeline. Beneath the digital mockery lies a considerably darker financial story involving hundreds of suspected cyberattacks, [\u2026]",
@@ -722,6 +730,6 @@
   }
  ],
  "first_run": null,
- "runs": 18,
- "last_run": "2026-10-31T21:51:45.901114+00:00"
+ "runs": 19,
+ "last_run": "2026-10-31T23:19:52.911420+00:00"
 }
