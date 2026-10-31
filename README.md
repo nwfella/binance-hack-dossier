@@ -34,27 +34,38 @@ state/seen.json                     dedupe index (committed)
 ```
 
 
-## Refresh triggers — read this
+## Refresh triggers — how it actually works
 
-**GitHub Actions `schedule` does not work for this repository.** Proven, not suspected: two
-different workflow files, including a five-minute canary left running for 13 minutes, produced
-**zero** `schedule` events. `push` and `workflow_dispatch` triggers work normally. This is a
-GitHub-side scheduling failure, not a configuration error.
+**Primary writer: a Windows scheduled task, hourly at :05.**
 
-What this means: the hourly rebuild only happens if something else triggers it. Three options:
+```
+schtasks /Query  /TN "BinanceHackTracker"     # status + next run
+schtasks /Run    /TN "BinanceHackTracker"     # trigger now
+schtasks /Delete /TN "BinanceHackTracker" /F  # remove
+```
 
-1. **Manual dispatch** (always available):
-   ```bash
-   gh workflow run "Refresh tracker" --ref main
-   ```
-2. **Local Windows Task Scheduler** — no third party, nothing leaves the machine, but only runs
-   while the PC is on. Opt in with:
-   ```
-   schtasks /Create /TN "BinanceHackTracker" /TR "C:\path\to\repo\scripts\refresh_local.cmd" /SC HOURLY /F
-   ```
-   Remove with `schtasks /Delete /TN "BinanceHackTracker" /F`.
-3. **External cron service** hitting the `workflow_dispatch` API — works with the PC off, but
-   requires storing a repo-scoped `actions:write` token with a third party.
+It runs `scripts/refresh_local.cmd`, which syncs to origin, regenerates the page, runs the
+verification gate, and commits. It logs every attempt to `logs/refresh.log`.
+
+**It is conflict-safe by construction.** `docs/index.html` and `docs/updates.json` are *generated*
+files, so rebasing them against a concurrent run can only ever conflict. Instead the runner resets
+to `origin/main` and regenerates from that state — a stale local copy can never overwrite newer
+remote data, and a race costs at most one retry. It also refuses to run at all if the working tree
+has uncommitted hand edits.
+
+**Fallback: GitHub Actions `schedule`.** GitHub delivers this repo's cron at roughly 3–7 hour
+intervals regardless of the requested cadence (measured over 7 scheduled runs: mean gap 5.5h), so
+it is a backstop for when the PC is off, not the primary path. `workflow_dispatch` also works.
+
+> Note: the workflow deliberately has **no `push` trigger**. With the local task running hourly, a
+> push-triggered rebuild would fire on every refresh and add a duplicate commit each hour.
+
+## History of this problem
+
+The first deployment used GitHub's cron as the only trigger. It delivered **zero** events in 4
+hours, then (after re-registering the workflow under a new filename) only about every six hours.
+That is why the page computes its own age from a baked `data-built` timestamp and flips to a red
+"refresh stalled" banner past three hours — a stalled scheduler is now visible rather than silent.
 
 ### The page cannot rot silently
 

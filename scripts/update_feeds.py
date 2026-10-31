@@ -267,6 +267,11 @@ def render(st: dict) -> str:
         )
     feed_html = "\n".join(rows) or '<p class="empty">No matching items yet — the next refresh will populate this.</p>'
 
+    # next scheduled tick: :05 past the coming hour (local task cadence)
+    nxt = now.replace(minute=5, second=0, microsecond=0)
+    if now.minute >= 5:
+        nxt = (now + timedelta(hours=1)).replace(minute=5, second=0, microsecond=0)
+
     last = st.get("last_run")
     last_dt = datetime.fromisoformat(last) if last else now
     fresh_age = (now - last_dt).total_seconds()
@@ -297,6 +302,7 @@ def render(st: dict) -> str:
         .replace("{{STALE_CLASS}}", " stale" if stale else "")
         .replace("{{STALE_NOTE}}", '<div class="banner">Data is more than 3 hours old — the hourly job may be stalled. Check the Actions tab.</div>' if stale else "")
         .replace("{{SRC_CHIPS}}", src_chips)
+        .replace("{{NEXT}}", nxt.strftime("%H:05 UTC"))
         .replace("{{NEWEST}}", ago(newest, now) if newest else "—")
         .replace("{{GEN_ISO}}", now.isoformat())
     )
