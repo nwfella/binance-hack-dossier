@@ -2,6 +2,30 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Kim Jong Un and North Korea Memes Flood X After Binance\u2019s $6.3B Hack",
+   "link": "https://news.bitcoin.com/featured/kim-jong-un-and-north-korea-memes-flood-x-after-binances-6-3b-hack/",
+   "desc": "Crypto Twitter on the social media platform now called X has found its latest villain-turned-comedian in Kim Jong Un. Following the colossal Binance breach, images of the North Korean dictator celebrating an imaginary payday have spread across nearly everyone\u2019s timeline. Beneath the digital mockery lies a considerably darker financial story involving hundreds of suspected cyberattacks, [\u2026]",
+   "date": "2026-10-31T21:15:44+00:00",
+   "first_seen": "2026-10-31T21:51:45.901114+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Bitcoin ETFs Lose $643M After Binance Hack Ends 4-Day Inflow Run",
+   "link": "https://news.bitcoin.com/market-updates/bitcoin-etfs-lose-643m-after-binance-hack-ends-4-day-inflow-run/",
+   "desc": "Bitcoin ETFs suffered $643.33 million in net outflows Friday, wiping out four consecutive days of inflows and pushing the week into negative territory. Ether and solana also faced heavy redemptions as the Binance hack triggered a fresh bout of risk aversion across crypto markets. Blackrock, Fidelity Lead $643M Bitcoin ETF Selloff Four days of steady [\u2026]",
+   "date": "2026-10-31T20:10:39+00:00",
+   "first_seen": "2026-10-31T21:51:45.901114+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "CFTC and US Lawmaker Offer Two Different Answers to Binance\u2019s $6.3B Hack",
+   "link": "https://news.bitcoin.com/regulation-and-legal/cftc-and-us-lawmaker-offer-two-different-answers-to-binances-6-3b-hack/",
+   "desc": "A $6.3 billion crypto heist has handed Washington a fresh regulatory fight. One federal watchdog wants exchanges to volunteer for oversight, while a Republican senator argues Congress already missed its chance to give the industry stronger defenses against thieves. CFTC Chair Selig Pushes Federal Registration After Binance Theft The Oct. 29 Binance breach, reportedly involving [\u2026]",
+   "date": "2026-10-31T19:05:34+00:00",
+   "first_seen": "2026-10-31T21:51:45.901114+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Binance Says BTC, ETH, XRP and 7 Other Cryptos Fully Backed After Hack",
    "link": "https://news.bitcoin.com/security/binance-says-btc-eth-xrp-and-7-other-cryptos-fully-backed-after-hack/",
    "desc": "Binance said 10 cryptocurrencies were fully backed after replenishing 90% of stolen assets. The exchange is sourcing less liquid tokens to close the remaining shortfall while targeting a Sunday withdrawal restart. 10 Cryptos Fully Backed as Binance Narrows Shortfall Binance reported progress replacing stolen assets in its third security incident update on X on Oct. [\u2026]",
@@ -698,6 +722,6 @@
   }
  ],
  "first_run": null,
- "runs": 17,
- "last_run": "2026-10-31T18:29:22.061817+00:00"
+ "runs": 18,
+ "last_run": "2026-10-31T21:51:45.901114+00:00"
 }
