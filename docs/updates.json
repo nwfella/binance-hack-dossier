@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "CryptoSlate",
+   "title": "FBI blames North Korea for $6 billion Binance hack, urges THORChain to block stolen funds",
+   "link": "https://cryptoslate.com/fbi-blames-north-korea-for-6-billion-binance-hack-urges-thorchain-to-block-stolen-funds/",
+   "desc": "The US Federal Bureau of Investigation (FBI) has blamed North Korea's TraderTraitor operation for stealing more than $6 billion from Binance. In an Oct. 31 security alert, the agency attributed the Oct. 29 attack to North Korean cyber actors, providing official US government confirmation of the perpetrators behind one of history's largest cryptocurrency thefts. The\u2026 Read the full story on CryptoSl",
+   "date": "2026-11-01T12:20:43+00:00",
+   "first_seen": "2026-11-01T13:05:04.705940+00:00"
+  },
+  {
    "source": "CoinDesk",
    "title": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
    "link": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
@@ -794,6 +802,6 @@
   }
  ],
  "first_run": null,
- "runs": 40,
- "last_run": "2026-11-01T12:05:04.790694+00:00"
+ "runs": 41,
+ "last_run": "2026-11-01T13:05:04.705940+00:00"
 }
