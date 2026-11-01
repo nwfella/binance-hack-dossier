@@ -153,7 +153,7 @@
   }
 </style>
 </head>
-<body data-built="2026-11-01T02:05:16.285727+00:00">
+<body data-built="2026-11-01T02:13:17.575381+00:00">
 
 <header>
   <div class="wrap">
@@ -162,12 +162,12 @@
     <p class="sub">An independent, hourly-updated record of the largest cryptocurrency theft on record —
       what is confirmed, what is only reported, which addresses matter, and how to protect yourself.</p>
     <div class="metabar">
-      <span><b>Rebuilt</b> <span id="builtAbs">01 Nov 2026, 02:05 UTC</span><span id="builtRel"></span></span>
+      <span><b>Rebuilt</b> <span id="builtAbs">01 Nov 2026, 02:13 UTC</span><span id="builtRel"></span></span>
       <span class="ok" id="autoClaim">● refreshed hourly at :05</span>
       <span><b>Next</b> 03:05 UTC</span>
-      <span><b>94</b> tracked items</span>
-      <span><b>Refresh #27</b></span>
-      <span><b>Newest headline</b> 19 min ago</span>
+      <span><b>79</b> tracked items</span>
+      <span><b>Refresh #28</b></span>
+      <span><b>Newest headline</b> 27 min ago</span>
     </div>
     <div id="staleBanner" class="banner" hidden></div>
   </div>
@@ -176,25 +176,26 @@
 <div class="wrap">
 
   <div class="alert">
-    <h2>All Binance deposits and withdrawals are suspended</h2>
-    <p>Binance co-founder Yi He: “User funds are safe. Binance will cover all hacking losses.” A full
-    post-mortem is promised. Binance has <strong>not</strong> published a loss figure, an attribution, or
-    a timetable for resuming withdrawals. Check Binance's own announcements before attempting any transfer.</p>
+    <h2>Deposits and withdrawals suspended since 29 Oct &middot; reopening targeted Sunday 1 Nov</h2>
+    <p>Binance has covered ~90% of stolen assets out of $6.34B set aside, and says BTC, ETH, USDT, BNB, SOL,
+    USDC, XRP, USD1, RLUSD and ZEC are <strong>fully backed</strong>. A fresh proof-of-reserves snapshot was taken
+    31 Oct; holders can verify 1:1 backing from roughly <strong>3 Nov</strong>. The FBI has confirmed North
+    Korea's role. Check Binance's own announcements before attempting any transfer.</p>
   </div>
 
   <div class="stats">
-    <div class="stat"><span class="n">$5.5–5.9B</span><span class="l">Est. outflow</span>
-      <span class="q">Third-party tallies. Not Binance's figure.</span></div>
-    <div class="stat blue"><span class="n">$2.54B</span><span class="l">Verified frozen</span>
-      <span class="q">Binance, self-reported. Not a loss figure.</span></div>
-    <div class="stat amber"><span class="n">~$2.9B</span><span class="l">Likely still loose</span>
-      <span class="q">Inferred: outflow minus freezes.</span></div>
+    <div class="stat"><span class="n">$6.36B</span><span class="l">Total taken</span>
+      <span class="q">TRM Labs. 10 blockchains, most in ~20 min.</span></div>
+    <div class="stat blue"><span class="n">~$2.7B</span><span class="l">Frozen</span>
+      <span class="q">Issuers + Arbitrum Security Council.</span></div>
+    <div class="stat amber"><span class="n">~$2.4B</span><span class="l">Beyond any freeze</span>
+      <span class="q">Attacker holds 420k+ ETH and 18,270 BTC.</span></div>
+    <div class="stat"><span class="n">90%</span><span class="l">Replenished</span>
+      <span class="q">Binance, 31 Oct. $6.34B set aside.</span></div>
     <div class="stat"><span class="n">11</span><span class="l">Wallets drained</span>
-      <span class="q">Across 4+ chains in ~12 minutes.</span></div>
-    <div class="stat"><span class="n">6</span><span class="l">Chains touched</span>
-      <span class="q">ETH, Arbitrum, Optimism, Avalanche, BTC, Tron.</span></div>
-    <div class="stat amber"><span class="n">None</span><span class="l">Attribution</span>
-      <span class="q">No agency or firm has named an actor.</span></div>
+      <span class="q">First move was XRP, 10 min ahead of the rest.</span></div>
+    <div class="stat amber"><span class="n">North Korea</span><span class="l">Attribution</span>
+      <span class="q">TraderTraitor / Lazarus. FBI-confirmed 1 Nov.</span></div>
   </div>
 
   <section>
@@ -241,51 +242,57 @@
 
   <section>
     <h2 class="sec"><span class="k">02</span> Incident brief</h2>
-    <p class="lede">The short version. Section 6 has the forensics.</p>
+    <p class="lede">The short version, revised as Binance's own findings have landed. Section 06 has the full timeline.</p>
     <div class="grid">
       <div class="card">
-        <h3>One leaked key, one persistent delegation</h3>
-        <p>The attacker obtained the private key to <strong>Binance 14</strong>, one of the exchange's busiest
-        payment wallets, and signed an <strong>EIP-7702 authorisation</strong> pointing it at attacker-deployed
-        bytecode. The delegation persists until the wallet signs a replacement — so the wallet became a sweeper
-        that forwarded every inbound deposit to the attacker, while Binance's own withdrawals kept flowing from it.</p>
+        <h3>A compromised engineer's laptop &mdash; not a leaked private key</h3>
+        <p>Binance links the theft to a <strong>DevOps engineer's compromised laptop</strong> that gave access to
+        a service container and let the attacker submit unauthorised withdrawals. Binance found <strong>no
+        evidence of a leaked wallet private key</strong>, later disclosed "additional points of breach", and
+        co-CEO Richard Teng stressed it was not one engineer's permissions or a single click. EIP-7702 did not
+        cause the breach &mdash; it <em>amplified</em> it.</p>
       </div>
       <div class="card">
-        <h3>A 50-authorisation nonce spray</h3>
-        <p>Because Binance 14's nonce was advancing with daily payouts, the attacker could not guess it — so he
-        signed <strong>50 authorisations across a contiguous nonce window</strong> in one type-4 transaction.
-        Forty-nine failed. One matched. Nonce unpredictability is not a security control.</p>
+        <h3>The attack began with XRP, ten minutes early</h3>
+        <p>Between <strong>20:05 and 20:09 UTC</strong>, before anything else moved, five Binance wallets on the
+        XRP Ledger sent <strong>233.46M XRP (~$296M)</strong> to a single attacker address. Bitcoin, Tron, Solana
+        and Optimism followed by 20:22; the Ethereum sweep at 20:24 was the biggest single move, not the first
+        one. Preparation began at least <strong>36 hours earlier</strong>.</p>
       </div>
       <div class="card">
-        <h3>Then ten more wallets in twelve minutes</h3>
-        <p>Within 12 minutes, ten more hot wallets on four chains sent to the same collection address — each as an
-        <strong>ordinary transfer signed by the wallet's own key</strong>. The Ethereum delegation cannot explain
-        the Bitcoin or Tron movements, which is why investigators describe a broader signing-key problem.</p>
+        <h3>Then a 50-authorisation nonce spray</h3>
+        <p>Because Binance 14's nonce was advancing with daily payouts, the attacker signed <strong>50 EIP-7702
+        authorisations across a contiguous nonce window</strong> in one type-4 transaction. Forty-nine failed, one
+        matched. The delegated wallet swept 167,464 ETH and 63 tokens, then swept again at 20:41, 20:59, 21:04,
+        21:44, 22:39 and 23:56 UTC.</p>
       </div>
       <div class="card">
-        <h3>The wallets were the proof-of-reserves wallets</h3>
-        <p>CoinDesk found the drained addresses are the same ones Binance publishes as backing customer assets.
-        Its disclosed ether backing is an estimated <strong>6% short</strong> until the stolen ETH is replaced —
-        roughly 204,500 ETH that has to be bought back into the reserve.</p>
+        <h3>Counterparty risk, realised &mdash; then partly cured</h3>
+        <p>The drained wallets were the ones Binance publishes as <strong>proof-of-reserves backing</strong>.
+        Binance has since set aside <strong>$6.34B</strong>, replaced ~90%, declared ten major assets 100% backed,
+        and is buying the rest via market and OTC. The new zero-knowledge proof takes 40&ndash;50 hours, so
+        customer verification lands around 3 Nov &mdash; not immediately.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2 class="sec"><span class="k">03</span> Live updates <span style="font:400 12px var(--mono); color:var(--muted)">— rebuilt hourly from 94 tracked items</span></h2>
+    <h2 class="sec"><span class="k">03</span> Live updates <span style="font:400 12px var(--mono); color:var(--muted)">— last 48h · 79 items · rebuilt hourly at :05</span></h2>
     <p class="lede">Public RSS feeds from crypto newsrooms, filtered for this incident and deduplicated.
-      Newest first. No AI summarisation and no editorialising — headline, source, timestamp, link.</p>
+      Newest first. No AI summarisation and no editorialising — headline, source, timestamp, link.
+      Showing the last 48 hours; all 94 items since the breach are retained in
+      <a href="updates.json">updates.json</a>.</p>
     <div class="feedbar" id="filters">
       <button class="fbtn on" data-src="all">All</button>
     </div>
     <div id="feed">
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-11-01T01:45:19+00:00">01 Nov 01:45 UTC</time><span class="rel">19 min ago</span></div><a class="ut" href="https://news.bitcoin.com/security/michael-saylor-sees-stronger-crypto-security-after-binances-6-3-billion-hack/" target="_blank" rel="noopener">Michael Saylor Sees Stronger Crypto Security After Binance’s $6.3 Billion Hack</a><p class="ud">Michael Saylor expects the crypto industry to strengthen security after Binance’s $6.3 billion hack. The Strategy executive chairman also backed the exchange’s commitment to use its own balance sheet to make customers whole. Saylo…</p></article>
-<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-11-01T01:10:05+00:00">01 Nov 01:10 UTC</time><span class="rel">55 min ago</span></div><a class="ut" href="https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses" target="_blank" rel="noopener">FBI confirms North Korea&#x27;s role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses</a><p class="ud">While the FBI listed hundreds of addresses in its notice, Chainalysis said the Binance attackers have already used &quot;thousands addresses,&quot; and expects this number to continue growing.</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-11-01T01:45:19+00:00">01 Nov 01:45 UTC</time><span class="rel">27 min ago</span></div><a class="ut" href="https://news.bitcoin.com/security/michael-saylor-sees-stronger-crypto-security-after-binances-6-3-billion-hack/" target="_blank" rel="noopener">Michael Saylor Sees Stronger Crypto Security After Binance’s $6.3 Billion Hack</a><p class="ud">Michael Saylor expects the crypto industry to strengthen security after Binance’s $6.3 billion hack. The Strategy executive chairman also backed the exchange’s commitment to use its own balance sheet to make customers whole. Saylo…</p></article>
+<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-11-01T01:10:05+00:00">01 Nov 01:10 UTC</time><span class="rel">63 min ago</span></div><a class="ut" href="https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses" target="_blank" rel="noopener">FBI confirms North Korea&#x27;s role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses</a><p class="ud">While the FBI listed hundreds of addresses in its notice, Chainalysis said the Binance attackers have already used &quot;thousands addresses,&quot; and expects this number to continue growing.</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-11-01T00:30:07+00:00">01 Nov 00:30 UTC</time><span class="rel">1 h ago</span></div><a class="ut" href="https://news.bitcoin.com/featured/trump-speaks-on-6-3b-binance-hack-as-fbi-confirms-north-korea/" target="_blank" rel="noopener">Trump Speaks on $6.3B Binance Hack as FBI Confirms North Korea</a><p class="ud">President Donald Trump said U.S. officials were looking into Binance’s $6.3 billion hack and acknowledged the exchange’s recovery assurances. The FBI subsequently attributed the theft to North Korea and warned of further launderin…</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T22:20:30+00:00">31 Oct 22:20 UTC</time><span class="rel">3 h ago</span></div><a class="ut" href="https://news.bitcoin.com/crypto-news/binance-hack-jolts-bitcoin-treasury-firm-into-weighing-btc-sales/" target="_blank" rel="noopener">Binance Hack Jolts Bitcoin Treasury Firm Into Weighing BTC Sales</a><p class="ud">Next Technology Holding, the 18th-largest publicly traded corporate bitcoin holder at press time, has authorized the sale or pledging of its approximately 5,833 BTC following Binance’s major security incident. The company’s decisi…</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T21:15:44+00:00">31 Oct 21:15 UTC</time><span class="rel">4 h ago</span></div><a class="ut" href="https://news.bitcoin.com/featured/kim-jong-un-and-north-korea-memes-flood-x-after-binances-6-3b-hack/" target="_blank" rel="noopener">Kim Jong Un and North Korea Memes Flood X After Binance’s $6.3B Hack</a><p class="ud">Crypto Twitter on the social media platform now called X has found its latest villain-turned-comedian in Kim Jong Un. Following the colossal Binance breach, images of the North Korean dictator celebrating an imaginary payday have …</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T20:10:39+00:00">31 Oct 20:10 UTC</time><span class="rel">5 h ago</span></div><a class="ut" href="https://news.bitcoin.com/market-updates/bitcoin-etfs-lose-643m-after-binance-hack-ends-4-day-inflow-run/" target="_blank" rel="noopener">Bitcoin ETFs Lose $643M After Binance Hack Ends 4-Day Inflow Run</a><p class="ud">Bitcoin ETFs suffered $643.33 million in net outflows Friday, wiping out four consecutive days of inflows and pushing the week into negative territory. Ether and solana also faced heavy redemptions as the Binance hack triggered a …</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T19:05:34+00:00">31 Oct 19:05 UTC</time><span class="rel">6 h ago</span></div><a class="ut" href="https://news.bitcoin.com/regulation-and-legal/cftc-and-us-lawmaker-offer-two-different-answers-to-binances-6-3b-hack/" target="_blank" rel="noopener">CFTC and US Lawmaker Offer Two Different Answers to Binance’s $6.3B Hack</a><p class="ud">A $6.3 billion crypto heist has handed Washington a fresh regulatory fight. One federal watchdog wants exchanges to volunteer for oversight, while a Republican senator argues Congress already missed its chance to give the industry…</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T20:10:39+00:00">31 Oct 20:10 UTC</time><span class="rel">6 h ago</span></div><a class="ut" href="https://news.bitcoin.com/market-updates/bitcoin-etfs-lose-643m-after-binance-hack-ends-4-day-inflow-run/" target="_blank" rel="noopener">Bitcoin ETFs Lose $643M After Binance Hack Ends 4-Day Inflow Run</a><p class="ud">Bitcoin ETFs suffered $643.33 million in net outflows Friday, wiping out four consecutive days of inflows and pushing the week into negative territory. Ether and solana also faced heavy redemptions as the Binance hack triggered a …</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T19:05:34+00:00">31 Oct 19:05 UTC</time><span class="rel">7 h ago</span></div><a class="ut" href="https://news.bitcoin.com/regulation-and-legal/cftc-and-us-lawmaker-offer-two-different-answers-to-binances-6-3b-hack/" target="_blank" rel="noopener">CFTC and US Lawmaker Offer Two Different Answers to Binance’s $6.3B Hack</a><p class="ud">A $6.3 billion crypto heist has handed Washington a fresh regulatory fight. One federal watchdog wants exchanges to volunteer for oversight, while a Republican senator argues Congress already missed its chance to give the industry…</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T17:45:33+00:00">31 Oct 17:45 UTC</time><span class="rel">8 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-says-btc-eth-xrp-and-7-other-cryptos-fully-backed-after-hack/" target="_blank" rel="noopener">Binance Says BTC, ETH, XRP and 7 Other Cryptos Fully Backed After Hack</a><p class="ud">Binance said 10 cryptocurrencies were fully backed after replenishing 90% of stolen assets. The exchange is sourcing less liquid tokens to close the remaining shortfall while targeting a Sunday withdrawal restart. 10 Cryptos Fully…</p></article>
 <article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-31T15:36:01+00:00">31 Oct 15:36 UTC</time><span class="rel">10 h ago</span></div><a class="ut" href="https://cointelegraph.com/news/binance-hack-90-percent-replenished?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Binance says 90% of stolen assets replenished, targets Sunday withdrawals</a><p class="ud">Less-liquid tokens make up the remaining shortfall as Binance continues buying replacement assets through market and over-the-counter trades.</p></article>
 <article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-31T15:26:46+00:00">31 Oct 15:26 UTC</time><span class="rel">10 h ago</span></div><a class="ut" href="https://cointelegraph.com/markets/bitcoin-binance-hack-strive-ceo?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Bitcoin held up better than expected after Binance hack, Strive CEO says</a><p class="ud">Strive CEO Matt Cole says the Binance hack has not changed his long-term case for Bitcoin, but cautions it is too early to call a market bottom.</p></article>
@@ -298,16 +305,16 @@
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T09:30:33+00:00">31 Oct 09:30 UTC</time><span class="rel">16 h ago</span></div><a class="ut" href="https://news.bitcoin.com/market-updates/binance-buys-back-stolen-tokens-ethena-ena/" target="_blank" rel="noopener">Binance Starts Shopping for Stolen Coins as Ethena Ships $24M in ENA</a><p class="ud">Binance has started buying back the tokens lost in its $6.3 billion hack, and onchain data shows wallets associated with Ethena sent 128.63 million ENA worth about $24 million to the exchange. Ethena Tokens Flow Into Binance Block…</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T08:30:36+00:00">31 Oct 08:30 UTC</time><span class="rel">17 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-hack-inside-job-theories-proof-of-reserves/" target="_blank" rel="noopener">Binance Inside Job Theories Explode Ahead of Monday’s Reserve Reports</a><p class="ud">Claims that the $6.3 billion Binance hack was an inside job are spreading across X as the exchange holds back its proof-of-reserves results until Monday, Nov. 2. Skeptics Question the Timing of Monday’s Audit The doubts center on …</p></article>
 <article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-31T05:01:32+00:00">31 Oct 05:01 UTC</time><span class="rel">21 h ago</span></div><a class="ut" href="https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve" target="_blank" rel="noopener">Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve</a><p class="ud">The 18,270 BTC haul is worth about $1.4 billion and comes within 442 coins of SpaceX’s disclosed holdings. Blockchain investigators link the attack to North Korea.</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T01:05:18+00:00">31 Oct 01:05 UTC</time><span class="rel">24 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-hackers-deploy-never-seen-before-crypto-laundering-tactics/" target="_blank" rel="noopener">Binance Hackers Deploy ‘Never-Seen-Before’ Crypto Laundering Tactics</a><p class="ud">Chainalysis identified previously unseen laundering patterns as attackers circulated stolen Binance assets through thousands of transactions, suggesting automated efforts to obscure the trail. Its investigation also linked the the…</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T23:05:47+00:00">30 Oct 23:05 UTC</time><span class="rel">26 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-prepares-to-resume-withdrawals-unveils-6-3b-hack-recovery-plan/" target="_blank" rel="noopener">Binance Prepares to Resume Withdrawals, Unveils $6.3B Hack Recovery Plan</a><p class="ud">Binance is preparing to restore withdrawals in phases after its $6.3 billion hack, with reopening dependent on security checks. The exchange committed company funds to replace stolen assets while investigators expanded their revie…</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-31T01:05:18+00:00">31 Oct 01:05 UTC</time><span class="rel">25 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-hackers-deploy-never-seen-before-crypto-laundering-tactics/" target="_blank" rel="noopener">Binance Hackers Deploy ‘Never-Seen-Before’ Crypto Laundering Tactics</a><p class="ud">Chainalysis identified previously unseen laundering patterns as attackers circulated stolen Binance assets through thousands of transactions, suggesting automated efforts to obscure the trail. Its investigation also linked the the…</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T23:05:47+00:00">30 Oct 23:05 UTC</time><span class="rel">27 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-prepares-to-resume-withdrawals-unveils-6-3b-hack-recovery-plan/" target="_blank" rel="noopener">Binance Prepares to Resume Withdrawals, Unveils $6.3B Hack Recovery Plan</a><p class="ud">Binance is preparing to restore withdrawals in phases after its $6.3 billion hack, with reopening dependent on security checks. The exchange committed company funds to replace stolen assets while investigators expanded their revie…</p></article>
 <article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-30T22:00:00+00:00">30 Oct 22:00 UTC</time><span class="rel">28 h ago</span></div><a class="ut" href="https://cointelegraph.com/magazine/binance-hackers-raced-to-move-billions-before-could-be-frozen?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Binance hackers raced to move billions before it could be frozen</a><p class="ud">Attackers raced to convert stolen stablecoins into crypto that issuers could not freeze as industry players like Tether and Circle moved to immobilize billions of dollars in assets.</p></article>
 <article class="upd"><div class="uh"><span class="src s-theblock">The Block</span><time datetime="2026-10-30T21:20:23+00:00">30 Oct 21:20 UTC</time><span class="rel">28 h ago</span></div><a class="ut" href="https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225" target="_blank" rel="noopener">Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion</a><p class="ud">Investigators tie the $6B Binance hack to North Korea. Here&#x27;s how hot-wallet signing infrastructure was compromised and where funds went.</p></article>
 <article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-30T21:16:04+00:00">30 Oct 21:16 UTC</time><span class="rel">28 h ago</span></div><a class="ut" href="https://decrypt.co/382285/binance-hack-why-offshore-exchanges-need-us-oversight-cftc-chair" target="_blank" rel="noopener">Binance Hack Shows Why Offshore Exchanges Need US Oversight, CFTC Chair Says</a><p class="ud">Michael Selig said the record $6.4 billion theft shows why offshore exchanges should register with the CFTC and adopt U.S.-grade cybersecurity standards.</p></article>
-<article class="upd"><div class="uh"><span class="src s-theblock">The Block</span><time datetime="2026-10-30T21:06:03+00:00">30 Oct 21:06 UTC</time><span class="rel">28 h ago</span></div><a class="ut" href="https://www.theblock.co/news/regulation/2026-10-30-trump-looking-into-binance-hack-calls-grow-for-crypto-rules-432236" target="_blank" rel="noopener">President Trump says they’re looking into Binance hack as calls grow for crypto rules</a><p class="ud">Following the $6.3 billion hack of the world&#x27;s largest crypto exchange, Binance, calls are growing for legislation.</p></article>
+<article class="upd"><div class="uh"><span class="src s-theblock">The Block</span><time datetime="2026-10-30T21:06:03+00:00">30 Oct 21:06 UTC</time><span class="rel">29 h ago</span></div><a class="ut" href="https://www.theblock.co/news/regulation/2026-10-30-trump-looking-into-binance-hack-calls-grow-for-crypto-rules-432236" target="_blank" rel="noopener">President Trump says they’re looking into Binance hack as calls grow for crypto rules</a><p class="ud">Following the $6.3 billion hack of the world&#x27;s largest crypto exchange, Binance, calls are growing for legislation.</p></article>
 <article class="upd"><div class="uh"><span class="src s-cryptoslate">CryptoSlate</span><time datetime="2026-10-30T20:30:08+00:00">30 Oct 20:30 UTC</time><span class="rel">29 h ago</span></div><a class="ut" href="https://cryptoslate.com/binance-hackers-deploy-never-seen-before-laundering-tactics-to-conceal-6-3-billion-theft/" target="_blank" rel="noopener">Binance hackers deploy never-seen-before laundering tactics to conceal $6.3 billion theft</a><p class="ud">Hackers behind Binance&#x27;s $6.3 billion breach are using previously unseen laundering tactics while rapidly converting stolen assets into other cryptocurrencies. On Oct. 30, blockchain analytics firm Chainalysis said that investigat…</p></article>
 <article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-30T19:55:00+00:00">30 Oct 19:55 UTC</time><span class="rel">30 h ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter" target="_blank" rel="noopener">Experts divided over Binance hack asset freezes, warn recovery is another matter</a><p class="ud">Tether, Circle and others moved within hours to block billions in stolen crypto, but legal experts question whether smaller victims would get the same protection.</p></article>
 <article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-30T18:45:03+00:00">30 Oct 18:45 UTC</time><span class="rel">31 h ago</span></div><a class="ut" href="https://decrypt.co/382257/binance-hack-why-bitcoin-didnt-crash" target="_blank" rel="noopener">Binance Hack: Why Bitcoin Didn&#x27;t Crash Like It Did in 2018</a><p class="ud">Binance lost about $6.4 billion, the largest crypto hack on record, yet Bitcoin fell about 3%, against nearly 11% in 2018 when the exchange was last attacked.</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T18:05:31+00:00">30 Oct 18:05 UTC</time><span class="rel">31 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/new-breach-points-binance-ceo-reveals-fresh-findings-6-3b-hack/" target="_blank" rel="noopener">New Breach Points: Binance CEO Reveals Fresh Findings in $6.3B Hack</a><p class="ud">Binance investigators uncovered additional breach points, bypassed approval controls, and evidence-destruction tactics in Thursday’s $6.3 billion hack, co-CEO Richard Teng said. His update outlined a withdrawal-service rebuild, a …</p></article>
+<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T18:05:31+00:00">30 Oct 18:05 UTC</time><span class="rel">32 h ago</span></div><a class="ut" href="https://news.bitcoin.com/security/new-breach-points-binance-ceo-reveals-fresh-findings-6-3b-hack/" target="_blank" rel="noopener">New Breach Points: Binance CEO Reveals Fresh Findings in $6.3B Hack</a><p class="ud">Binance investigators uncovered additional breach points, bypassed approval controls, and evidence-destruction tactics in Thursday’s $6.3 billion hack, co-CEO Richard Teng said. His update outlined a withdrawal-service rebuild, a …</p></article>
 <article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-30T17:50:26+00:00">30 Oct 17:50 UTC</time><span class="rel">32 h ago</span></div><a class="ut" href="https://decrypt.co/382268/secret-service-fbi-binance-hack-probe" target="_blank" rel="noopener">Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million</a><p class="ud">Binance says it has set aside $6.34 billion to cover losses from the breach and the FBI and Secret Service are now working with the exchange as investigators trace the stolen funds.</p></article>
 <article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-30T17:48:27+00:00">30 Oct 17:48 UTC</time><span class="rel">32 h ago</span></div><a class="ut" href="https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Coinbase leads crypto stock selloff following $6.3B Binance hack</a><p class="ud">Circle, Strategy and other crypto-linked stocks fell sharply Friday, a day after Binance disclosed a $6.3 billion security breach.</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T17:02:31+00:00">30 Oct 17:02 UTC</time><span class="rel">33 h ago</span></div><a class="ut" href="https://news.bitcoin.com/market-updates/bitcoin-rebounds-above-77k-binance-hack-keeps-traders-edge/" target="_blank" rel="noopener">Bitcoin Price Rebounds Above $77K, but Binance Hack Keeps Traders on Edge</a><p class="ud">Bitcoin stabilized above $77,000 after a $6.3 billion Binance hack triggered a marketwide sell-off, pushing the cryptocurrency to a multiweek low of $76,320. Bitcoin Plunges to Multiweek Low Following Binance Hack Bitcoin price st…</p></article>
@@ -317,7 +324,7 @@
 <article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-30T16:31:17+00:00">30 Oct 16:31 UTC</time><span class="rel">33 h ago</span></div><a class="ut" href="https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart" target="_blank" rel="noopener">Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart</a><p class="ud">CEO Richard Teng said hackers erased evidence and bypassed security checks. Binance plans to publish its proof of reserves Monday.</p></article>
 <article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-30T16:25:06+00:00">30 Oct 16:25 UTC</time><span class="rel">33 h ago</span></div><a class="ut" href="https://decrypt.co/382236/elon-musk-cz-trade-blows-spacex-shares-binance-hack" target="_blank" rel="noopener">Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack</a><p class="ud">After Musk appeared to mock Binance’s $6.3 billion hack, CZ reminded him that the exchange’s $500 million bet on his Twitter takeover is now worth over $1 billion in SpaceX shares.</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T15:26:13+00:00">30 Oct 15:26 UTC</time><span class="rel">34 h ago</span></div><a class="ut" href="https://news.bitcoin.com/market-updates/coinbase-bitcoin-giant-strategy-fall-binance-hack-rocks-crypto-stocks/" target="_blank" rel="noopener">Coinbase, Bitcoin Giant Strategy Fall as Binance Hack Rocks Crypto Stocks</a><p class="ud">Crypto-linked stocks plunged Friday as a multibillion-dollar Binance security breach collided with a broader technology selloff driven by concerns over AI spending. Coinbase dropped more than 12% and Strategy fell 6%, even after b…</p></article>
-<article class="upd"><div class="uh"><span class="src s-protos">Protos</span><time datetime="2026-10-30T15:12:36+00:00">30 Oct 15:12 UTC</time><span class="rel">34 h ago</span></div><a class="ut" href="https://protos.com/how-the-binance-hack-happened-on-chain-on-ethereum/" target="_blank" rel="noopener">How the Binance hack happened on-chain on Ethereum</a><p class="ud">The hack of Binance&#x27;s Ethereum on-chain relied on EIP-7702 to target at least one address and regular transfers for other addresses.</p></article>
+<article class="upd"><div class="uh"><span class="src s-protos">Protos</span><time datetime="2026-10-30T15:12:36+00:00">30 Oct 15:12 UTC</time><span class="rel">35 h ago</span></div><a class="ut" href="https://protos.com/how-the-binance-hack-happened-on-chain-on-ethereum/" target="_blank" rel="noopener">How the Binance hack happened on-chain on Ethereum</a><p class="ud">The hack of Binance&#x27;s Ethereum on-chain relied on EIP-7702 to target at least one address and regular transfers for other addresses.</p></article>
 <article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-30T14:17:34+00:00">30 Oct 14:17 UTC</time><span class="rel">35 h ago</span></div><a class="ut" href="https://decrypt.co/resources/what-is-eip-7702-the-ethereum-upgrade-behind-the-6-4b-binance-hack" target="_blank" rel="noopener">What is EIP-7702? The Ethereum Upgrade Behind the $6.4B Binance Hack</a><p class="ud">EIP-7702 lets ordinary Ethereum wallets run smart contract code, enabling batched and sponsored transactions. Here&#x27;s how it works.</p></article>
 <article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-30T14:13:34+00:00">30 Oct 14:13 UTC</time><span class="rel">35 h ago</span></div><a class="ut" href="https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack" target="_blank" rel="noopener">Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack</a><p class="ud">Analysts at Cantor Fitzgerald, TD Cowen and Compass Point say the $6.3 billion Binance hack is unlikely to derail the crypto market&#x27;s recovery.</p></article>
 <article class="upd"><div class="uh"><span class="src s-cryptoslate">CryptoSlate</span><time datetime="2026-10-30T14:00:23+00:00">30 Oct 14:00 UTC</time><span class="rel">1 d ago</span></div><a class="ut" href="https://cryptoslate.com/bitcoin-fell-after-the-feds-pause-but-blaming-interest-rates-misses-the-binance-shock/" target="_blank" rel="noopener">Bitcoin fell after the Fed’s pause, but blaming interest rates misses the Binance shock</a><p class="ud">he Federal Reserve asked for more information before changing interest rates. Eighteen and a half hours later, the economy supplied it: growth was strong, inflation remained elevated, and households were spending more without buyi…</p></article>
@@ -358,21 +365,6 @@
 <article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-30T03:36:11+00:00">30 Oct 03:36 UTC</time><span class="rel">1 d ago</span></div><a class="ut" href="https://www.coindesk.com/policy/2026/10/29/crypto-s-longtime-foe-north-korea-s-lazarus-group-likely-behind-binance-hack-blockchain-sleuths" target="_blank" rel="noopener">Crypto&#x27;s longtime foe, North Korea&#x27;s Lazarus Group, likely behind Binance hack: blockchain sleuths</a><p class="ud">Security researchers suggested that the hermit kingdom&#x27;s Lazarus Group was behind Thursday&#x27;s nearly $6 billion hack of the world&#x27;s largest crypto exchange.</p></article>
 <article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T03:08:24+00:00">30 Oct 03:08 UTC</time><span class="rel">1 d ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-releases-first-6-3b-hack-findings-reports-no-key-leak-evidence/" target="_blank" rel="noopener">Binance Releases First $6.3B Hack Findings, Reports No Key Leak Evidence</a><p class="ud">Binance’s initial investigation points to a possible employee laptop compromise behind a security incident with an estimated $6.3 billion impact. The crypto exchange reported no evidence of a wallet private key leak and pledged to…</p></article>
 <article class="upd"><div class="uh"><span class="src s-theblock">The Block</span><time datetime="2026-10-30T02:22:31+00:00">30 Oct 02:22 UTC</time><span class="rel">1 d ago</span></div><a class="ut" href="https://www.theblock.co/news/markets/2026-10-29-bitcoin-slides-below-77000-binance-hack-432183" target="_blank" rel="noopener">Bitcoin slides below $77,000, BNB drops amid Binance hack</a><p class="ud">BNB lost 7.1%, while Binance Co-CEO Yi He pledged that the exchange will cover all user losses resulting from the hack.</p></article>
-<article class="upd"><div class="uh"><span class="src s-protos">Protos</span><time datetime="2026-10-30T00:52:31+00:00">30 Oct 00:52 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://protos.com/live-binance-suspends-withdrawals-amid-massive-crypto-hack/" target="_blank" rel="noopener">LIVE: Binance suspends withdrawals amid massive crypto hack</a><p class="ud">Billions of dollars vanished from Binance crypto wallets on Thursday in one of the largest exchange hacks in world history.</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-30T00:41:03+00:00">30 Oct 00:41 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://news.bitcoin.com/security/inside-the-5-8b-binance-hack-whats-confirmed-and-what-isnt/" target="_blank" rel="noopener">Inside the $5.8B Binance Hack: What’s Confirmed and What Isn’t</a><p class="ud">A suspected security breach at Binance has grown into a multibillion-dollar cryptocurrency emergency, with analysts tracking as much as $5.8 billion in potentially compromised assets across several blockchains. The exchange has su…</p></article>
-<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-30T00:17:10+00:00">30 Oct 00:17 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/30/binance-hack-drained-wallets-backing-customer-assets-reserve-data-shows" target="_blank" rel="noopener">Binance hack drained wallets backing customer assets, reserve data shows</a><p class="ud">Binance’s own reserve data lists the drained wallets as backing customer balances, leaving its ether backing an estimated 6% short until the exchange replaces what was stolen.</p></article>
-<article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-30T00:11:26+00:00">30 Oct 00:11 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://cointelegraph.com/news/binance-hack-may-involve-private-key-misuse-not-theft-blockaid-ceo?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Binance hack may involve private key ‘misuse,’ not theft: Blockaid CEO</a><p class="ud">Blockaid’s Ido Ben-Natan suspects attackers manipulated Binance’s transaction-signing infrastructure, drawing parallels with the Bybit hack.</p></article>
-<article class="upd"><div class="uh"><span class="src s-cryptoslate">CryptoSlate</span><time datetime="2026-10-29T23:50:05+00:00">29 Oct 23:50 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://cryptoslate.com/trumps-crypto-firm-joins-tether-circle-and-ripple-in-2-6-billion-stablecoin-freeze-as-binance-hack-outflows-near-6-billion/" target="_blank" rel="noopener">Trump’s crypto firm joins Tether, Circle, and Ripple in $2.6 billion stablecoin freeze as Binance hack outflows near $6 billion</a><p class="ud">Stablecoin issuers, including Tether, Circle, Ripple, and World Liberty Financial, have frozen more than $2.6 billion in digital assets linked to a suspected Binance security breach involving nearly $6 billion. On Oct. 29, Tether …</p></article>
-<article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-29T23:24:21+00:00">29 Oct 23:24 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://cointelegraph.com/markets/binance-hack-rattles-crypto-markets-bnb-bitcoin-slide?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Binance hack rattles markets as BNB falls 8%, Bitcoin nears $77K</a><p class="ud">Bitcoin, Ether and the broader crypto market took a dive as Binance suffered a multibillion-dollar hack.</p></article>
-<article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-29T22:57:48+00:00">29 Oct 22:57 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://decrypt.co/382194/binance-hack-exit-ramps-defi-exchange-ethereum" target="_blank" rel="noopener">Binance Hacker Hunts for Exit Ramps as DeFi Exchanges Pause Markets</a><p class="ud">Etherscan records show wallets tied to the suspected Binance hack swapping freezable stablecoins for Ethereum on decentralized exchanges.</p></article>
-<article class="upd"><div class="uh"><span class="src s-cryptoslate">CryptoSlate</span><time datetime="2026-10-29T22:45:24+00:00">29 Oct 22:45 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://cryptoslate.com/bitcoin-whipsaws-below-79000-as-binance-hot-wallet-reportedly-drained-by-tornado-cash-linked-wallet/" target="_blank" rel="noopener">Bitcoin whipsaws below $79,000 as Binance hot wallet reportedly drained by Tornado Cash-linked wallet</a><p class="ud">Bitcoin hit an intraday low of $78,297 on Binance spot on Oct. 29 and sat near $79,126 at press time, as large transfers left Binance-labeled wallets. Binance shared on X that the exchange is “aware of reports of a potential secur…</p></article>
-<article class="upd"><div class="uh"><span class="src s-bleepingcomputer">BleepingComputer</span><time datetime="2026-10-29T22:45:23+00:00">29 Oct 22:45 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/" target="_blank" rel="noopener">Binance probes potential $5.8 billion crypto-theft hack</a><p class="ud">Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]</p></article>
-<article class="upd"><div class="uh"><span class="src s-theblock">The Block</span><time datetime="2026-10-29T21:49:16+00:00">29 Oct 21:49 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://www.theblock.co/news/markets/2026-10-29-binance-investigating-hack-suspicious-outflows-5-billion-432171" target="_blank" rel="noopener">Binance investigating hack as suspicious outflows reach up to $5.8 billion</a><p class="ud">Tether and Circle froze $1.79 billion in USDT and USDC after billions moved out of Binance hot wallets. Binance says it is investigating.</p></article>
-<article class="upd"><div class="uh"><span class="src s-decrypt">Decrypt</span><time datetime="2026-10-29T21:36:24+00:00">29 Oct 21:36 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://decrypt.co/382191/binance-suspected-hack-5-billion-tether-circle-freeze-crypto" target="_blank" rel="noopener">Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion</a><p class="ud">An on-chain tally puts the suspected Binance drain at $5.57 billion across three blockchains, as Tether and Circle froze $1.8 billion.</p></article>
-<article class="upd"><div class="uh"><span class="src s-bitcoincom">Bitcoin.com</span><time datetime="2026-10-29T21:33:23+00:00">29 Oct 21:33 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://news.bitcoin.com/security/binance-founder-likely-hack-billions-crypto-leaves-exchange-wallets/" target="_blank" rel="noopener">Binance Founder Suggests Likely Hack as Billions in Crypto Leaves Exchange Wallets</a><p class="ud">Billions of dollars’ worth of cryptocurrency was pulled from the wallets of leading exchange Binance on Thursday, according to onchain data and industry analysts, fueling speculation that it may have been the target of a massive h…</p></article>
-<article class="upd"><div class="uh"><span class="src s-cointelegraph">Cointelegraph</span><time datetime="2026-10-29T21:24:36+00:00">29 Oct 21:24 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://cointelegraph.com/news/binance-linked-wallet-faces-possible-exploit-blockchain-researcher-warns?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Live updates: Binance says $3B in crypto frozen in connection to hack</a><p class="ud">Follow live updates as Binance says $3 billion in assets has been frozen after a multibillion-dollar hack, with further freezes possible as investigators trace funds.</p></article>
-<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-29T21:12:45+00:00">29 Oct 21:12 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/29/potential-multi-billion-binance-hack-hitting-crypto-markets" target="_blank" rel="noopener">Binance loses $5.7 billion in &#x27;biggest crypto hack in history&#x27;</a><p class="ud">Crypto prices are sliding on the news, with bitcoin falling back to $77,000, though Binance&#x27;s co-CEO said it would cover all losses.</p></article>
-<article class="upd"><div class="uh"><span class="src s-coindesk">CoinDesk</span><time datetime="2026-10-29T10:41:39+00:00">29 Oct 10:41 UTC</time><span class="rel">2 d ago</span></div><a class="ut" href="https://www.coindesk.com/business/2026/10/29/live-updates-bitcoin-clings-to-usd80-000-as-strategy-s-cushion-thins-before-earnings" target="_blank" rel="noopener">Live updates: Binance confirms security breach, says &#x27;will cover all hacking losses&#x27;</a><p class="ud">North of $5 billion appears to have been stolen from the world&#x27;s biggest crypto exchange, Binance, of which some $2.5 billion has been frozen.</p></article>
     </div>
     <p class="more"><span class="chip">Bitcoin.com <b>27</b></span> <span class="chip">CoinDesk <b>22</b></span> <span class="chip">Cointelegraph <b>18</b></span> <span class="chip">Decrypt <b>12</b></span> <span class="chip">CryptoSlate <b>6</b></span> <span class="chip">The Block <b>5</b></span> <span class="chip">Protos <b>2</b></span> <span class="chip">BleepingComputer <b>2</b></span></p>
   </section>
@@ -430,34 +422,55 @@
 
   <section>
     <h2 class="sec"><span class="k">06</span> Timeline</h2>
-    <p class="lede">All times UTC, 29 October 2026 (ET = UTC−4). Times before midnight are 29 Oct.</p>
+    <p class="lede">All times UTC. The attack began on 29 October; the corporate response ran through 1 November.
+      Sequence reconstructed from TRM Labs, Blockaid and Binance's own updates.</p>
     <div class="tl">
-      <div class="ev"><div class="t">20:20:59 <em>(16:20 ET)</em></div>
-        <p><b>The nonce spray.</b> Type-4 transaction to Binance 14 carrying 50 EIP-7702 authorisations signed with
-        its key, one per nonce from 18,914,775 to 18,914,824. 49 invalid, <b>1 matched</b> — the wallet is now delegated.</p></div>
-      <div class="ev key"><div class="t">20:24:23 <em>(16:24 ET)</em></div>
-        <p><b>The sweep.</b> 167,464 ETH + 1.615B USDT + ~60 other tokens to a fresh address. Binance 14 left with
-        <b>1 ETH</b>. Basket ≈ $2.5B.</p></div>
-      <div class="ev"><div class="t">20:24:47</div>
-        <p>Binance 16 sends 28,005.6 ETH, 55.7M USDT, 25.9M RLUSD and 84.5 WBTC. No code involved — an ordinary
-        transfer signed with the wallet's own key.</p></div>
-      <div class="ev"><div class="t">by 20:36</div>
-        <p>Ten more hot wallets on four chains send to the same address: 44.2M OP, 74.6M ARB, 8,426 ETH, 1.81M AVAX.
-        Separately <b>18,270 BTC</b> and ~$630M on Tron move.</p></div>
+      <div class="ev"><div class="t">28 Oct, morning <em>(T&minus;36h)</em></div>
+        <p><b>Financing.</b> An attacker-controlled wallet receives three small transfers from Tornado Cash.
+        Preparation runs at least 36 hours.</p></div>
+      <div class="ev"><div class="t">29 Oct, early</div>
+        <p><b>Rehearsal.</b> Malicious contract code is deployed and tested against two fresh Ethereum wallets,
+        then a third, with test funds moved and returned. All of it visible on-chain in advance.</p></div>
+      <div class="ev key"><div class="t">20:05&ndash;20:09 <em>(first move)</em></div>
+        <p><b>XRP goes first.</b> Five Binance wallets on the XRP Ledger send <b>233.46M XRP (~$296M)</b> to a
+        single attacker address &mdash; ten minutes before every other chain. This was the canary in the coal mine.</p></div>
+      <div class="ev"><div class="t">20:10</div>
+        <p>Transfers begin from Binance wallets on <b>Solana</b> and <b>Optimism</b>.</p></div>
+      <div class="ev"><div class="t">20:20 <em>(16:20 ET)</em></div>
+        <p><b>Bitcoin.</b> 18,270 BTC (~$1.47B) leaves a Binance wallet, immediately split into 1,000 and 100 BTC
+        batches. Simultaneously the attacker submits <b>50 EIP-7702 authorisations</b> to Binance 14 &mdash;
+        49 invalid, 1 matches.</p></div>
+      <div class="ev"><div class="t">20:22</div>
+        <p><b>Tron.</b> 612.7M USDT and 46.4M TRX (~$628M) move to new addresses.</p></div>
+      <div class="ev key"><div class="t">20:24:23</div>
+        <p><b>The Ethereum sweep.</b> 167,464 ETH, 1.615B USDT and 63 tokens in one transaction (~$2.5B).
+        Binance 14 is left holding 1 ETH. Twenty-four seconds later Binance 16 sends 28,005.6 ETH more.</p></div>
+      <div class="ev"><div class="t">20:41 &rarr; 23:56</div>
+        <p><b>Standing drain.</b> Further sweeps at 20:41, 20:59, 21:04, 21:44, 22:39 and 23:56 as fresh assets
+        land in the delegated wallet. It also exercises permissions over a separate Binance smart account, moving
+        another <b>823M USDC</b>.</p></div>
       <div class="ev key"><div class="t">~21:04 <em>(17:04 ET)</em></div>
-        <p><b>Freezes begin.</b> Tether freezes 975.1M USDT, Circle 823M USDC — ~$1.8B at that point.</p></div>
+        <p><b>Freezes begin.</b> Tether freezes 975.1M USDT, Circle 823M USDC. Ripple, World Liberty Financial,
+        Paxos and the Arbitrum Security Council follow.</p></div>
       <div class="ev key"><div class="t">22:22 <em>(18:22 ET)</em></div>
-        <p><b>Binance officially pauses withdrawals</b>, then extends to all deposits and withdrawals.</p></div>
-      <div class="ev"><div class="t">23:06</div><p>Binance Alpha trading suspended.</p></div>
-      <div class="ev"><div class="t">23:22</div>
-        <p>Binance disputes the $1.8B figure: <b>“verified total frozen is $2.54 billion”</b>.</p></div>
-      <div class="ev key"><div class="t">00:04 <em>(30 Oct, 20:04 ET)</em></div>
-        <p><b>Yi He confirms the hack.</b> Funds safe, all losses covered, post-mortem to follow.</p></div>
-      <div class="ev"><div class="t">post-freeze</div>
-        <p>~$850M in ETH still moving between fresh wallets; 17,270 BTC untouched. Aave froze DAO-operated V3/V4
-        markets; the Arbitrum Security Council froze ~$30.5M.</p></div>
+        <p><b>Binance pauses all deposits and withdrawals</b>, having earlier paused Solana, XRP and several
+        stablecoin networks.</p></div>
+      <div class="ev"><div class="t">23:05 <em>(second wave)</em></div>
+        <p>The operation extends to further Binance wallets on <b>Avalanche</b> and <b>Polygon</b>.</p></div>
+      <div class="ev"><div class="t">00:30, 30 Oct</div>
+        <p><b>TRM Labs totals $6.36B</b> across ten blockchains: Ethereum, Bitcoin, Tron, XRP Ledger, Solana,
+        Arbitrum, Optimism, Base, Avalanche, Polygon &mdash; most of it inside 20 minutes.</p></div>
+      <div class="ev"><div class="t">30 Oct</div>
+        <p><b>Attribution.</b> TRM and Chainalysis attribute the theft to <b>TraderTraitor</b> (Lazarus / APT38),
+        a North Korean unit, with "high degree of confidence". FBI and Secret Service join the probe. Binance
+        links the breach to a <b>compromised DevOps laptop</b> and reports no evidence of a leaked key, then
+        discloses "additional points of breach". Binance sets aside <b>$6.34B</b>.</p></div>
+      <div class="ev key"><div class="t">31 Oct &rarr; 1 Nov</div>
+        <p><b>Replenishment.</b> Binance reports <b>~90%</b> of losses covered and ten assets &mdash; BTC, ETH,
+        USDT, BNB, SOL, USDC, XRP, USD1, RLUSD, ZEC &mdash; fully backed, drawn from company funds, futures
+        insurance reserves and SAFU. A new proof-of-reserves snapshot is taken; the zk proof needs 40&ndash;50
+        hours. Withdrawals targeted to reopen <b>Sunday 1 Nov</b>. The <b>FBI confirms</b> North Korea's role.</p></div>
     </div>
-  </section>
 
   <section>
     <h2 class="sec"><span class="k">07</span> Resources to monitor</h2>
@@ -551,7 +564,7 @@
     <p><b>Not advice.</b> This is a research summary, not a forensic audit or financial, legal or investment
       advice. Binance has not published a post-mortem; nothing here is a finding of fact about its solvency,
       its controls, or the attacker's identity.</p>
-    <p style="margin-top:14px">Compiled by <b>nwfella</b> · revision 1.0 · generated 2026-11-01T02:05:16.285727+00:00 ·
+    <p style="margin-top:14px">Compiled by <b>nwfella</b> · revision 1.0 · generated 2026-11-01T02:13:17.575381+00:00 ·
       <a href="Binance-Hack-Report-2026-10-29.pdf">full PDF report</a> ·
       <a href="https://github.com/nwfella/binance-hack-dossier">source</a></p>
   </footer>

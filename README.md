@@ -4,7 +4,12 @@ Detailed incident report (PDF) + an hourly-updating live tracker for the October
 Binance hot-wallet compromise.
 
 - **Live tracker:** <https://nwfella.github.io/binance-hack-dossier/>
-- **PDF report:** [`docs/Binance-Hack-Report-2026-10-29.pdf`](docs/Binance-Hack-Report-2026-10-29.pdf)
+- **PDF report (revision 1.1):** [`docs/Binance-Hack-Report-2026-10-29.pdf`](docs/Binance-Hack-Report-2026-10-29.pdf)
+
+The tracker renders the **last 48 hours** of coverage; every item collected since the breach (94 and
+counting) is retained in [`docs/updates.json`](docs/updates.json). The report is revision 1.1 and
+incorporates the TRM Labs $6.36B reconstruction, the FBI attribution to TraderTraitor, Binance's
+DevOps-laptop root cause, and the $6.34B remediation.
 
 ## How the hourly update works (and why it costs $0)
 

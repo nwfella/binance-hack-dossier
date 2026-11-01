@@ -26,7 +26,7 @@ DOCS = ROOT / "docs"
 STATE = DOCS / "updates.json"
 OUT = DOCS / "index.html"
 
-MAX_ITEMS = 260
+MAX_ITEMS = 5000   # full history retained; the rendered feed is windowed, not the store
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 
 FEEDS = [
@@ -239,18 +239,32 @@ def ago(dt: datetime, now: datetime) -> str:
     return f"{s//86400} d ago"
 
 
+FEED_WINDOW_H = 48
+
+
+def item_dt(it: dict):
+    """Newest available timestamp for an item."""
+    if it.get("date"):
+        d = parse_date(it["date"])
+        if d:
+            return d
+    try:
+        return datetime.fromisoformat(it["first_seen"])
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def render(st: dict) -> str:
     now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(hours=FEED_WINDOW_H)
     tpl = (pathlib.Path(__file__).parent / "template.html").read_text(encoding="utf-8")
 
+    windowed = [i for i in st["items"] if (item_dt(i) or cutoff) >= cutoff]
+    older = len(st["items"]) - len(windowed)
+
     rows = []
-    for it in st["items"]:
-        dt = None
-        for key in ("date", "first_seen"):
-            if it.get(key):
-                dt = parse_date(it[key]) if key == "date" else datetime.fromisoformat(it[key])
-                if dt:
-                    break
+    for it in windowed:
+        dt = item_dt(it)
         if dt:
             stamp = dt.astimezone(timezone.utc).strftime("%d %b %H:%M UTC")
             rel = ago(dt, now)
@@ -280,7 +294,7 @@ def render(st: dict) -> str:
 
     # newest item time, for the "latest headline" chip
     newest = None
-    for it in st["items"]:
+    for it in windowed:
         if it.get("date"):
             newest = parse_date(it["date"])
             if newest:
@@ -297,7 +311,10 @@ def render(st: dict) -> str:
         tpl.replace("{{FEED}}", feed_html)
         .replace("{{BUILT}}", built)
         .replace("{{LAST_ET}}", last_dt.astimezone(timezone(timedelta(hours=-7))).strftime("%d %b %H:%M PDT"))
-        .replace("{{COUNT}}", str(len(st["items"])))
+        .replace("{{COUNT}}", str(len(windowed)))
+        .replace("{{TOTAL}}", str(len(st["items"])))
+        .replace("{{OLDER}}", str(older))
+        .replace("{{WINDOW}}", str(FEED_WINDOW_H))
         .replace("{{RUNS}}", str(st.get("runs", 0)))
         .replace("{{STALE_CLASS}}", " stale" if stale else "")
         .replace("{{STALE_NOTE}}", '<div class="banner">Data is more than 3 hours old — the hourly job may be stalled. Check the Actions tab.</div>' if stale else "")

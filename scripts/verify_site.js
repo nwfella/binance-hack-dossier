@@ -46,7 +46,7 @@ ok("no unresolved template tokens", tokens.length === 0, tokens.slice(0, 5).join
   ok(`section ${n} present`, html.includes(`<span class="k">${n}</span>`));
 });
 ok("header flag / live indicator", html.includes('class="flag"'));
-ok("withdrawal-suspension alert", /All Binance deposits and withdrawals are suspended/.test(html));
+ok("withdrawal-suspension alert", /Deposits and withdrawals suspended since 29 Oct/.test(html));
 ok("rebuild timestamp injected", /<b>Rebuilt<\/b>\s*<span id="builtAbs">\d{2} \w{3} \d{4}/.test(html));
 ok("build instant baked for client-side age check", /<body data-built="\d{4}-\d{2}-\d{2}T/.test(html));
 ok("client-side staleness logic present", html.includes("staleBanner") && html.includes("refresh stalled"));
@@ -77,10 +77,15 @@ const ADDRS = [
 ADDRS.forEach((a, i) => ok(`address ${i + 1} present + linked`, html.includes(a)));
 
 // ---------- figure integrity ----------
-ok("frozen figure $2.54B present", html.includes("$2.54B"));
-ok("loss range shown as a range, not a point", /\$5\.5–5\.9B|\$5\.5-5\.9B/.test(html));
-ok("'not a loss estimate' caveat present", /Not a loss estimate/i.test(html));
-ok("attribution stated as absent", /No agency or firm has named an actor/.test(html));
+ok("headline loss $6.36B present", html.includes("$6.36B"));
+ok("frozen total ~$2.7B present", /~\$2\.7B/.test(html));
+ok("unfrozen tranche ~$2.4B present", /~\$2\.4B/.test(html));
+ok("attribution shown (North Korea)", /North Korea/.test(html) && /TraderTraitor|Lazarus/.test(html));
+ok("replenishment status shown (~90%)", /90%/.test(html));
+ok("FBI confirmation referenced", /FBI/.test(html));
+ok("root cause corrected to DevOps laptop", /DevOps/.test(html));
+ok("XRP-first sequencing present", /XRP/.test(html) && /\$296M|296 million/.test(html));
+ok("feed window disclosed", /last 48h|48 hours/i.test(html));
 
 // ---------- state file ----------
 ok("updates.json parses", (() => {

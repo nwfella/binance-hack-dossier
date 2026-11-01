@@ -176,25 +176,26 @@
 <div class="wrap">
 
   <div class="alert">
-    <h2>All Binance deposits and withdrawals are suspended</h2>
-    <p>Binance co-founder Yi He: “User funds are safe. Binance will cover all hacking losses.” A full
-    post-mortem is promised. Binance has <strong>not</strong> published a loss figure, an attribution, or
-    a timetable for resuming withdrawals. Check Binance's own announcements before attempting any transfer.</p>
+    <h2>Deposits and withdrawals suspended since 29 Oct &middot; reopening targeted Sunday 1 Nov</h2>
+    <p>Binance has covered ~90% of stolen assets out of $6.34B set aside, and says BTC, ETH, USDT, BNB, SOL,
+    USDC, XRP, USD1, RLUSD and ZEC are <strong>fully backed</strong>. A fresh proof-of-reserves snapshot was taken
+    31 Oct; holders can verify 1:1 backing from roughly <strong>3 Nov</strong>. The FBI has confirmed North
+    Korea's role. Check Binance's own announcements before attempting any transfer.</p>
   </div>
 
   <div class="stats">
-    <div class="stat"><span class="n">$5.5–5.9B</span><span class="l">Est. outflow</span>
-      <span class="q">Third-party tallies. Not Binance's figure.</span></div>
-    <div class="stat blue"><span class="n">$2.54B</span><span class="l">Verified frozen</span>
-      <span class="q">Binance, self-reported. Not a loss figure.</span></div>
-    <div class="stat amber"><span class="n">~$2.9B</span><span class="l">Likely still loose</span>
-      <span class="q">Inferred: outflow minus freezes.</span></div>
+    <div class="stat"><span class="n">$6.36B</span><span class="l">Total taken</span>
+      <span class="q">TRM Labs. 10 blockchains, most in ~20 min.</span></div>
+    <div class="stat blue"><span class="n">~$2.7B</span><span class="l">Frozen</span>
+      <span class="q">Issuers + Arbitrum Security Council.</span></div>
+    <div class="stat amber"><span class="n">~$2.4B</span><span class="l">Beyond any freeze</span>
+      <span class="q">Attacker holds 420k+ ETH and 18,270 BTC.</span></div>
+    <div class="stat"><span class="n">90%</span><span class="l">Replenished</span>
+      <span class="q">Binance, 31 Oct. $6.34B set aside.</span></div>
     <div class="stat"><span class="n">11</span><span class="l">Wallets drained</span>
-      <span class="q">Across 4+ chains in ~12 minutes.</span></div>
-    <div class="stat"><span class="n">6</span><span class="l">Chains touched</span>
-      <span class="q">ETH, Arbitrum, Optimism, Avalanche, BTC, Tron.</span></div>
-    <div class="stat amber"><span class="n">None</span><span class="l">Attribution</span>
-      <span class="q">No agency or firm has named an actor.</span></div>
+      <span class="q">First move was XRP, 10 min ahead of the rest.</span></div>
+    <div class="stat amber"><span class="n">North Korea</span><span class="l">Attribution</span>
+      <span class="q">TraderTraitor / Lazarus. FBI-confirmed 1 Nov.</span></div>
   </div>
 
   <section>
@@ -241,40 +242,46 @@
 
   <section>
     <h2 class="sec"><span class="k">02</span> Incident brief</h2>
-    <p class="lede">The short version. Section 6 has the forensics.</p>
+    <p class="lede">The short version, revised as Binance's own findings have landed. Section 06 has the full timeline.</p>
     <div class="grid">
       <div class="card">
-        <h3>One leaked key, one persistent delegation</h3>
-        <p>The attacker obtained the private key to <strong>Binance 14</strong>, one of the exchange's busiest
-        payment wallets, and signed an <strong>EIP-7702 authorisation</strong> pointing it at attacker-deployed
-        bytecode. The delegation persists until the wallet signs a replacement — so the wallet became a sweeper
-        that forwarded every inbound deposit to the attacker, while Binance's own withdrawals kept flowing from it.</p>
+        <h3>A compromised engineer's laptop &mdash; not a leaked private key</h3>
+        <p>Binance links the theft to a <strong>DevOps engineer's compromised laptop</strong> that gave access to
+        a service container and let the attacker submit unauthorised withdrawals. Binance found <strong>no
+        evidence of a leaked wallet private key</strong>, later disclosed "additional points of breach", and
+        co-CEO Richard Teng stressed it was not one engineer's permissions or a single click. EIP-7702 did not
+        cause the breach &mdash; it <em>amplified</em> it.</p>
       </div>
       <div class="card">
-        <h3>A 50-authorisation nonce spray</h3>
-        <p>Because Binance 14's nonce was advancing with daily payouts, the attacker could not guess it — so he
-        signed <strong>50 authorisations across a contiguous nonce window</strong> in one type-4 transaction.
-        Forty-nine failed. One matched. Nonce unpredictability is not a security control.</p>
+        <h3>The attack began with XRP, ten minutes early</h3>
+        <p>Between <strong>20:05 and 20:09 UTC</strong>, before anything else moved, five Binance wallets on the
+        XRP Ledger sent <strong>233.46M XRP (~$296M)</strong> to a single attacker address. Bitcoin, Tron, Solana
+        and Optimism followed by 20:22; the Ethereum sweep at 20:24 was the biggest single move, not the first
+        one. Preparation began at least <strong>36 hours earlier</strong>.</p>
       </div>
       <div class="card">
-        <h3>Then ten more wallets in twelve minutes</h3>
-        <p>Within 12 minutes, ten more hot wallets on four chains sent to the same collection address — each as an
-        <strong>ordinary transfer signed by the wallet's own key</strong>. The Ethereum delegation cannot explain
-        the Bitcoin or Tron movements, which is why investigators describe a broader signing-key problem.</p>
+        <h3>Then a 50-authorisation nonce spray</h3>
+        <p>Because Binance 14's nonce was advancing with daily payouts, the attacker signed <strong>50 EIP-7702
+        authorisations across a contiguous nonce window</strong> in one type-4 transaction. Forty-nine failed, one
+        matched. The delegated wallet swept 167,464 ETH and 63 tokens, then swept again at 20:41, 20:59, 21:04,
+        21:44, 22:39 and 23:56 UTC.</p>
       </div>
       <div class="card">
-        <h3>The wallets were the proof-of-reserves wallets</h3>
-        <p>CoinDesk found the drained addresses are the same ones Binance publishes as backing customer assets.
-        Its disclosed ether backing is an estimated <strong>6% short</strong> until the stolen ETH is replaced —
-        roughly 204,500 ETH that has to be bought back into the reserve.</p>
+        <h3>Counterparty risk, realised &mdash; then partly cured</h3>
+        <p>The drained wallets were the ones Binance publishes as <strong>proof-of-reserves backing</strong>.
+        Binance has since set aside <strong>$6.34B</strong>, replaced ~90%, declared ten major assets 100% backed,
+        and is buying the rest via market and OTC. The new zero-knowledge proof takes 40&ndash;50 hours, so
+        customer verification lands around 3 Nov &mdash; not immediately.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2 class="sec"><span class="k">03</span> Live updates <span style="font:400 12px var(--mono); color:var(--muted)">— rebuilt hourly from {{COUNT}} tracked items</span></h2>
+    <h2 class="sec"><span class="k">03</span> Live updates <span style="font:400 12px var(--mono); color:var(--muted)">— last {{WINDOW}}h · {{COUNT}} items · rebuilt hourly at :05</span></h2>
     <p class="lede">Public RSS feeds from crypto newsrooms, filtered for this incident and deduplicated.
-      Newest first. No AI summarisation and no editorialising — headline, source, timestamp, link.</p>
+      Newest first. No AI summarisation and no editorialising — headline, source, timestamp, link.
+      Showing the last {{WINDOW}} hours; all {{TOTAL}} items since the breach are retained in
+      <a href="updates.json">updates.json</a>.</p>
     <div class="feedbar" id="filters">
       <button class="fbtn on" data-src="all">All</button>
     </div>
@@ -337,34 +344,55 @@
 
   <section>
     <h2 class="sec"><span class="k">06</span> Timeline</h2>
-    <p class="lede">All times UTC, 29 October 2026 (ET = UTC−4). Times before midnight are 29 Oct.</p>
+    <p class="lede">All times UTC. The attack began on 29 October; the corporate response ran through 1 November.
+      Sequence reconstructed from TRM Labs, Blockaid and Binance's own updates.</p>
     <div class="tl">
-      <div class="ev"><div class="t">20:20:59 <em>(16:20 ET)</em></div>
-        <p><b>The nonce spray.</b> Type-4 transaction to Binance 14 carrying 50 EIP-7702 authorisations signed with
-        its key, one per nonce from 18,914,775 to 18,914,824. 49 invalid, <b>1 matched</b> — the wallet is now delegated.</p></div>
-      <div class="ev key"><div class="t">20:24:23 <em>(16:24 ET)</em></div>
-        <p><b>The sweep.</b> 167,464 ETH + 1.615B USDT + ~60 other tokens to a fresh address. Binance 14 left with
-        <b>1 ETH</b>. Basket ≈ $2.5B.</p></div>
-      <div class="ev"><div class="t">20:24:47</div>
-        <p>Binance 16 sends 28,005.6 ETH, 55.7M USDT, 25.9M RLUSD and 84.5 WBTC. No code involved — an ordinary
-        transfer signed with the wallet's own key.</p></div>
-      <div class="ev"><div class="t">by 20:36</div>
-        <p>Ten more hot wallets on four chains send to the same address: 44.2M OP, 74.6M ARB, 8,426 ETH, 1.81M AVAX.
-        Separately <b>18,270 BTC</b> and ~$630M on Tron move.</p></div>
+      <div class="ev"><div class="t">28 Oct, morning <em>(T&minus;36h)</em></div>
+        <p><b>Financing.</b> An attacker-controlled wallet receives three small transfers from Tornado Cash.
+        Preparation runs at least 36 hours.</p></div>
+      <div class="ev"><div class="t">29 Oct, early</div>
+        <p><b>Rehearsal.</b> Malicious contract code is deployed and tested against two fresh Ethereum wallets,
+        then a third, with test funds moved and returned. All of it visible on-chain in advance.</p></div>
+      <div class="ev key"><div class="t">20:05&ndash;20:09 <em>(first move)</em></div>
+        <p><b>XRP goes first.</b> Five Binance wallets on the XRP Ledger send <b>233.46M XRP (~$296M)</b> to a
+        single attacker address &mdash; ten minutes before every other chain. This was the canary in the coal mine.</p></div>
+      <div class="ev"><div class="t">20:10</div>
+        <p>Transfers begin from Binance wallets on <b>Solana</b> and <b>Optimism</b>.</p></div>
+      <div class="ev"><div class="t">20:20 <em>(16:20 ET)</em></div>
+        <p><b>Bitcoin.</b> 18,270 BTC (~$1.47B) leaves a Binance wallet, immediately split into 1,000 and 100 BTC
+        batches. Simultaneously the attacker submits <b>50 EIP-7702 authorisations</b> to Binance 14 &mdash;
+        49 invalid, 1 matches.</p></div>
+      <div class="ev"><div class="t">20:22</div>
+        <p><b>Tron.</b> 612.7M USDT and 46.4M TRX (~$628M) move to new addresses.</p></div>
+      <div class="ev key"><div class="t">20:24:23</div>
+        <p><b>The Ethereum sweep.</b> 167,464 ETH, 1.615B USDT and 63 tokens in one transaction (~$2.5B).
+        Binance 14 is left holding 1 ETH. Twenty-four seconds later Binance 16 sends 28,005.6 ETH more.</p></div>
+      <div class="ev"><div class="t">20:41 &rarr; 23:56</div>
+        <p><b>Standing drain.</b> Further sweeps at 20:41, 20:59, 21:04, 21:44, 22:39 and 23:56 as fresh assets
+        land in the delegated wallet. It also exercises permissions over a separate Binance smart account, moving
+        another <b>823M USDC</b>.</p></div>
       <div class="ev key"><div class="t">~21:04 <em>(17:04 ET)</em></div>
-        <p><b>Freezes begin.</b> Tether freezes 975.1M USDT, Circle 823M USDC — ~$1.8B at that point.</p></div>
+        <p><b>Freezes begin.</b> Tether freezes 975.1M USDT, Circle 823M USDC. Ripple, World Liberty Financial,
+        Paxos and the Arbitrum Security Council follow.</p></div>
       <div class="ev key"><div class="t">22:22 <em>(18:22 ET)</em></div>
-        <p><b>Binance officially pauses withdrawals</b>, then extends to all deposits and withdrawals.</p></div>
-      <div class="ev"><div class="t">23:06</div><p>Binance Alpha trading suspended.</p></div>
-      <div class="ev"><div class="t">23:22</div>
-        <p>Binance disputes the $1.8B figure: <b>“verified total frozen is $2.54 billion”</b>.</p></div>
-      <div class="ev key"><div class="t">00:04 <em>(30 Oct, 20:04 ET)</em></div>
-        <p><b>Yi He confirms the hack.</b> Funds safe, all losses covered, post-mortem to follow.</p></div>
-      <div class="ev"><div class="t">post-freeze</div>
-        <p>~$850M in ETH still moving between fresh wallets; 17,270 BTC untouched. Aave froze DAO-operated V3/V4
-        markets; the Arbitrum Security Council froze ~$30.5M.</p></div>
+        <p><b>Binance pauses all deposits and withdrawals</b>, having earlier paused Solana, XRP and several
+        stablecoin networks.</p></div>
+      <div class="ev"><div class="t">23:05 <em>(second wave)</em></div>
+        <p>The operation extends to further Binance wallets on <b>Avalanche</b> and <b>Polygon</b>.</p></div>
+      <div class="ev"><div class="t">00:30, 30 Oct</div>
+        <p><b>TRM Labs totals $6.36B</b> across ten blockchains: Ethereum, Bitcoin, Tron, XRP Ledger, Solana,
+        Arbitrum, Optimism, Base, Avalanche, Polygon &mdash; most of it inside 20 minutes.</p></div>
+      <div class="ev"><div class="t">30 Oct</div>
+        <p><b>Attribution.</b> TRM and Chainalysis attribute the theft to <b>TraderTraitor</b> (Lazarus / APT38),
+        a North Korean unit, with "high degree of confidence". FBI and Secret Service join the probe. Binance
+        links the breach to a <b>compromised DevOps laptop</b> and reports no evidence of a leaked key, then
+        discloses "additional points of breach". Binance sets aside <b>$6.34B</b>.</p></div>
+      <div class="ev key"><div class="t">31 Oct &rarr; 1 Nov</div>
+        <p><b>Replenishment.</b> Binance reports <b>~90%</b> of losses covered and ten assets &mdash; BTC, ETH,
+        USDT, BNB, SOL, USDC, XRP, USD1, RLUSD, ZEC &mdash; fully backed, drawn from company funds, futures
+        insurance reserves and SAFU. A new proof-of-reserves snapshot is taken; the zk proof needs 40&ndash;50
+        hours. Withdrawals targeted to reopen <b>Sunday 1 Nov</b>. The <b>FBI confirms</b> North Korea's role.</p></div>
     </div>
-  </section>
 
   <section>
     <h2 class="sec"><span class="k">07</span> Resources to monitor</h2>
