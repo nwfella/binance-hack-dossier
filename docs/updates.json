@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
+   "link": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+   "desc": "Binance reopens customer withdrawals following a record $6.3 billion exploit. Bitcoin leads the first phase.",
+   "date": "2026-11-01T10:35:42+00:00",
+   "first_seen": "2026-11-01T11:05:05.214221+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Record Breaking Binance Hack Hits Markets, Kalshi Hits New Valuation, And More \u2013 Weekly Recap",
+   "link": "https://news.bitcoin.com/featured/record-breaking-binance-hack-hits-markets-kalshi-hits-new-valuation-and-more-weekly-recap/",
+   "desc": "This week\u2019s stories spanned exchange security, prediction markets, bitcoin treasury risk, earnings and tokenization. Binance investigated a potential multibillion-dollar hack, while Kalshi raised another $1 billion at a $40 billion valuation. Datavault AI said it could not access 817.6 BTC, Coinbase returned to profit with $719 million in Q3 net income, and DTCC launched a [\u2026]",
+   "date": "2026-11-01T10:30:45+00:00",
+   "first_seen": "2026-11-01T11:05:05.214221+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "Binance says phase one of withdrawals opens after $6.3B hack",
    "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -778,6 +794,6 @@
   }
  ],
  "first_run": null,
- "runs": 38,
- "last_run": "2026-11-01T10:05:04.681513+00:00"
+ "runs": 39,
+ "last_run": "2026-11-01T11:05:05.214221+00:00"
 }
