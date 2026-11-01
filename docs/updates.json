@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "North Korean hackers launder $242 million of Binance loot via Tron as FBI presses THORChain: analyst",
+   "link": "https://www.theblock.co/news/defi/2026-11-01-north-korean-hackers-launder-242-million-of-binance-loot-via-tron-as-fbi-presses-thorchain-analyst-432257",
+   "desc": "Crypto bridges Relay, THORChain, Chainflip and Symbiosis moved about $140 million of stolen funds off Tron, with Relay handling the most at $48 million.",
+   "date": "2026-11-01T18:25:48+00:00",
+   "first_seen": "2026-11-01T19:11:30.637224+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "North Korea\u2019s $1.4B Bitcoin Haul From Binance Hack Remains Untouched",
+   "link": "https://news.bitcoin.com/featured/north-koreas-1-4b-bitcoin-haul-from-binance-hack-remains-untouched/",
+   "desc": "On Oct. 29, during the Binance hack, approximately 18,270.2 BTC worth $1.4 billion was stolen, with the Federal Bureau of Investigation (FBI) subsequently identifying the Democratic People\u2019s Republic of Korea (North Korea) as the principal perpetrator. The stolen bitcoin remains untouched, dispersed across 19 separate wallets to this day. Unlike the other compromised assets, the [\u2026]",
+   "date": "2026-11-01T18:20:35+00:00",
+   "first_seen": "2026-11-01T19:11:30.637224+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Processes $4.65B in Withdrawals Across 15 Networks After Hack",
    "link": "https://news.bitcoin.com/security/binance-processes-4-65b-in-withdrawals-across-15-networks-after-hack/",
@@ -834,6 +850,6 @@
   }
  ],
  "first_run": null,
- "runs": 47,
- "last_run": "2026-11-01T18:05:05.354840+00:00"
+ "runs": 48,
+ "last_run": "2026-11-01T19:11:30.637224+00:00"
 }
