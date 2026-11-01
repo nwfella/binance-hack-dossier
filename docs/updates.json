@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Crypto Weekly: Binance Hack Deepens Crypto Rout as Market Cap Falls to $2.7T",
+   "link": "https://news.bitcoin.com/market-updates/crypto-weekly-binance-hack-deepens-crypto-rout-as-market-cap-falls-to-2-7t/",
+   "desc": "The cryptocurrency market ended October down 10%, with its total capitalization falling from $3 trillion to $2.7 trillion amid widespread losses. Bitcoin declined 3.3% in the final week, extending its year-to-date losses to 11%, while ethereum fell more than 15% over 30 days. Pre-Hack Weakness The cryptocurrency economy shed tens of billions of dollars in [\u2026]",
+   "date": "2026-11-01T21:30:25+00:00",
+   "first_seen": "2026-11-01T23:02:32.255599+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "Tracked Binance wallets record $2.5 billion in outflows as withdrawals reopen after hack",
+   "link": "https://cryptoslate.com/tracked-binance-wallets-record-2-5-billion-in-outflows-as-withdrawals-reopen-after-hack/",
+   "desc": "Binance's tracked cryptocurrency wallets recorded $2,510 million in net outflows on Nov. 1 after the exchange resumed withdrawals following its $6.3 billion security breach. According to DeFiLlama data, the outflows included approximately $1,083 million in USDT, $912 million in Bitcoin, $385 million in USDC and $131 million in wrapped Ethereum. These outflows coincided with Binance's\u2026 Read the ful",
+   "date": "2026-11-01T21:00:31+00:00",
+   "first_seen": "2026-11-01T23:02:32.255599+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "CZ Praises US Authorities for Halting $6B Binance Hack Fallout",
+   "link": "https://news.bitcoin.com/security/cz-praises-us-authorities-for-halting-6b-binance-hack-fallout/",
+   "desc": "The co-founder and former CEO of Binance praised the role U.S. law enforcement agencies played in handling the aftermath of the over $6 billion hack the exchange suffered at the hands of North Korean hackers, crediting them with keeping the market afloat. CZ Praises US Role in Binance Hack Aftermath As Binance continues to recover [\u2026]",
+   "date": "2026-11-01T20:29:05+00:00",
+   "first_seen": "2026-11-01T23:02:32.255599+00:00"
+  },
+  {
    "source": "BleepingComputer",
    "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
    "link": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
@@ -866,6 +890,6 @@
   }
  ],
  "first_run": null,
- "runs": 49,
- "last_run": "2026-11-01T20:05:05.889137+00:00"
+ "runs": 50,
+ "last_run": "2026-11-01T23:02:32.255599+00:00"
 }
