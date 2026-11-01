@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "BleepingComputer",
+   "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
+   "link": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+   "desc": "The FBI has confirmed that North Korean state-sponsored hackers known as TraderTraitor were behind the $6.3 billion crypto-theft attack on Binance, making it the largest cryptocurrency heist on record. [...]",
+   "date": "2026-11-01T19:57:53+00:00",
+   "first_seen": "2026-11-01T20:05:05.889137+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Thorchain Glitch Blocks Binance Hack Route as FBI Presses Nodes",
+   "link": "https://news.bitcoin.com/crypto-news/thorchain-glitch-blocks-binance-hack-route-as-fbi-presses-nodes/",
+   "desc": "A one-block Ethereum reorganization on Saturday triggered a double refund involving 10 ETH on Thorchain, setting off an emergency pause that disrupted cross-chain swaps across most of its supported networks. Chainalysis said the malfunction inadvertently delayed laundering activity connected to Binance\u2019s $6.4 billion theft. Meanwhile, the FBI urged Thorchain node operators to block transactions as",
+   "date": "2026-11-01T19:30:37+00:00",
+   "first_seen": "2026-11-01T20:05:05.889137+00:00"
+  },
+  {
    "source": "The Block",
    "title": "North Korean hackers launder $242 million of Binance loot via Tron as FBI presses THORChain: analyst",
    "link": "https://www.theblock.co/news/defi/2026-11-01-north-korean-hackers-launder-242-million-of-binance-loot-via-tron-as-fbi-presses-thorchain-analyst-432257",
@@ -850,6 +866,6 @@
   }
  ],
  "first_run": null,
- "runs": 48,
- "last_run": "2026-11-01T19:11:30.637224+00:00"
+ "runs": 49,
+ "last_run": "2026-11-01T20:05:05.889137+00:00"
 }
