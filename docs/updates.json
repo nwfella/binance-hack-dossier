@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "Bitcoin ETF Investors Head for the Exits After Record Binance Hack",
+   "link": "https://decrypt.co/382309/bitcoin-etf-investors-exits-record-binance-hack",
+   "desc": "Bitcoin ETFs saw $643.2 million in outflows Friday, the first full trading session after the $6.4 billion Binance hack, ending October with roughly $516 million in net outflows.",
+   "date": "2026-11-01T16:01:02+00:00",
+   "first_seen": "2026-11-01T16:05:05.417350+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Ethereum validators pocket $30 million windfall as Binance hackers lose $119 million in rushed trades",
    "link": "https://cryptoslate.com/ethereum-validators-pocket-30-million-windfall-as-binance-hackers-lose-119-million-in-rushed-trades/",
@@ -810,6 +818,6 @@
   }
  ],
  "first_run": null,
- "runs": 44,
- "last_run": "2026-11-01T15:05:06.040799+00:00"
+ "runs": 45,
+ "last_run": "2026-11-01T16:05:05.417350+00:00"
 }
