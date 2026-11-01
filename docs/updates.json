@@ -2,6 +2,22 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Michael Saylor Sees Stronger Crypto Security After Binance\u2019s $6.3 Billion Hack",
+   "link": "https://news.bitcoin.com/security/michael-saylor-sees-stronger-crypto-security-after-binances-6-3-billion-hack/",
+   "desc": "Michael Saylor expects the crypto industry to strengthen security after Binance\u2019s $6.3 billion hack. The Strategy executive chairman also backed the exchange\u2019s commitment to use its own balance sheet to make customers whole. Saylor Sees Lessons From Binance Security Failures Strategy Inc. (Nasdaq: MSTR) Executive Chairman Michael Saylor said on Oct. 30 that the crypto [\u2026]",
+   "date": "2026-11-01T01:45:19+00:00",
+   "first_seen": "2026-11-01T02:05:05.125395+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
+   "link": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
+   "desc": "While the FBI listed hundreds of addresses in its notice, Chainalysis said the Binance attackers have already used \"thousands addresses,\" and expects this number to continue growing.",
+   "date": "2026-11-01T01:10:05+00:00",
+   "first_seen": "2026-11-01T02:05:05.125395+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Trump Speaks on $6.3B Binance Hack as FBI Confirms North Korea",
    "link": "https://news.bitcoin.com/featured/trump-speaks-on-6-3b-binance-hack-as-fbi-confirms-north-korea/",
    "desc": "President Donald Trump said U.S. officials were looking into Binance\u2019s $6.3 billion hack and acknowledged the exchange\u2019s recovery assurances. The FBI subsequently attributed the theft to North Korea and warned of further laundering. Trump Examines North Korea Link and Binance Assurances President Donald Trump said on Oct. 30 that U.S. officials were looking into the [\u2026]",
@@ -738,6 +754,6 @@
   }
  ],
  "first_run": null,
- "runs": 26,
- "last_run": "2026-11-01T01:05:04.865848+00:00"
+ "runs": 27,
+ "last_run": "2026-11-01T02:05:05.125395+00:00"
 }
