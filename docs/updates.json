@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "Binance sees $3.64 billion in net outflows after reopening withdrawals following record hack",
+   "link": "https://www.theblock.co/news/business/2026-11-01-binance-sees-3-64-billion-in-net-outflows-after-reopening-withdrawals-following-record-hack-432259",
+   "desc": "The exchange said the outflows equal 2.1% of its $171 billion in assets and that withdrawal volumes have declined after an initial spike.",
+   "date": "2026-11-01T16:32:31+00:00",
+   "first_seen": "2026-11-01T17:05:05.175695+00:00"
+  },
+  {
    "source": "Decrypt",
    "title": "Bitcoin ETF Investors Head for the Exits After Record Binance Hack",
    "link": "https://decrypt.co/382309/bitcoin-etf-investors-exits-record-binance-hack",
@@ -818,6 +826,6 @@
   }
  ],
  "first_run": null,
- "runs": 45,
- "last_run": "2026-11-01T16:05:05.417350+00:00"
+ "runs": 46,
+ "last_run": "2026-11-01T17:05:05.175695+00:00"
 }
