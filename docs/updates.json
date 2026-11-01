@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "XRP Hit First in Binance Hack: Five Wallets Drained in About Four Minutes",
+   "link": "https://news.bitcoin.com/security/xrp-hit-first-in-binance-hack-five-wallets-drained-in-about-four-minutes/",
+   "desc": "Binance\u2019s wallet breach involved approximately $296 million in XRP transfers, blockchain investigators found. Ripple froze stolen RLUSD during the response, and the exchange subsequently said its XRP customer balances were fully backed. Five Payments Consolidated $296 Million Binance lost approximately $296 million in XRP on Oct. 29, TRM Labs\u2019 transaction tracing found. The blockchain intelligence",
+   "date": "2026-11-01T03:15:09+00:00",
+   "first_seen": "2026-11-01T04:05:05.265083+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Michael Saylor Sees Stronger Crypto Security After Binance\u2019s $6.3 Billion Hack",
    "link": "https://news.bitcoin.com/security/michael-saylor-sees-stronger-crypto-security-after-binances-6-3-billion-hack/",
    "desc": "Michael Saylor expects the crypto industry to strengthen security after Binance\u2019s $6.3 billion hack. The Strategy executive chairman also backed the exchange\u2019s commitment to use its own balance sheet to make customers whole. Saylor Sees Lessons From Binance Security Failures Strategy Inc. (Nasdaq: MSTR) Executive Chairman Michael Saylor said on Oct. 30 that the crypto [\u2026]",
@@ -754,6 +762,6 @@
   }
  ],
  "first_run": null,
- "runs": 30,
- "last_run": "2026-11-01T03:05:05.677423+00:00"
+ "runs": 31,
+ "last_run": "2026-11-01T04:05:05.265083+00:00"
 }
