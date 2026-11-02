@@ -2,6 +2,30 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Binance May Have Lost Around Half of 5-Year Profits to Fines and Hacks: Analysis",
+   "link": "https://news.bitcoin.com/opinion-and-analysis/binance-lost-half-5-year-profits-fines-hacks-analyst/",
+   "desc": "Binance\u2019s \u201ccost of doing business,\u201d including fines and hack losses, could equal more than half of the largest crypto exchange\u2019s estimated pre-tax profits from 2021\u20132025. Following the largest crypto theft in history, Binance\u2019s combined bill for fines and hack-related losses has reached around $10.7 billion. Meanwhile, Vetle Lunde, head of research at K33 Research, the [\u2026]",
+   "date": "2026-11-02T19:57:16+00:00",
+   "first_seen": "2026-11-02T20:19:22.825278+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "North Korea Is Laundering Binance Hack Loot at One New Wallet Every 25 Seconds",
+   "link": "https://decrypt.co/382355/north-korea-laundering-binance-hack-loot-new-wallet-every-25-seconds",
+   "desc": "$2.85 billion of the $6.43 billion stolen from Binance has been frozen or seized, compared with about 3% in the Bybit hack, as North Korea\u2019s automated laundering spans 12,000 wallets.",
+   "date": "2026-11-02T18:46:03+00:00",
+   "first_seen": "2026-11-02T20:19:22.825278+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "BNB\u2019s $99 million ETF inflows came almost entirely before Binance\u2019s hack",
+   "link": "https://cryptoslate.com/bnbs-99-million-etf-inflows-came-almost-entirely-before-binances-hack/",
+   "desc": "BNB exchange-traded funds (ETFs) led October inflows among US-listed spot crypto ETFs tracked by SoSoValue, with the largest allocation arriving weeks before Binance suffered a record $6.3 billion cryptocurrency hack. The US-listed VanEck BNB ETF attracted $99 million during the month, ahead of $35 million for NEAR and $19 million for XRP, according to SoSoValue\u2026 Read the full story on CryptoSlate",
+   "date": "2026-11-02T18:40:47+00:00",
+   "first_seen": "2026-11-02T20:19:22.825278+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Binance Hack Fallout Keeps Bitcoin Price Under Pressure Below $77K",
    "link": "https://news.bitcoin.com/market-updates/binance-hack-fallout-keeps-bitcoin-price-under-pressure-77k/",
    "desc": "Bitcoin slipped below $77,000 on Monday, despite Binance\u2019s announcement that it had fully replenished assets lost in the recent hack using its own funds. Another, albeit much smaller crypto exchange hack also popped up on Monday. Bitcoin Drops Below $77K Bitcoin slipped below $77,000 on Monday as the cryptocurrency continued to grapple with a crisis [\u2026]",
@@ -1074,6 +1098,6 @@
   }
  ],
  "first_run": null,
- "runs": 53,
- "last_run": "2026-11-02T18:05:06.833404+00:00"
+ "runs": 54,
+ "last_run": "2026-11-02T20:19:22.825278+00:00"
 }
