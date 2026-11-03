@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "source": "CryptoSlate",
+   "title": "Bybit and Bitget see crypto deposits surge following Binance\u2019s $6.3 billion hack",
+   "link": "https://cryptoslate.com/bybit-and-bitget-see-crypto-deposits-surge-following-binances-6-3-billion-hack/",
+   "desc": "Bybit and Bitget recorded larger address counts during the shutdown, but the data do not establish Binance customer migration. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-03T10:40:42+00:00",
+   "first_seen": "2026-11-03T11:05:05.316937+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Reopens XRP Withdrawals While Ripple Mints $110M in RLUSD in One Go",
+   "link": "https://news.bitcoin.com/altcoins/ripple-mints-110m-rlusd-binance-reopens-xrp-withdrawals/",
+   "desc": "Ripple issued 110.57 million RLUSD on the XRP Ledger in a single transaction on Nov. 2, hours before Binance began reopening XRP and RLUSD withdrawals after its $6.3 billion hack. A $110 Million Mint in Seconds Ripple\u2019s dollar-backed stablecoin had one of its biggest nights on the XRP Ledger (XRPL). Onchain trackers flagged the mint [\u2026]",
+   "date": "2026-11-03T10:30:08+00:00",
+   "first_seen": "2026-11-03T11:05:05.316937+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "North Korea Denies $6.3B Binance Hack, Calls FBI Finding a 'Political Provocation'",
+   "link": "https://decrypt.co/382394/north-korea-denies-6-3b-binance-hack-calls-fbi-finding-a-political-provocation",
+   "desc": "Kim Yo Jong suggested the U.S. itself could be behind the theft, as Binance said hourly deposits had begun to exceed withdrawals.",
+   "date": "2026-11-03T10:18:48+00:00",
+   "first_seen": "2026-11-03T11:05:05.316937+00:00"
+  },
+  {
    "source": "CoinDesk",
    "title": "North Korea denies role in $6.4 billion Binance hack after FBI points to TraderTraitor",
    "link": "https://www.coindesk.com/business/2026/11/03/north-korea-denies-role-in-usd6-4-billion-binance-hack-after-fbi-points-to-tradertraitor",
@@ -1202,6 +1226,6 @@
   }
  ],
  "first_run": null,
- "runs": 68,
- "last_run": "2026-11-03T10:05:06.095488+00:00"
+ "runs": 69,
+ "last_run": "2026-11-03T11:05:05.316937+00:00"
 }
