@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Cointelegraph",
+   "title": "South Korea urges exchanges to boost cold storage after Binance hack",
+   "link": "https://cointelegraph.com/news/south-korea-urges-exchanges-to-boost-cold-storage-after-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "South Korean crypto exchanges are already required to hold at least 80% of customer crypto in cold wallets, but the regulator is urging more.",
+   "date": "2026-11-03T01:32:39+00:00",
+   "first_seen": "2026-11-03T02:05:05.281665+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "XRP Adds Nearly 8,000 New Wallets in a Day Following $6 Billion Binance Hack",
+   "link": "https://news.bitcoin.com/market-updates/xrp-adds-nearly-8000-new-wallets-in-a-day-following-6-billion-binance-hack/",
+   "desc": "XRP recorded one of its strongest days for new wallet creation this year after the Binance hack, according to Santiment. The increase contrasted with subdued prices, as the analytics firm suggested a possible shift toward self-custody. XRP Wallet Growth Accelerates Despite Price Pressure Santiment reported on Nov. 2 that 7,934 new XRP wallets were created [\u2026]",
+   "date": "2026-11-03T01:10:59+00:00",
+   "first_seen": "2026-11-03T02:05:05.281665+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance warns of second wave of crypto theft as $6.3 billion hack recovery continues",
    "link": "https://cryptoslate.com/binance-warns-of-second-wave-of-crypto-theft-as-6-3-billion-hack-recovery-continues/",
@@ -1146,6 +1162,6 @@
   }
  ],
  "first_run": null,
- "runs": 57,
- "last_run": "2026-11-03T01:05:05.360858+00:00"
+ "runs": 58,
+ "last_run": "2026-11-03T02:05:05.281665+00:00"
 }
