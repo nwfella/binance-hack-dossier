@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Binance Warns of Fake Compensation Offers as Withdrawals Resume",
+   "link": "https://news.bitcoin.com/featured/binance-warns-of-fake-compensation-offers-as-withdrawals-resume/",
+   "desc": "Binance warned that impersonators could exploit its withdrawal restart with fake compensation offers and fees for faster processing. The exchange also completed a cryptographic reserve proof, enabling customers to check backing for 10 tokens while recovery continued. Fake Compensation Offers Accompany Withdrawal Restart Binance addressed potential fraud during its withdrawal restart following the ",
+   "date": "2026-11-03T03:30:34+00:00",
+   "first_seen": "2026-11-03T04:05:05.409760+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Tether Says It Froze Over $1.5B From Binance Hack Within 30 Minutes",
    "link": "https://news.bitcoin.com/security/tether-says-it-froze-over-1-5b-from-binance-hack-within-30-minutes/",
    "desc": "Tether said it froze more than $1.5 billion in stolen USDT within 30 minutes of the Binance hack, blocking access to those funds. The announcement followed the FBI\u2019s attribution of the attack to North Korea. Tether Describes $1.5 Billion Binance Hack Freeze Tether said on Nov. 2 that it had frozen more than $1.5 billion [\u2026]",
@@ -1170,6 +1178,6 @@
   }
  ],
  "first_run": null,
- "runs": 60,
- "last_run": "2026-11-03T03:05:05.846072+00:00"
+ "runs": 61,
+ "last_run": "2026-11-03T04:05:05.409760+00:00"
 }
