@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CryptoSlate",
+   "title": "Binance warns of second wave of crypto theft as $6.3 billion hack recovery continues",
+   "link": "https://cryptoslate.com/binance-warns-of-second-wave-of-crypto-theft-as-6-3-billion-hack-recovery-continues/",
+   "desc": "The November 2 update says the full proof is complete, while replenishment remains about 95% and broader token coverage is planned. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-03T00:30:20+00:00",
+   "first_seen": "2026-11-03T01:05:05.360858+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Hack Funds Spread Across 12,000 Wallets in Under Four Days",
+   "link": "https://news.bitcoin.com/security/binance-hack-funds-spread-across-12000-wallets-in-under-four-days/",
+   "desc": "Funds stolen from Binance passed through approximately 12,000 wallets in under four days, Elliptic found. The operation spanned 11 blockchains, while the firm assessed that only a negligible amount had likely been cashed out. Thousands of Wallets Expand the Laundering Trail Crypto assets stolen from Binance moved through approximately 12,000 wallets across 11 blockchains in [\u2026]",
+   "date": "2026-11-03T00:05:30+00:00",
+   "first_seen": "2026-11-03T01:05:05.360858+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "North Korea denies role in $6.3B Binance hack, points finger at US",
    "link": "https://cointelegraph.com/news/north-korea-denies-role-in-63b-binance-hack-points-finger-at-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -1130,6 +1146,6 @@
   }
  ],
  "first_run": null,
- "runs": 56,
- "last_run": "2026-11-03T00:05:05.235707+00:00"
+ "runs": 57,
+ "last_run": "2026-11-03T01:05:05.360858+00:00"
 }
