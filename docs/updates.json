@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Cointelegraph",
+   "title": "North Korea denies role in $6.3B Binance hack, points finger at US",
+   "link": "https://cointelegraph.com/news/north-korea-denies-role-in-63b-binance-hack-points-finger-at-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Pyongyang has pushed back against the FBI\u2019s attribution of the Binance attack, with Kim Yo Jong calling the US allegations politically motivated.",
+   "date": "2026-11-02T23:07:07+00:00",
+   "first_seen": "2026-11-03T00:05:05.235707+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Tether freezes $4.5 million as Mercado Bitcoin hacker holds $46 million in crypto",
    "link": "https://cryptoslate.com/tether-freezes-4-5-million-as-mercado-bitcoin-hacker-holds-46-million-in-crypto/",
@@ -1122,6 +1130,6 @@
   }
  ],
  "first_run": null,
- "runs": 55,
- "last_run": "2026-11-02T23:05:06.160008+00:00"
+ "runs": 56,
+ "last_run": "2026-11-03T00:05:05.235707+00:00"
 }
