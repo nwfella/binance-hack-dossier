@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "CZ calls for crypto security alliance as AI-driven attacks accelerate after Binance hack",
+   "link": "https://www.theblock.co/news/regulation/2026-11-03-cz-calls-for-crypto-security-alliance-ai-driven-attacks-accelerate-binance-hack-432458",
+   "desc": "In his first interview since the Binance hack, Changpeng Zhao says AI is accelerating cyberattacks and calls for industry security alliance.",
+   "date": "2026-11-03T20:43:38+00:00",
+   "first_seen": "2026-11-03T21:05:05.502490+00:00"
+  },
+  {
+   "source": "BleepingComputer",
+   "title": "Binance says fake job interview led to $6.3 billion crypto heist",
+   "link": "https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist/",
+   "desc": "Cryptocurrency exchange Binance says North Korean hackers used a fake job interview to trick an employee into installing malware that ultimately let them compromise the company's wallet infrastructure and steal about $6.34 billion in digital assets. [...]",
+   "date": "2026-11-03T20:05:50+00:00",
+   "first_seen": "2026-11-03T21:05:05.502490+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance says thinly traded tokens are delaying full replacement of stolen assets",
    "link": "https://cryptoslate.com/binance-says-thinly-traded-tokens-are-delaying-full-replacement-of-stolen-assets/",
@@ -1346,6 +1362,6 @@
   }
  ],
  "first_run": null,
- "runs": 79,
- "last_run": "2026-11-03T20:05:05.395613+00:00"
+ "runs": 80,
+ "last_run": "2026-11-03T21:05:05.502490+00:00"
 }
