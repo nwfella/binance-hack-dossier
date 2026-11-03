@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "South Korea's president says country needs a \u2018cybersecurity czar\u2019 following $6.3 billion Binance hack",
+   "link": "https://www.coindesk.com/tech/2026/11/03/south-korea-s-president-says-country-needs-a-cybersecurity-czar-following-usd6-3-billion-binance-hack",
+   "desc": "Lee Jae Myung said he wants a government-wide agency to tackle cyberattacks as AI raises security concerns across financial institutions and critical infrastructure.",
+   "date": "2026-11-03T16:49:56+00:00",
+   "first_seen": "2026-11-03T17:05:05.202862+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance traces $6.3B hack to fake job interviews, compromised AI tool",
+   "link": "https://cointelegraph.com/news/binance-fake-job-interviews-compromised-ai-tool-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Hackers exploited compromised employee computers and stolen credentials to breach Binance\u2019s wallet infrastructure, according to the exchange\u2019s investigation.",
+   "date": "2026-11-03T16:44:06+00:00",
+   "first_seen": "2026-11-03T17:05:05.202862+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Says Fake Job Interview, Compromised AI Tools Led to $6.3 Billion Hack",
    "link": "https://news.bitcoin.com/security/binance-fake-job-interview-compromised-ai-tools-6-3b-hack/",
@@ -1306,6 +1322,6 @@
   }
  ],
  "first_run": null,
- "runs": 74,
- "last_run": "2026-11-03T16:05:05.242547+00:00"
+ "runs": 75,
+ "last_run": "2026-11-03T17:05:05.202862+00:00"
 }
