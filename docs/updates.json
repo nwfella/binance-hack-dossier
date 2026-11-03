@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "Binance net outflows reach $5.3 billion after record hack. CEO says recovery underway",
+   "link": "https://www.coindesk.com/business/2026/11/03/binance-net-outflows-reach-usd5-3b-after-record-hack-though-ceo-cites-recovery",
+   "desc": "Nearly $11 billion left the exchange over 46 hours, although CEO Richard Teng said hourly deposits were beginning to exceed withdrawals.",
+   "date": "2026-11-03T12:57:28+00:00",
+   "first_seen": "2026-11-03T13:05:05.458031+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Misses Monthly Luna Classic Burn for First Time Since 2023",
+   "link": "https://decrypt.co/382401/binance-misses-monthly-luna-classic-burn-for-first-time-since-2023",
+   "desc": "LUNC holders are waiting for Binance\u2019s November burn, but it hasn\u2019t arrived as the exchange recovers from a record $6.3 billion hack.",
+   "date": "2026-11-03T12:15:29+00:00",
+   "first_seen": "2026-11-03T13:05:05.458031+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Tether freezes $1.5 billion in 30 minutes after Binance hack, but $729 million escapes",
    "link": "https://cryptoslate.com/tether-freezes-1-5-billion-in-30-minutes-after-binance-hack-but-729-million-escapes/",
@@ -1242,6 +1258,6 @@
   }
  ],
  "first_run": null,
- "runs": 70,
- "last_run": "2026-11-03T12:05:05.055543+00:00"
+ "runs": 71,
+ "last_run": "2026-11-03T13:05:05.458031+00:00"
 }
