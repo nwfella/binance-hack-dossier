@@ -2,6 +2,22 @@
  "items": [
   {
    "source": "CryptoSlate",
+   "title": "Tether freezes $1.5 billion in 30 minutes after Binance hack, but $729 million escapes",
+   "link": "https://cryptoslate.com/tether-freezes-1-5-billion-in-30-minutes-after-binance-hack-but-729-million-escapes/",
+   "desc": "Tether describes immobilized USDT, while US precedents show separate decisions governing custody, ownership and return. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-03T12:00:53+00:00",
+   "first_seen": "2026-11-03T12:05:05.055543+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance\u2019s net inflows turn positive at $2.3B as withdrawals expand",
+   "link": "https://cointelegraph.com/news/binances-daily-inflows-positive-18b-withdrawals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Binance led exchanges in 24-hour net inflows, reversing Monday\u2019s heavy outflows as it restored access to funds after its $6.3 billion hack.",
+   "date": "2026-11-03T11:32:02+00:00",
+   "first_seen": "2026-11-03T12:05:05.055543+00:00"
+  },
+  {
+   "source": "CryptoSlate",
    "title": "Bybit and Bitget see crypto deposits surge following Binance\u2019s $6.3 billion hack",
    "link": "https://cryptoslate.com/bybit-and-bitget-see-crypto-deposits-surge-following-binances-6-3-billion-hack/",
    "desc": "Bybit and Bitget recorded larger address counts during the shutdown, but the data do not establish Binance customer migration. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
@@ -1226,6 +1242,6 @@
   }
  ],
  "first_run": null,
- "runs": 69,
- "last_run": "2026-11-03T11:05:05.316937+00:00"
+ "runs": 70,
+ "last_run": "2026-11-03T12:05:05.055543+00:00"
 }
