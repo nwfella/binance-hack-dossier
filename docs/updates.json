@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "North Korea Denies Role in $6.3B Binance Hack, Calls FBI Blame \u2018Political Provocation\u2019",
+   "link": "https://news.bitcoin.com/security/north-korea-denies-role-6-3b-binance-hack-fbi-blame-political-provocation/",
+   "desc": "North Korea has rejected allegations that it orchestrated the $6.3 billion cryptocurrency theft from Binance, with leader Kim Jong-un\u2019s influential sister accusing the United States of using the investigation to discredit the country. North Korea Slams FBI for Binance Blame Kim Yo-jong dismissed the FBI\u2019s findings Tuesday, describing Washington\u2019s attribution of the Oct. 29 attack [\u2026]",
+   "date": "2026-11-03T15:01:55+00:00",
+   "first_seen": "2026-11-03T15:05:05.359291+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance's $6.3 billion hack began with a fake job interview, exchange says",
+   "link": "https://www.coindesk.com/business/2026/11/03/binance-s-usd6-3-billion-hack-began-with-a-fake-job-interview-exchange-says",
+   "desc": "North Korea-linked attackers spent months compromising Binance employees and internal systems before exploiting its hot-wallet signing infrastructure through Ethereum's EIP-7702 mechanism.",
+   "date": "2026-11-03T14:53:19+00:00",
+   "first_seen": "2026-11-03T15:05:05.359291+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "CZ warns of more AI-driven hacks following Binance\u2019s historic $6.4 billion heist",
+   "link": "https://www.coindesk.com/business/2026/11/03/cz-warns-of-more-ai-driven-hacks-following-binance-s-historic-usd6-4-billion-heist",
+   "desc": "While investigators found no evidence that AI agents laundered the stolen Binance funds, Zhao stressed that automated tools are lowering the barrier for complex breaches.",
+   "date": "2026-11-03T14:22:09+00:00",
+   "first_seen": "2026-11-03T15:05:05.359291+00:00"
+  },
+  {
    "source": "Decrypt",
    "title": "Morning Minute: Tom Lee Calls the Binance Hack Bullish for Ethereum",
    "link": "https://decrypt.co/382410/morning-minute-tom-lee-calls-the-binance-hack-bullish-for-ethereum",
@@ -1266,6 +1290,6 @@
   }
  ],
  "first_run": null,
- "runs": 72,
- "last_run": "2026-11-03T14:05:05.405611+00:00"
+ "runs": 73,
+ "last_run": "2026-11-03T15:05:05.359291+00:00"
 }
