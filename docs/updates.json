@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "Morning Minute: Tom Lee Calls the Binance Hack Bullish for Ethereum",
+   "link": "https://decrypt.co/382410/morning-minute-tom-lee-calls-the-binance-hack-bullish-for-ethereum",
+   "desc": "Meanwhile, both the BTC ETFs and ETH ETFs bleed outflows in the Binance hack aftermath, dragging down prices.",
+   "date": "2026-11-03T13:11:47+00:00",
+   "first_seen": "2026-11-03T14:05:05.405611+00:00"
+  },
+  {
    "source": "CoinDesk",
    "title": "Binance net outflows reach $5.3 billion after record hack. CEO says recovery underway",
    "link": "https://www.coindesk.com/business/2026/11/03/binance-net-outflows-reach-usd5-3b-after-record-hack-though-ceo-cites-recovery",
@@ -1258,6 +1266,6 @@
   }
  ],
  "first_run": null,
- "runs": 71,
- "last_run": "2026-11-03T13:05:05.458031+00:00"
+ "runs": 72,
+ "last_run": "2026-11-03T14:05:05.405611+00:00"
 }
