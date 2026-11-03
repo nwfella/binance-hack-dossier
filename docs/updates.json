@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "Five Ways North Korea Breaks Into Crypto Firms\u2014and How Binance Was Hacked",
+   "link": "https://decrypt.co/382420/five-ways-north-korea-breaks-into-crypto-firms-and-how-binance-was-hacked",
+   "desc": "From AI deepfakes to poisoning code libraries: here's how North Korean hackers get inside crypto companies.",
+   "date": "2026-11-03T17:30:54+00:00",
+   "first_seen": "2026-11-03T17:47:25.732113+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "North Korea denies role in $6 billion Binance hack after FBI accusation",
+   "link": "https://cryptoslate.com/north-korea-denies-role-in-6-billion-binance-hack-after-fbi-accusation/",
+   "desc": "Reuters, citing KCNA, reported the denial after the FBI blamed TraderTraitor for stealing more than $6 billion from Binance. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-03T17:10:03+00:00",
+   "first_seen": "2026-11-03T17:47:25.732113+00:00"
+  },
+  {
    "source": "CoinDesk",
    "title": "South Korea's president says country needs a \u2018cybersecurity czar\u2019 following $6.3 billion Binance hack",
    "link": "https://www.coindesk.com/tech/2026/11/03/south-korea-s-president-says-country-needs-a-cybersecurity-czar-following-usd6-3-billion-binance-hack",
@@ -1322,6 +1338,6 @@
   }
  ],
  "first_run": null,
- "runs": 75,
- "last_run": "2026-11-03T17:05:05.202862+00:00"
+ "runs": 76,
+ "last_run": "2026-11-03T17:47:25.732113+00:00"
 }
