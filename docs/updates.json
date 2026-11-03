@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "Arbitrum\u2019s council moved $30 million of Binance hack funds without the hacker\u2019s key",
+   "link": "https://www.coindesk.com/tech/2026/11/03/arbitrum-s-council-moved-usd30-million-of-binance-hack-funds-without-the-hacker-s-key",
+   "desc": "A 12-person committee briefly rewrote one of Arbitrum\u2019s core contracts to spend from an address it held no key for, then put the code back. It\u2019s the second time this year.",
+   "date": "2026-11-03T05:25:12+00:00",
+   "first_seen": "2026-11-03T06:05:05.341670+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Warns of Fake Compensation Offers as Withdrawals Resume",
    "link": "https://news.bitcoin.com/featured/binance-warns-of-fake-compensation-offers-as-withdrawals-resume/",
@@ -1178,6 +1186,6 @@
   }
  ],
  "first_run": null,
- "runs": 62,
- "last_run": "2026-11-03T05:05:05.429353+00:00"
+ "runs": 63,
+ "last_run": "2026-11-03T06:05:05.341670+00:00"
 }
