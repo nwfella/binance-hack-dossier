@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CryptoSlate",
+   "title": "Binance relied on AI to fight fraud before hackers exploited internal tool in $6 billion theft",
+   "link": "https://cryptoslate.com/binance-relied-on-ai-to-fight-fraud-before-hackers-exploited-internal-tool-in-6-billion-theft/",
+   "desc": "Hackers exploited Binance's internal artificial intelligence tools to compromise engineers before stealing $6.34 billion in cryptocurrency, the exchange disclosed. In its Nov. 3 security report, Binance said attackers used a compromised employee computer and an internal AI tool on Oct. 20 to take control of two engineers responsible for its wallet infrastructure. The attackers subsequently\u2026 Read t",
+   "date": "2026-11-03T22:30:31+00:00",
+   "first_seen": "2026-11-03T23:05:05.436628+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Binance Inflows Flip Positive After $7 Billion Post-Hack Exodus",
+   "link": "https://news.bitcoin.com/exchanges/binance-inflows-flip-positive-after-7-billion-post-hack-exodus/",
+   "desc": "Binance\u2019s tracked wallets have swung back to roughly $3.25 billion in 24-hour net inflows after recording more than $7 billion in daily outflows following its $6.3 billion hack. Binance Users Return as 24-Hour Inflows Swing Positive Money is starting to flow back into Binance after one of the largest security shocks in crypto history. Binance [\u2026]",
+   "date": "2026-11-03T22:05:48+00:00",
+   "first_seen": "2026-11-03T23:05:05.436628+00:00"
+  },
+  {
    "source": "The Block",
    "title": "CZ calls for crypto security alliance as AI-driven attacks accelerate after Binance hack",
    "link": "https://www.theblock.co/news/regulation/2026-11-03-cz-calls-for-crypto-security-alliance-ai-driven-attacks-accelerate-binance-hack-432458",
@@ -1362,6 +1378,6 @@
   }
  ],
  "first_run": null,
- "runs": 81,
- "last_run": "2026-11-03T22:05:05.458680+00:00"
+ "runs": 82,
+ "last_run": "2026-11-03T23:05:05.436628+00:00"
 }
