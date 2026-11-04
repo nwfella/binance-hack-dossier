@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "Coinbase says 99% of customer assets sit in cold storage after Binance\u2019s $6.3 billion breach",
+   "link": "https://www.theblock.co/news/ecosystems/2026-11-04-coinbase-security-cold-storage-binance-hack-432880",
+   "desc": "Coinbase says 99% of customer assets are in cold storage and it wasn't affected by the $6.3 billion Binance hack.",
+   "date": "2026-11-04T16:58:42+00:00",
+   "first_seen": "2026-11-04T17:05:05.308377+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "Coinbase Says 99% of Customer Assets in Cold Storage After $6.3B Binance Hack",
+   "link": "https://news.bitcoin.com/exchanges/coinbase-99-percent-customer-assets-cold-storage-after-binance-hack/",
+   "desc": "Coinbase says more than 99% of customer assets are held in offline cold storage following Binance\u2019s $6.34 billion hack on Oct. 29, 2026. In a Nov. 4 disclosure, the publicly traded U.S. crypto exchange detailed its distributed signing keys, emergency shutdown controls, and withdrawal restrictions. While Coinbase says its systems were unaffected, its latest security [\u2026]",
+   "date": "2026-11-04T16:30:24+00:00",
+   "first_seen": "2026-11-04T17:05:05.308377+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Hack Exposed Three \u2018Entirely Avoidable\u2019 Flaws, Says Coinex Founder",
    "link": "https://news.bitcoin.com/security/coinex-founder-haipo-yang-binance-hack-three-mistakes/",
@@ -1450,6 +1466,6 @@
   }
  ],
  "first_run": null,
- "runs": 98,
- "last_run": "2026-11-04T16:05:05.197833+00:00"
+ "runs": 99,
+ "last_run": "2026-11-04T17:05:05.308377+00:00"
 }
