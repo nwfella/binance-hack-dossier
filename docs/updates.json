@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "CryptoSlate",
+   "title": "Aave and Lido lose $1.7B in massive DeFi capital drop after the Binance hack",
+   "link": "https://cryptoslate.com/aave-and-lido-lose-1-7b-in-massive-defi-capital-drop-after-the-binance-hack/",
+   "desc": "Stablecoin contraction was evident before the breach, while Aave's temporary freeze showed how collateralized loans can coexist with scarce withdrawal cash. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-04T19:50:13+00:00",
+   "first_seen": "2026-11-04T20:05:06.086911+00:00"
+  },
+  {
+   "source": "CryptoSlate",
    "title": "Bitcoin rockets above $80,000 for first time since Binance hack despite Democrats sweep, but a historical crash looms",
    "link": "https://cryptoslate.com/bitcoin-rockets-above-80000-for-first-time-since-binance-hack-despite-democrats-sweep-but-a-historical-crash-looms/",
    "desc": "Bitcoin surged more than 5% from its election-night low to reclaim $80,000 for the first time since Binance's record hack. The cryptocurrency extended its recovery from approximately $75,600 on Wednesday, shaking off concerns that Democrats' takeover of Congress would undermine President Donald Trump's crypto-friendly agenda. According to CoinGlass data, this rally liquidated $453.32 million in\u2026 R",
@@ -1474,6 +1482,6 @@
   }
  ],
  "first_run": null,
- "runs": 102,
- "last_run": "2026-11-04T19:05:05.990835+00:00"
+ "runs": 103,
+ "last_run": "2026-11-04T20:05:06.086911+00:00"
 }
