@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Grayscale Reveals a Silver Lining in Binance\u2019s $6 Billion Hack",
+   "link": "https://news.bitcoin.com/security/grayscale-reveals-a-silver-lining-in-binances-6-billion-hack/",
+   "desc": "Grayscale said Binance\u2019s $6 billion hack could lead to stronger exchange security despite a potential setback for market confidence. The asset manager also highlighted institutional custody through U.S. crypto investment products as a central lesson for investors. Grayscale Sees Security Gains After Binance Attack Grayscale, a digital asset manager, said on Nov. 3 that the [\u2026]",
+   "date": "2026-11-04T08:30:30+00:00",
+   "first_seen": "2026-11-04T09:05:04.835947+00:00"
+  },
+  {
+   "source": "CryptoSlate",
+   "title": "South Korea orders massive crypto wallet lockdown following the Binance hack",
+   "link": "https://cryptoslate.com/south-korea-orders-massive-crypto-wallet-lockdown-following-the-binance-hack/",
+   "desc": "The FSC also requested stronger transfer monitoring, response staffing and reserves, while exchange implementation and any new custody threshold remain unspecified. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-04T08:20:08+00:00",
+   "first_seen": "2026-11-04T09:05:04.835947+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance stopped 57 North Korean cyber threats but fell for a fake job interview",
    "link": "https://cryptoslate.com/binance-stopped-57-north-korean-cyber-threats-but-fell-for-a-fake-job-interview/",
@@ -1386,6 +1402,6 @@
   }
  ],
  "first_run": null,
- "runs": 92,
- "last_run": "2026-11-04T08:05:05.134509+00:00"
+ "runs": 93,
+ "last_run": "2026-11-04T09:05:04.835947+00:00"
 }
