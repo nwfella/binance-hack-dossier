@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Bitcoin Fork ECX Price Crashes 76% From Peak as Binance Hack Steals Spotlight",
+   "link": "https://news.bitcoin.com/crypto-news/bitcoin-fork-ecx-price-crashes-76-percent-binance-hack-steals-spotlight/",
+   "desc": "The recent $6.3 billion Binance hack and subsequent cryptocurrency market downturn largely eclipsed Drivechain creator Paul Sztorc\u2019s ECX launch on Oct. 29, 2026. Since the start of the phased launch and subsequent trading, the forked digital asset climbed to an all-time high of $134.97 per coin before relinquishing 76% of its peak valuation, leaving it [\u2026]",
+   "date": "2026-11-04T21:19:28+00:00",
+   "first_seen": "2026-11-05T03:05:05.058689+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "Bitcoin rebounds past $80,000 as markets shrug off midterms and Binance hack",
+   "link": "https://www.theblock.co/news/markets/2026-11-04-bitcoin-price-midterm-elections-binance-hack-recovery-433030",
+   "desc": "Bitcoin rose 3.5% to $80,500 and ether jumped 6% after Democrats won Congress, while Bitwise says the Binance hack had limited market impact.",
+   "date": "2026-11-04T20:09:58+00:00",
+   "first_seen": "2026-11-05T03:05:05.058689+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Aave and Lido lose $1.7B in massive DeFi capital drop after the Binance hack",
    "link": "https://cryptoslate.com/aave-and-lido-lose-1-7b-in-massive-defi-capital-drop-after-the-binance-hack/",
@@ -1482,6 +1498,6 @@
   }
  ],
  "first_run": null,
- "runs": 103,
- "last_run": "2026-11-04T20:05:06.086911+00:00"
+ "runs": 104,
+ "last_run": "2026-11-05T03:05:05.058689+00:00"
 }
