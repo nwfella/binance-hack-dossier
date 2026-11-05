@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Fed and OCC Probe Bank Security After Binance\u2019s $6.3B Hack: Report",
+   "link": "https://news.bitcoin.com/finance/fed-occ-probe-bank-security-after-binance-6-3b-hack-report/",
+   "desc": "The Federal Reserve and Office of the Comptroller of the Currency (OCC) contacted U.S. banks following Binance\u2019s $6.3 billion hack, Reuters reported Nov. 5. Supervisors sought information about suspicious activity, service disruptions, and cybersecurity vulnerabilities. The regulatory inquiries followed the Oct. 29 Binance theft, which investigators attributed to North Korean hackers, and was foll",
+   "date": "2026-11-05T14:35:45+00:00",
+   "first_seen": "2026-11-05T15:05:05.429702+00:00"
+  },
+  {
+   "source": "Protos",
+   "title": "Binance hack spooks US gov\u2019t into checking on banks, report",
+   "link": "https://protos.com/binance-hack-spooks-us-govt-into-checking-on-banks-report/",
+   "desc": "The security breach that led to the $6.3B hack of Binance has also reportedly prompted US banks to check their own security systems.",
+   "date": "2026-11-05T14:29:25+00:00",
+   "first_seen": "2026-11-05T15:05:05.429702+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Gate CEO says crypto exchanges must prove they can survive a hack like Binance\u2019s",
+   "link": "https://www.coindesk.com/business/2026/11/05/gate-ceo-says-crypto-exchanges-must-prove-they-can-survive-a-hack-like-binance-s",
+   "desc": "Lin Han says Gate holds enough assets in cold storage to cover customer balances even if its hot wallets are emptied. An independent audit is underway.",
+   "date": "2026-11-05T14:21:50+00:00",
+   "first_seen": "2026-11-05T15:05:05.429702+00:00"
+  },
+  {
    "source": "Protos",
    "title": "Binance drops SignalPlus API keys after potential hack",
    "link": "https://protos.com/binance-drops-signalplus-api-keys-after-potential-hack/",
@@ -1538,6 +1562,6 @@
   }
  ],
  "first_run": null,
- "runs": 116,
- "last_run": "2026-11-05T14:05:05.579895+00:00"
+ "runs": 117,
+ "last_run": "2026-11-05T15:05:05.429702+00:00"
 }
