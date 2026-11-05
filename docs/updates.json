@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Protos",
+   "title": "Binance drops SignalPlus API keys after potential hack",
+   "link": "https://protos.com/binance-drops-signalplus-api-keys-after-potential-hack/",
+   "desc": "Binance removed all API keys linked to SignalPlus after the crypto trading terminal reported that it may have been hacked.",
+   "date": "2026-11-05T13:43:13+00:00",
+   "first_seen": "2026-11-05T14:05:05.579895+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Revokes Signalplus API Access Days After $6.34B Hack",
    "link": "https://news.bitcoin.com/security/binance-revokes-signalplus-api-access-days-after-6-34b-hack/",
@@ -1530,6 +1538,6 @@
   }
  ],
  "first_run": null,
- "runs": 115,
- "last_run": "2026-11-05T13:05:05.145203+00:00"
+ "runs": 116,
+ "last_run": "2026-11-05T14:05:05.579895+00:00"
 }
