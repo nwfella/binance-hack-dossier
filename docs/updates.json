@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Binance Revokes Signalplus API Access Days After $6.34B Hack",
+   "link": "https://news.bitcoin.com/security/binance-revokes-signalplus-api-access-days-after-6-34b-hack/",
+   "desc": "Binance revoked all API keys linked to Signalplus on Thursday, Nov. 5, 2026, after the third-party trading platform reported a potential security issue. The exchange said its internal systems were unaffected, and customer funds remained safe. The precaution comes just one week after the Binance $6.34 billion hack on Oct. 29, when attackers reportedly compromised [\u2026]",
+   "date": "2026-11-05T13:00:37+00:00",
+   "first_seen": "2026-11-05T13:05:05.145203+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Cuts Off SignalPlus API Keys Over 'Potential Security Issue' at Trading Platform",
+   "link": "https://decrypt.co/382599/binance-cuts-off-signalplus-api-keys-over-potential-security-issue-at-trading-platform",
+   "desc": "The exchange said its own systems and user funds are unaffected, a week after it lost $6.4 billion in a hack blamed on North Korea.",
+   "date": "2026-11-05T12:23:24+00:00",
+   "first_seen": "2026-11-05T13:05:05.145203+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto",
    "link": "https://cointelegraph.com/news/polygon-hard-fork-binance-polymarket-6-8m-hack-recovery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -1514,6 +1530,6 @@
   }
  ],
  "first_run": null,
- "runs": 114,
- "last_run": "2026-11-05T12:05:05.451725+00:00"
+ "runs": 115,
+ "last_run": "2026-11-05T13:05:05.145203+00:00"
 }
