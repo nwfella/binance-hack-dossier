@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Cointelegraph",
+   "title": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto",
+   "link": "https://cointelegraph.com/news/polygon-hard-fork-binance-polymarket-6-8m-hack-recovery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Polygon block producers have already frozen the stolen tokens, but a proposed hard fork would allow the funds to be recovered and returned to their owners.",
+   "date": "2026-11-05T06:02:29+00:00",
+   "first_seen": "2026-11-05T06:05:04.869248+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "CZ Warns AI Is Outpacing Crypto Defenses After $6.3B Binance Hack",
+   "link": "https://news.bitcoin.com/security/cz-warns-ai-is-outpacing-crypto-defenses-after-6-3b-binance-hack/",
+   "desc": "In his first interview since Binance suffered a record $6.3 billion hack, founder Changpeng Zhao warned that AI is accelerating cyberattacks faster than financial firms can strengthen their defenses. He also called for government support and a crypto-wide security alliance. CZ Wants US, China Help After Binance Hack The Binance hack was not merely a [\u2026]",
+   "date": "2026-11-05T05:30:55+00:00",
+   "first_seen": "2026-11-05T06:05:04.869248+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Bitcoin Fork ECX Price Crashes 76% From Peak as Binance Hack Steals Spotlight",
    "link": "https://news.bitcoin.com/crypto-news/bitcoin-fork-ecx-price-crashes-76-percent-binance-hack-steals-spotlight/",
@@ -1498,6 +1514,6 @@
   }
  ],
  "first_run": null,
- "runs": 106,
- "last_run": "2026-11-05T05:05:04.899481+00:00"
+ "runs": 107,
+ "last_run": "2026-11-05T06:05:04.869248+00:00"
 }
