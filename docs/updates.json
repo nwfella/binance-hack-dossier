@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Stolen Binance Bitcoin, XRP on the Move as $3.1B Remains Unlaundered: Elliptic",
+   "link": "https://news.bitcoin.com/crypto-news/stolen-binance-bitcoin-xrp-3-1b-remains-unlaundered-elliptic/",
+   "desc": "Hackers behind the $6.4 billion Binance theft have begun moving stolen XRP and converting more cryptocurrency into bitcoin, although approximately $3.1 billion in assets remains largely untouched more than a week after the attack, according to the latest findings from blockchain analytics firm Elliptic. In an analysis updated Friday, Elliptic revealed that about 42 million [\u2026]",
+   "date": "2026-11-06T17:50:21+00:00",
+   "first_seen": "2026-11-06T18:05:06.088728+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance cuts off trading platform SignalPlus after hackers break in with a fake Teams invite",
    "link": "https://cryptoslate.com/binance-cuts-off-trading-platform-signalplus-after-hackers-break-in-with-a-fake-teams-invite/",
@@ -1626,6 +1634,6 @@
   }
  ],
  "first_run": null,
- "runs": 140,
- "last_run": "2026-11-06T17:27:05.906957+00:00"
+ "runs": 141,
+ "last_run": "2026-11-06T18:05:06.088728+00:00"
 }
