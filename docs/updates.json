@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "As CZ Calls for Security Alliance, Binance\u2019s Previous Alliance Just Closed",
+   "link": "https://news.bitcoin.com/security/as-cz-calls-for-security-alliance-binances-previous-alliance-just-closed/",
+   "desc": "In an unfortunate coincidence, the T3 Financial Crime Unit, involving major crypto players Tether, Tron, TRM Labs, and Binance, had already shut down months before the $6.3 billion Binance hack. The two-year-old unit, which claimed to have frozen $450 million in illicit crypto assets, was closed in late August, Bloomberg reported, citing undisclosed people familiar [\u2026]",
+   "date": "2026-11-06T11:30:11+00:00",
+   "first_seen": "2026-11-06T12:05:05.444632+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance hackers had 8 weeks of access before $6.3B exploit, Security Alliance estimates",
+   "link": "https://cointelegraph.com/news/binance-hackers-8-weeks-access-63b-exploit-security-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "The cybersecurity company flagged similar multi-stage intrusion patterns behind other high-profile crypto heists, including the $388 million Bitget hack.",
+   "date": "2026-11-06T11:26:30+00:00",
+   "first_seen": "2026-11-06T12:05:05.444632+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "Binance\u2019s $6.3B hack leaves questions over hot wallet safeguards",
    "link": "https://cointelegraph.com/news/binances-hack-questions-hot-wallet-risk-controls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -1594,6 +1610,6 @@
   }
  ],
  "first_run": null,
- "runs": 133,
- "last_run": "2026-11-06T11:05:05.500798+00:00"
+ "runs": 134,
+ "last_run": "2026-11-06T12:05:05.444632+00:00"
 }
