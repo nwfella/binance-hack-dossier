@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "Cointelegraph",
+   "title": "Binance\u2019s $6.3B hack leaves questions over hot wallet safeguards",
+   "link": "https://cointelegraph.com/news/binances-hack-questions-hot-wallet-risk-controls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Experts say blockchain records show repeated wallet drains but cannot establish Binance\u2019s internal signing controls or transaction limits.",
+   "date": "2026-11-06T10:40:57+00:00",
+   "first_seen": "2026-11-06T11:05:05.500798+00:00"
+  },
+  {
+   "source": "Cointelegraph",
    "title": "Binance, Deribit revoke SignalPlus API keys after fake Teams invite attack",
    "link": "https://cointelegraph.com/news/binance-deribit-revoke-signalplus-api-fake-teams-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "desc": "SignalPlus said attackers compromised an engineer\u2019s computer in a breach that resulted in losses of less than $82,000, which the crypto trading platform pledged to reimburse in full.",
@@ -1586,6 +1594,6 @@
   }
  ],
  "first_run": null,
- "runs": 132,
- "last_run": "2026-11-06T10:05:05.776421+00:00"
+ "runs": 133,
+ "last_run": "2026-11-06T11:05:05.500798+00:00"
 }
