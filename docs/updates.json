@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "$3.1B in Stolen Binance Crypto Has Yet to Be Laundered: Elliptic",
+   "link": "https://decrypt.co/382711/3-1b-in-stolen-binance-crypto-has-yet-to-be-laundered-elliptic",
+   "desc": "The attackers have used more than 20,000 wallets on 16 blockchains so far, but the bulk of the stolen ETH and Bitcoin hasn't moved.",
+   "date": "2026-11-06T14:04:18+00:00",
+   "first_seen": "2026-11-06T15:05:05.058220+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "As CZ Calls for Security Alliance, Binance\u2019s Previous Alliance Just Closed",
    "link": "https://news.bitcoin.com/security/as-cz-calls-for-security-alliance-binances-previous-alliance-just-closed/",
@@ -1610,6 +1618,6 @@
   }
  ],
  "first_run": null,
- "runs": 136,
- "last_run": "2026-11-06T14:05:05.687248+00:00"
+ "runs": 137,
+ "last_run": "2026-11-06T15:05:05.058220+00:00"
 }
