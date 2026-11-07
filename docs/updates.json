@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Binance Hack Takes Another Twist as Hackers Amass 2,300 More Bitcoin",
+   "link": "https://news.bitcoin.com/featured/binance-hack-takes-another-twist-as-hackers-amass-2300-more-bitcoin/",
+   "desc": "In the aftermath of the colossal $6.3 billion Binance hack, which saw 18,270.2 BTC drained from the crypto exchange\u2019s wallet, onchain intelligence and blockchain analytics firm Elliptic has revealed that the attacker\u2019s bitcoin holdings are growing considerably larger. According to Elliptic, the hackers have converted $175 million in stolen altcoins into approximately 2,300 BTC, further [\u2026]",
+   "date": "2026-11-07T16:30:13+00:00",
+   "first_seen": "2026-11-07T20:12:07.106677+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Binance Pulls Kevin O\u2019Leary, Michael Lewis Into $1.76B FTX Clawback Lawsuit",
    "link": "https://news.bitcoin.com/regulation-and-legal/binance-pulls-kevin-oleary-michael-lewis-1-76b-ftx-clawback-lawsuit/",
    "desc": "Binance and founder Changpeng Zhao subpoenaed Kevin O\u2019Leary and Michael Lewis as they defended a $1.76 billion FTX clawback lawsuit. The requests reached an investor paid to promote the exchange and an author who documented the rise and fall of its co-founder, Sam Bankman-Fried. Binance and CZ Seek Evidence Beyond FTX Binance and its founder [\u2026]",
@@ -1658,6 +1666,6 @@
   }
  ],
  "first_run": null,
- "runs": 161,
- "last_run": "2026-11-07T15:54:42.021676+00:00"
+ "runs": 162,
+ "last_run": "2026-11-07T20:12:07.106677+00:00"
 }
