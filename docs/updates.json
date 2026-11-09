@@ -2,6 +2,14 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "Binance Restores HYPE, APT as Data Reveals Billions in Reserve Outflows",
+   "link": "https://news.bitcoin.com/crypto-news/binance-restores-hype-apt-as-data-reveals-billions-in-reserve-outflows/",
+   "desc": "Binance restored withdrawals for the altcoins hyperliquid (HYPE) and aptos (APT) on Sunday, Nov. 8, advancing its recovery from the $6.3 billion October hack. Meanwhile, Cryptoquant\u2019s latest exchange metrics reveal substantial declines in bitcoin, ethereum, and stablecoin reserves, even as daily withdrawal pressures appear to be easing. Binance Withdrawal Recovery Advances After Historic $6.3 Bill",
+   "date": "2026-11-08T22:30:51+00:00",
+   "first_seen": "2026-11-09T01:05:06.269346+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "CZ Issues AI Warning Following Binance Hack, STRC Repegs, And More \u2013 Weekly Recap",
    "link": "https://news.bitcoin.com/featured/cz-issues-ai-warning-following-binance-hack-strc-repegs-and-more-weekly-recap/",
    "desc": "This week\u2019s stories focused on security, treasury strategy and institutional adoption. CZ warned that AI is accelerating cyberattacks faster than crypto firms can strengthen defenses after Binance\u2019s $6.3 billion hack. Strategy\u2019s STRC returned to $100 after shifting to daily dividends, while Binance warned users about post-hack scams. Bitmine moved to 99% of its 5% ETH [\u2026]",
@@ -1682,6 +1690,6 @@
   }
  ],
  "first_run": null,
- "runs": 181,
- "last_run": "2026-11-08T19:05:09.122184+00:00"
+ "runs": 182,
+ "last_run": "2026-11-09T01:05:06.269346+00:00"
 }
