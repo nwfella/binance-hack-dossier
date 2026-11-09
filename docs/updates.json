@@ -1,6 +1,70 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "Binance Hack Launderers Mint Elon Musk and Animal Meme Coins to Move Stolen Crypto",
+   "link": "https://decrypt.co/382873/binance-hack-elon-musk-animal-meme-coins-launder-stolen-crypto",
+   "desc": "Elliptic says the hackers are minting their own worthless tokens\u2014complete with cartoon animal and Elon Musk logos\u2014and routing stolen funds through liquidity pools to break the trail.",
+   "date": "2026-11-09T19:36:02+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "Protos",
+   "title": "North Korea launders Binance funds with Elon Musk memecoin, report",
+   "link": "https://protos.com/north-korea-launders-binance-funds-with-elon-musk-memecoin-report/",
+   "desc": "North Korea-linked hackers behind $6.4B Binance theft are reportedly laundering stolen funds using TRON, Solana, and NEAR-based memecoins.",
+   "date": "2026-11-09T17:52:10+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "BleepingComputer",
+   "title": "Binance denies data breach after alleged ShinyHunters claims",
+   "link": "https://www.bleepingcomputer.com/news/security/binance-denies-data-breach-after-alleged-shinyhunters-claims/",
+   "desc": "Binance, the world's largest crypto exchange, has denied claims of a new security breach made by a threat actor using the 'ShinyHunters' handle on a newly emerged underground cybercrime forum. [...]",
+   "date": "2026-11-09T16:12:39+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "Binance hack launderers mint homemade Elon Musk, animal memecoins to move stolen funds: Elliptic",
+   "link": "https://www.theblock.co/news/ecosystems/2026-11-09-binance-hack-launderers-mint-homemade-elon-musk-animal-memecoins-move-stolen-funds-elliptic-436440",
+   "desc": "Elliptic says the extra swaps slow investigators down, but the stolen funds remain traceable onchain.",
+   "date": "2026-11-09T15:54:16+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
+   "link": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
+   "desc": "North Korean hackers used six homemade memecoins to launder 117,000 NEAR, worth about $430,000, from the $6.3 billion Binance hack, Elliptic says.",
+   "date": "2026-11-09T15:00:44+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Analysts see no broader \u2018contagion\u2019 from $6.3B Binance hack",
+   "link": "https://cointelegraph.com/markets/analysts-no-contagion-effect-63b-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Binance\u2019s pledge to cover all user losses helped contain the fallout from the $6.3 billion hack, analysts said.",
+   "date": "2026-11-09T13:52:46+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "The $2.85B Binance hackers lost shows why the UK needs stablecoin freeze rules",
+   "link": "https://cointelegraph.com/opinion/285b-binance-hackers-lost-shows-why-uk-needs-stablecoin-freeze-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "The Binance hack proved stablecoin freezes work. Now the UK should make clear freeze rules a condition of listing coins.",
+   "date": "2026-11-09T13:30:00+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
+   "source": "Protos",
+   "title": "Binance faces renewed scrutiny as CFO exits amid compliance turmoil",
+   "link": "https://protos.com/binance-faces-renewed-scrutiny-as-cfo-exits-amid-compliance-turmoil/",
+   "desc": "Binance CFO Kaiser Ng quit nine days after the biggest theft in crypto history, but the exchange says the exit was planned well in advance.",
+   "date": "2026-11-09T12:42:44+00:00",
+   "first_seen": "2026-11-09T20:07:54.415848+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Binance Restores HYPE, APT as Data Reveals Billions in Reserve Outflows",
    "link": "https://news.bitcoin.com/crypto-news/binance-restores-hype-apt-as-data-reveals-billions-in-reserve-outflows/",
@@ -1690,6 +1754,6 @@
   }
  ],
  "first_run": null,
- "runs": 183,
- "last_run": "2026-11-09T01:57:31.310689+00:00"
+ "runs": 184,
+ "last_run": "2026-11-09T20:07:54.415848+00:00"
 }
