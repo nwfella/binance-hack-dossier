@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Decrypt",
+   "title": "Binance Halts MEXC Transfers as FinCEN Cuts Exchange Off From US Financial System",
+   "link": "https://decrypt.co/382926/binance-halts-mexc-transfers-as-fincen-cuts-exchange-off-from-us-financial-system",
+   "desc": "The exchange will reject withdrawals to MEXC and hold deposits from it for review, after FinCEN tied it to $16 billion in suspicious flows.",
+   "date": "2026-11-10T12:13:27+00:00",
+   "first_seen": "2026-11-10T13:05:04.716388+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "North Korea\u2019s $6.3B Binance Hack Takes a Strange Turn With Meme Coins",
    "link": "https://news.bitcoin.com/security/north-korea-binance-hack-takes-strange-turn-meme-coins/",
@@ -1778,6 +1786,6 @@
   }
  ],
  "first_run": null,
- "runs": 196,
- "last_run": "2026-11-10T12:05:04.541876+00:00"
+ "runs": 197,
+ "last_run": "2026-11-10T13:05:04.716388+00:00"
 }
