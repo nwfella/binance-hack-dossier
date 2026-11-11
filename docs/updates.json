@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Binance Blocks MEXC Transfers After $16B Illicit Finance Allegations",
+   "link": "https://news.bitcoin.com/exchanges/binance-blocks-mexc-transfers-after-16b-illicit-finance-allegations/",
+   "desc": "Binance restricted dealings with MEXC after U.S. authorities alleged the exchange facilitated at least $16 billion in illicit transactions. The move followed a designation targeting MEXC\u2019s access to the U.S. financial system. Binance Rejects MEXC Transfers and Withholds Deposits Binance said Nov. 10 that it was restricting transactions involving MEXC following the Financial Crimes Enforcement [\u2026]",
+   "date": "2026-11-11T01:25:37+00:00",
+   "first_seen": "2026-11-11T04:05:06.459801+00:00"
+  },
+  {
    "source": "Protos",
    "title": "Binance Labs-backed Initia hacked again, $3.3M lost in three weeks",
    "link": "https://protos.com/binance-labs-backed-initia-hacked-again-3-3m-lost-in-three-weeks/",
@@ -1802,6 +1810,6 @@
   }
  ],
  "first_run": null,
- "runs": 206,
- "last_run": "2026-11-10T23:43:28.716613+00:00"
+ "runs": 207,
+ "last_run": "2026-11-11T04:05:06.459801+00:00"
 }
