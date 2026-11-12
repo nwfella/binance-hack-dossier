@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Cointelegraph",
+   "title": "Binance CSO unwittingly foreshadowed $6.3B hack tactic months before attack",
+   "link": "https://cointelegraph.com/news/binance-cso-foreshadowed-6b-hack-tactic-months-before-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "In a July interview, Binance chief security officer Jimmy Su explained how fake coding assessments could compromise employee devices, a tactic later used in the exchange\u2019s record-breaking hack.",
+   "date": "2026-11-12T05:07:11+00:00",
+   "first_seen": "2026-11-12T06:05:12.235166+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance hacker\u2019s XRP stockpile rapidly crashes driven by Bitcoin swaps",
    "link": "https://cryptoslate.com/binance-hackers-xrp-stockpile-rapidly-crashes-driven-by-bitcoin-swaps/",
@@ -1818,6 +1826,6 @@
   }
  ],
  "first_run": null,
- "runs": 219,
- "last_run": "2026-11-12T02:30:05.751074+00:00"
+ "runs": 220,
+ "last_run": "2026-11-12T06:05:12.235166+00:00"
 }
