@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "North Korea's Binance hack faces U.S. crackdown as DOJ targets $1.2 billion in stolen crypto",
+   "link": "https://www.coindesk.com/policy/2026/11/12/north-korea-s-binance-hack-faces-u-s-crackdown-as-doj-targets-usd1-2-billion-in-stolen-crypto",
+   "desc": "Federal authorities say they've taken infrastructure used in the FaceStealer scheme used to steal as much as $400 million in crypto assets.",
+   "date": "2026-11-12T22:55:52+00:00",
+   "first_seen": "2026-11-12T23:52:06.136477+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "DOJ moves to seize $1.2 billion from Binance hack, disrupts North Korean deepfake scheme",
+   "link": "https://www.theblock.co/news/business/2026-11-12-doj-seize-1-2-billion-binance-hack-north-korea-facestealer-439065",
+   "desc": "DOJ got court approval to seize $1.2B stolen from Binance by North Korea's TraderTraitor & took down the FaceStealer deepfake scam.",
+   "date": "2026-11-12T22:40:22+00:00",
+   "first_seen": "2026-11-12T23:52:06.136477+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "Binance CSO unwittingly foreshadowed $6.3B hack tactic months before attack",
    "link": "https://cointelegraph.com/news/binance-cso-foreshadowed-6b-hack-tactic-months-before-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -1826,6 +1842,6 @@
   }
  ],
  "first_run": null,
- "runs": 228,
- "last_run": "2026-11-12T13:05:05.565106+00:00"
+ "runs": 229,
+ "last_run": "2026-11-12T23:52:06.136477+00:00"
 }
