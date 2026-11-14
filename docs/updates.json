@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "Meta tests prediction-market app, DOJ moves to seize $1.2 billion from Binance hack, and more",
+   "link": "https://www.theblock.co/newsletters/the-daily/2026-11-14-meta-prediction-market-app-doj-binance-hack-more-crypto-news-440304",
+   "desc": "In today's newsletter, Meta tests prediction-market app using points instead of cash; DOJ moves to seize $1.2 billion from Binance hack, disrupts North Korean deepfake scheme; and more.",
+   "date": "2026-11-14T05:40:00+00:00",
+   "first_seen": "2026-11-14T08:54:48.076808+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "US courts target $1.2B in stolen Binance funds, yet victims face a new hurdle",
    "link": "https://cryptoslate.com/binance-funds-theft-us-court-orders-cover-over-1-2-billion-with-return-unresolved/",
@@ -1866,6 +1874,6 @@
   }
  ],
  "first_run": null,
- "runs": 232,
- "last_run": "2026-11-14T01:44:12.762738+00:00"
+ "runs": 233,
+ "last_run": "2026-11-14T08:54:48.076808+00:00"
 }
