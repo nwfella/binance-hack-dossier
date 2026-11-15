@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "DOJ Secures Court Approval Targeting $1.2B in Stolen Binance Crypto",
+   "link": "https://news.bitcoin.com/regulation-and-legal/doj-secures-court-approval-targeting-1-2b-in-stolen-binance-crypto/",
+   "desc": "The Justice Department secured court authorization targeting more than $1.2 billion in cryptocurrency stolen from Binance. The action formed part of a recovery effort that froze billions of dollars following an attack U.S. authorities attributed to North Korea. Court Orders Target More Than $1.2 Billion The U.S. Department of Justice (DOJ) announced on Nov. 12 [\u2026]",
+   "date": "2026-11-15T01:45:52+00:00",
+   "first_seen": "2026-11-15T07:09:22.009240+00:00"
+  },
+  {
    "source": "CryptoSlate",
    "title": "Binance says stolen crypto has been replaced but some customers have to wait",
    "link": "https://cryptoslate.com/binance-says-stolen-crypto-has-been-replaced-but-some-customers-have-to-wait/",
@@ -1890,6 +1898,6 @@
   }
  ],
  "first_run": null,
- "runs": 236,
- "last_run": "2026-11-15T00:19:15.617288+00:00"
+ "runs": 237,
+ "last_run": "2026-11-15T07:09:22.009240+00:00"
 }
