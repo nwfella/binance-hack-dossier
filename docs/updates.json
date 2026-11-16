@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "CZ denies Binance sold crypto as Bitcoin bounces from four-month low near $62,000",
+   "link": "https://www.theblock.co/news/markets/2026-11-15-cz-denies-binance-sold-crypto-as-bitcoin-bounces-from-four-month-low-near-62000-440807",
+   "desc": "The price moves across the market led to $2 billion in crypto liquidations in a single 24-hour period over the weekend.",
+   "date": "2026-11-15T21:57:53+00:00",
+   "first_seen": "2026-11-16T00:20:44.827621+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "DOJ Secures Court Approval Targeting $1.2B in Stolen Binance Crypto",
    "link": "https://news.bitcoin.com/regulation-and-legal/doj-secures-court-approval-targeting-1-2b-in-stolen-binance-crypto/",
@@ -1898,6 +1906,6 @@
   }
  ],
  "first_run": null,
- "runs": 239,
- "last_run": "2026-11-15T20:21:44.667623+00:00"
+ "runs": 240,
+ "last_run": "2026-11-16T00:20:44.827621+00:00"
 }
