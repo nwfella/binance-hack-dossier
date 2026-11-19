@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "Cointelegraph",
+   "title": "Binance\u2019s $6.5B freeze order, Hong Kong \u2018suspicious\u2019 of HYPE: Asia Express",
+   "link": "https://cointelegraph.com/magazine/binances-65b-freeze-order-hong-kong-suspicious-of-hype-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Binance obtains court orders freezing assets stolen in October\u2019s hack. Hong Kong warns citizens about Hyperliquid, and Thai police arrest four foreigners linked to a crypto scam.",
+   "date": "2026-11-19T22:25:18+00:00",
+   "first_seen": "2026-11-19T23:46:56.804136+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
+   "title": "A New Recovery Model? Binance Wins $6.5B Freezing Order Across 26K Wallets",
+   "link": "https://news.bitcoin.com/regulation-and-legal/new-recovery-model-binance-wins-6-5b-freeze-26k-wallets/",
+   "desc": "Binance has secured a $6.5 billion worldwide freezing order from Abu Dhabi\u2019s ADGM Courts as it pursues assets stolen in the Oct. 29 hack. The ruling introduces an unusual weapon for crypto recovery: a constantly updated list of 26,000 wallets that can be served and tracked through the blockchain. Abu Dhabi Court Grants Binance [\u2026]",
+   "date": "2026-11-19T21:25:58+00:00",
+   "first_seen": "2026-11-19T23:46:56.804136+00:00"
+  },
+  {
    "source": "CoinDesk",
    "title": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
    "link": "https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft",
@@ -1986,6 +2002,6 @@
   }
  ],
  "first_run": null,
- "runs": 244,
- "last_run": "2026-11-19T17:20:01.347485+00:00"
+ "runs": 245,
+ "last_run": "2026-11-19T23:46:56.804136+00:00"
 }
