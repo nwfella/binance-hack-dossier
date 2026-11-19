@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "Binance gets $6.5 billion freezing order, CryptoQuant says bitcoin is in a \u2018value zone\u2019, and more",
+   "link": "https://www.theblock.co/newsletters/the-daily/2026-11-19-binance-gets-6-5-billion-freezing-order-cryptoquant-says-bitcoin-is-in-a-value-zone-and-more-443511",
+   "desc": "In today's newsletter, Binance obtains $6.5 billion freezing order from Abu Dhabi court; CryptoQuant says bitcoin is back in a bearish phase but has entered a 'value zone'; and more.",
+   "date": "2026-11-19T06:00:00+00:00",
+   "first_seen": "2026-11-19T07:54:12.653518+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance hackers stole 192 tokens across 11 networks, court docs show",
+   "link": "https://cointelegraph.com/news/binance-hackers-stole-192-tokens-across-11-networks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "Stablecoins accounted for at least $3.46 billion of the $6.3 billion stolen, while the hackers also took memecoins, tokenized gold and gaming tokens.",
+   "date": "2026-11-19T05:09:45+00:00",
+   "first_seen": "2026-11-19T07:54:12.653518+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "Binance says it obtained $6.5B worldwide freezing order after hack",
    "link": "https://cointelegraph.com/news/binance-says-won-65b-worldwide-freezing-order-after-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -1954,6 +1970,6 @@
   }
  ],
  "first_run": null,
- "runs": 242,
- "last_run": "2026-11-19T00:17:40.764116+00:00"
+ "runs": 243,
+ "last_run": "2026-11-19T07:54:12.653518+00:00"
 }
