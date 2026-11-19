@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "source": "CoinDesk",
+   "title": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
+   "link": "https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft",
+   "desc": "The crypto exchange said it has already replaced the stolen assets using its own funds and insurance reserves.",
+   "date": "2026-11-19T15:20:38+00:00",
+   "first_seen": "2026-11-19T17:20:01.347485+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Binance Wins $6.5B Freezing Order Over Hack That Can Be Served via the Blockchain",
+   "link": "https://decrypt.co/383608/binance-wins-6-5b-freezing-order-over-hack-that-can-be-served-via-the-blockchain",
+   "desc": "An Abu Dhabi court's worldwide injunction targets the unknown hackers, backed by a \"living list\" of 26,000 wallets holding stolen funds.",
+   "date": "2026-11-19T12:59:14+00:00",
+   "first_seen": "2026-11-19T17:20:01.347485+00:00"
+  },
+  {
    "source": "The Block",
    "title": "Binance gets $6.5 billion freezing order, CryptoQuant says bitcoin is in a \u2018value zone\u2019, and more",
    "link": "https://www.theblock.co/newsletters/the-daily/2026-11-19-binance-gets-6-5-billion-freezing-order-cryptoquant-says-bitcoin-is-in-a-value-zone-and-more-443511",
@@ -1970,6 +1986,6 @@
   }
  ],
  "first_run": null,
- "runs": 243,
- "last_run": "2026-11-19T07:54:12.653518+00:00"
+ "runs": 244,
+ "last_run": "2026-11-19T17:20:01.347485+00:00"
 }
