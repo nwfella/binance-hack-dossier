@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "The Block",
+   "title": "Binance hack laundering ramps up as $149 million in bitcoin mixed through coinjoins: Elliptic",
+   "link": "https://www.theblock.co/news/markets/2026-11-20-binance-hack-laundering-ramps-up-149-million-bitcoin-mixed-coinjoins-elliptic-444758",
+   "desc": "Elliptic says little has likely been cashed out, despite a sharp rise in bitcoin mixing since Nov. 17.",
+   "date": "2026-11-20T18:22:39+00:00",
+   "first_seen": "2026-11-20T22:38:40.556503+00:00"
+  },
+  {
    "source": "Cointelegraph",
    "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
    "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -2026,6 +2034,6 @@
   }
  ],
  "first_run": null,
- "runs": 247,
- "last_run": "2026-11-20T16:04:38.618461+00:00"
+ "runs": 248,
+ "last_run": "2026-11-20T22:38:40.556503+00:00"
 }
