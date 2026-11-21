@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "source": "Bitcoin.com",
+   "title": "Binance Hackers Move $860 Million in Ether as Bitcoin Laundering Surges",
+   "link": "https://news.bitcoin.com/security/binance-hackers-move-860-million-ether-bitcoin-laundering-surges/",
+   "desc": "Hackers linked to North Korea have moved approximately $860 million in ether stolen from Binance over the past four days, while dramatically accelerating efforts to obscure the origins of bitcoin obtained through cryptocurrency swaps, according to new findings from blockchain analytics firm Elliptic. In a report updated Friday, Nov. 20, Elliptic revealed that five of [\u2026]",
+   "date": "2026-11-21T00:15:37+00:00",
+   "first_seen": "2026-11-21T03:29:00.018038+00:00"
+  },
+  {
    "source": "The Block",
    "title": "Binance hack laundering ramps up as $149 million in bitcoin mixed through coinjoins: Elliptic",
    "link": "https://www.theblock.co/news/markets/2026-11-20-binance-hack-laundering-ramps-up-149-million-bitcoin-mixed-coinjoins-elliptic-444758",
@@ -2034,6 +2042,6 @@
   }
  ],
  "first_run": null,
- "runs": 248,
- "last_run": "2026-11-20T22:38:40.556503+00:00"
+ "runs": 249,
+ "last_run": "2026-11-21T03:29:00.018038+00:00"
 }
