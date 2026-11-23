@@ -2,6 +2,46 @@
  "items": [
   {
    "source": "Bitcoin.com",
+   "title": "US Government Targets $1.17B as Circle Offers to Reissue Binance\u2019s Frozen USDC",
+   "link": "https://news.bitcoin.com/stablecoins/us-government-targets-1-17b-circle-offers-reissue-binance-frozen-usdc/",
+   "desc": "The U.S. government filed a civil forfeiture complaint Monday, Nov. 23, seeking approximately $1.17 billion in USDC connected to Binance\u2019s $6.3 billion cryptocurrency heist, exposing new details about how suspected North Korean hackers infiltrated the exchange and commandeered its wallets. Federal Complaint Exposes How Binance\u2019s $6 Billion Hack Unfolded Federal prosecutors are pursuing one of [\u2026]",
+   "date": "2026-11-23T21:45:31+00:00",
+   "first_seen": "2026-11-23T22:00:26.202366+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack",
+   "link": "https://cointelegraph.com/news/us-seeks-11b-crypto-stolen-north-korea-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "US prosecutors are seeking control of stolen USDC, while Elliptic says hackers have moved $247 million through Bitcoin mixers.",
+   "date": "2026-11-23T21:04:03+00:00",
+   "first_seen": "2026-11-23T22:00:26.202366+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "North Korea Moves $247 Million of Binance Hack Loot Through Bitcoin Mixers",
+   "link": "https://decrypt.co/383844/north-korea-247-million-binance-hack-bitcoin-mixers",
+   "desc": "Roughly a month after the $6.4 billion hack, Elliptic says nearly all of the coinjoin mixing was coordinated by one person who \u201crefuses to block funds such as these.\"",
+   "date": "2026-11-23T20:36:02+00:00",
+   "first_seen": "2026-11-23T22:00:26.202366+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "DOJ seeks $1.17 billion in USDC tied to Binance hack; Circle could issue replacement tokens",
+   "link": "https://www.theblock.co/news/regulation/2026-11-23-doj-1-17-billion-usdc-binance-hack-circle-replacement-tokens-445398",
+   "desc": "The U.S. Justice Department is seeking to recover about $1.17 billion in USDC tied to the Oct. 29 Binance hack.",
+   "date": "2026-11-23T20:00:34+00:00",
+   "first_seen": "2026-11-23T22:00:26.202366+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance hackers push $247 million through transactions designed to cloud the source",
+   "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
+   "desc": "Elliptic found that nearly all the mixing transactions, known as coinjoins, were coordinated by an entity called Kruw during fixed daily hours, suggesting potential handoffs to China-based money launderers.",
+   "date": "2026-11-23T15:29:01+00:00",
+   "first_seen": "2026-11-23T22:00:26.202366+00:00"
+  },
+  {
+   "source": "Bitcoin.com",
    "title": "Binance Hackers Move $860 Million in Ether as Bitcoin Laundering Surges",
    "link": "https://news.bitcoin.com/security/binance-hackers-move-860-million-ether-bitcoin-laundering-surges/",
    "desc": "Hackers linked to North Korea have moved approximately $860 million in ether stolen from Binance over the past four days, while dramatically accelerating efforts to obscure the origins of bitcoin obtained through cryptocurrency swaps, according to new findings from blockchain analytics firm Elliptic. In a report updated Friday, Nov. 20, Elliptic revealed that five of [\u2026]",
@@ -2042,6 +2082,6 @@
   }
  ],
  "first_run": null,
- "runs": 253,
- "last_run": "2026-11-22T06:37:46.824238+00:00"
+ "runs": 254,
+ "last_run": "2026-11-23T22:00:26.202366+00:00"
 }
