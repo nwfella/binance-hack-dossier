@@ -1,6 +1,46 @@
 {
  "items": [
   {
+   "source": "CryptoSlate",
+   "title": "US moves to seize $1.1 billion from Binance hackers without accessing their wallets",
+   "link": "https://cryptoslate.com/us-moves-to-seize-1-1-billion-from-binance-hackers-without-accessing-their-wallets/",
+   "desc": "If the court orders forfeiture, Circle would send the government new tokens equal to the blocked balances. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+   "date": "2026-11-24T16:50:10+00:00",
+   "first_seen": "2026-11-24T17:34:17.463559+00:00"
+  },
+  {
+   "source": "Decrypt",
+   "title": "Justice Department Moves to Forfeit $1.1B in USDC From North Korea's Binance Hack",
+   "link": "https://decrypt.co/383874/justice-department-moves-to-forfeit-1-1b-in-usdc-from-north-koreas-binance-hack",
+   "desc": "U.S. authorities say they've now helped freeze, seize or return more than $2.9 billion of the crypto stolen from Binance in October.",
+   "date": "2026-11-24T14:13:03+00:00",
+   "first_seen": "2026-11-24T17:34:17.463559+00:00"
+  },
+  {
+   "source": "Protos",
+   "title": "DoJ says Lazarus hijacked 32 Binance platform addresses",
+   "link": "https://protos.com/doj-says-lazarus-hijacked-32-binance-platform-addresses/",
+   "desc": "A new DoJ filing explains how North Korea\u2019s Lazarus Group hijacked 32 wallet addresses on Binance\u2019s platform via EIP-7702.",
+   "date": "2026-11-24T13:06:28+00:00",
+   "first_seen": "2026-11-24T17:34:17.463559+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving",
+   "link": "https://www.coindesk.com/policy/2026/11/24/u-s-seeks-usd1-1-billion-seized-in-binance-hack-as-north-korean-funds-keep-moving",
+   "desc": "U.S. seeks to recover $1.1 billion in frozen USDC as billions more from the Binance hack remain unaccounted for.",
+   "date": "2026-11-24T10:58:51+00:00",
+   "first_seen": "2026-11-24T17:34:17.463559+00:00"
+  },
+  {
+   "source": "The Block",
+   "title": "DOJ moves to recover $1.17 billion from Binance hack, Strategy buys another 457 BTC, and more",
+   "link": "https://www.theblock.co/newsletters/the-daily/2026-11-24-doj-binance-hack-strategy-bitcoin-more-crypto-news-445430",
+   "desc": "In today's newsletter, DOJ moves to recover $1.17 billion from Binance hack; Strategy buys another 457 BTC as Saylor says 'the dots aren't done'; and more.",
+   "date": "2026-11-24T05:40:00+00:00",
+   "first_seen": "2026-11-24T17:34:17.463559+00:00"
+  },
+  {
    "source": "Bitcoin.com",
    "title": "Clockwork Laundering: Binance Hackers Follow a Daily Cadence Linked to China",
    "link": "https://news.bitcoin.com/featured/clockwork-laundering-binance-hackers-follow-daily-cadence-linked-china/",
@@ -2090,6 +2130,6 @@
   }
  ],
  "first_run": null,
- "runs": 255,
- "last_run": "2026-11-24T05:57:26.913726+00:00"
+ "runs": 256,
+ "last_run": "2026-11-24T17:34:17.463559+00:00"
 }
