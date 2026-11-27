@@ -2,6 +2,38 @@
  "items": [
   {
    "source": "Decrypt",
+   "title": "Binance Fully Lifts Withdrawal Suspension Four Weeks After $6.4B Hack",
+   "link": "https://decrypt.co/384121/binance-fully-lifts-withdrawal-suspension-four-weeks-after-6-4b-hack",
+   "desc": "Binance has restored all withdrawals after October's hack, as the U.S. says it has helped freeze, seize or return $2.9 billion of the funds.",
+   "date": "2026-11-27T13:24:17+00:00",
+   "first_seen": "2026-11-27T14:17:48.721177+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Tether can freeze stolen crypto in minutes. Getting it back can take years.",
+   "link": "https://www.coindesk.com/business/2026/11/27/tether-can-freeze-stolen-crypto-in-minutes-getting-it-back-can-take-years",
+   "desc": "Tether says it has returned $1.28 billion in frozen USDT, but victims can wait years to recover their money and face fees of up to 20%.",
+   "date": "2026-11-27T10:00:00+00:00",
+   "first_seen": "2026-11-27T14:17:48.721177+00:00"
+  },
+  {
+   "source": "CoinDesk",
+   "title": "Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack",
+   "link": "https://www.coindesk.com/markets/2026/11/27/binance-says-its-withdrawal-suspension-is-over-four-weeks-after-a-usd6-3-billion-hack",
+   "desc": "Binance says it has fully lifted withdrawal suspensions imposed after October\u2019s $6.3 billion hack, though a small number of networks remain paused for unrelated maintenance.",
+   "date": "2026-11-27T04:45:47+00:00",
+   "first_seen": "2026-11-27T14:17:48.721177+00:00"
+  },
+  {
+   "source": "Cointelegraph",
+   "title": "Binance completes withdrawal recovery four weeks after $6.3B hack",
+   "link": "https://cointelegraph.com/news/binance-completes-withdrawal-recovery-four-weeks-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "desc": "The announcement concludes a phased withdrawal recovery that began on Nov. 1, when Binance restored Bitcoin withdrawals following the record crypto theft.",
+   "date": "2026-11-26T21:33:47+00:00",
+   "first_seen": "2026-11-27T14:17:48.721177+00:00"
+  },
+  {
+   "source": "Decrypt",
    "title": "UK Regulator Cites Binance Hack as It Plans Tougher DeFi Rules Than US and EU: Report",
    "link": "https://decrypt.co/384027/uk-regulator-cites-binance-hack-as-it-plans-tougher-defi-rules-than-us-and-eu-report",
    "desc": "The FCA plans to require DeFi platforms to be authorized and to keep regulated exchanges from routing UK retail trades to them.",
@@ -2146,6 +2178,6 @@
   }
  ],
  "first_run": null,
- "runs": 261,
- "last_run": "2026-11-26T12:18:14.660920+00:00"
+ "runs": 262,
+ "last_run": "2026-11-27T14:17:48.721177+00:00"
 }
